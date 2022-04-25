@@ -5,18 +5,22 @@ using UnityEngine;
 public class condMov : MonoBehaviour 
 {
     public GameObject Trix;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider collision)
     {
-        if (other.tag == "Anda")
+        if (collision.gameObject.tag == "Anda") 
         {
-            Debug.Log("É possivel se mover");
-            Trix.GetComponent<botControl>().enabled = true;
+          
+             Debug.Log("É possivel se mover");
+             Trix.GetComponent<botControl>().enabled = true;
+            
         }
-
-        else
+            
+        
+        if(collision.gameObject.tag != "Anda")
         {
-            Debug.Log("Não é possivel se mover");
+             Debug.Log("Não é possivel se mover");
             Trix.GetComponent<botControl>().enabled = false;
+            
         }
 
     }

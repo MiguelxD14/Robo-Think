@@ -16,7 +16,7 @@ public class deD : MonoBehaviour
             GetComponent<Rigidbody>().useGravity = false;
        //   this.transform.position = dest.position; 
             this.transform.parent = GameObject.Find("Hand").transform;
-        transform.localRotation = GameObject.Find("Hand").transform.rotation;
+            transform.rotation = GameObject.Find("Hand").transform.rotation;
     }
         void OnMouseUp()
     {
