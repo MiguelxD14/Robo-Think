@@ -21,11 +21,8 @@ public class execCod : MonoBehaviour
 
             if (hit.collider.gameObject == this.gameObject)
             {
-
                 Debug.Log("Executar codigo");
                 Trix.GetComponent<botControl>().enabled = true;
-
-
             }
         }
     }
