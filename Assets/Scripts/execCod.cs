@@ -5,18 +5,11 @@ using UnityEngine;
 public class execCod : MonoBehaviour
 {
     public GameObject Trix;
-    void Update()
+    void OnMouseDown()
     {
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.collider.gameObject == this.gameObject)
-            {
-                Debug.Log("Executar codigo");
-                Trix.GetComponent<botControl>().enabled = true;
-            }
-        }
+        Debug.Log("Executar codigo");
+        Trix.GetComponent<botControl>().enabled = true;
+
     }
 }

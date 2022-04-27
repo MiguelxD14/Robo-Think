@@ -850,7 +850,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442336110}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.15, z: 1.7999991}
+  m_LocalPosition: {x: 0, y: -0.15, z: 3.155}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963194228}
@@ -867,8 +867,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1.4641521}
+  m_Center: {x: 0, y: 0, z: 0.24283159}
 --- !u!1 &471796320
 GameObject:
   m_ObjectHideFlags: 0
@@ -1199,6 +1199,11 @@ MonoBehaviour:
   Op3: {fileID: 945412421}
   Op4: {fileID: 1764964415}
   Op5: {fileID: 1987766640}
+  op1: 0
+  op2: 0
+  op3: 0
+  op4: 0
+  op5: 0
   speed: 1
   condition: {fileID: 1950313874}
 --- !u!1 &784477304
@@ -1668,8 +1673,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0.08}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.3000001, z: 0.07999992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442336111}
@@ -1719,6 +1724,7 @@ GameObject:
   - component: {fileID: 997476911}
   - component: {fileID: 997476910}
   - component: {fileID: 997476909}
+  - component: {fileID: 997476914}
   m_Layer: 0
   m_Name: Restart
   m_TagString: Untagged
@@ -1738,7 +1744,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189c80167522cfe4db4e94826fd55075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartButton: {fileID: 0}
 --- !u!65 &997476910
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1809,12 +1814,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997476908}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.77, y: 2.405, z: -16.91}
+  m_LocalPosition: {x: -2.57, y: 2.8, z: -16.784}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &997476914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997476908}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1047130666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,7 +2833,7 @@ Rigidbody:
   m_GameObject: {fileID: 1996248415}
   serializedVersion: 2
   m_Mass: 0.5
-  m_Drag: 0.5
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
   m_IsKinematic: 1
@@ -2832,26 +2853,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1020939, y: 0.33042836, z: 0.12562172}
   m_Center: {x: 0.051046968, y: -0.0005065203, z: -0.00072241575}
---- !u!114 &1996248420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1996248415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9d97959f91d5c94d84147a70cf23ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot1: {fileID: 1544131508}
-  slot2: {fileID: 513683383}
-  slot3: {fileID: 784477304}
-  slot4: {fileID: 385519152}
-  slot5: {fileID: 1388661587}
-  slot6: {fileID: 251947382}
-  slot7: {fileID: 263296191}
-  slot8: {fileID: 1118158322}
 --- !u!1001 &2090455607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3577,7 +3578,9 @@ GameObject:
   - component: {fileID: 2320418566233039217}
   - component: {fileID: 4436245277979586728}
   - component: {fileID: 5463307227891356437}
+  - component: {fileID: 1051725168282182463}
   - component: {fileID: 1051725168282182461}
+  - component: {fileID: 1051725168282182462}
   m_Layer: 0
   m_Name: ExecCod
   m_TagString: Untagged
@@ -3598,6 +3601,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.455282, y: 0.84011436, z: 1.6058111}
   m_Center: {x: -0.3802632, y: -1.4200556, z: -0.0000010383162}
+--- !u!54 &1051725168282182462
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051725168282182460}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1051725168282182463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051725168282182460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b8c84d3b5f3c4ca01deeb818d3e58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Trix: {fileID: 777056491}
 --- !u!23 &1079662025226651077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6145,6 +6177,7 @@ GameObject:
   - component: {fileID: 5828450642537940243}
   - component: {fileID: 1880040866049956575}
   - component: {fileID: 5666554689325680932}
+  - component: {fileID: 5666554689325680933}
   m_Layer: 0
   m_Name: 3
   m_TagString: Untagged
@@ -6165,6 +6198,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 9.231659, y: 12.924321, z: 9.1832846e-14}
   m_Center: {x: -1.7694986, y: 1.9231665, z: 1.3664923e-14}
+--- !u!54 &5666554689325680933
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5666554689325680931}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &5669721522671583041
 Transform:
   m_ObjectHideFlags: 0
@@ -6995,14 +7044,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d97959f91d5c94d84147a70cf23ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slot1: {fileID: 0}
-  slot2: {fileID: 0}
-  slot3: {fileID: 0}
-  slot4: {fileID: 0}
-  slot5: {fileID: 0}
-  slot6: {fileID: 0}
-  slot7: {fileID: 0}
-  slot8: {fileID: 0}
+  slot1: {fileID: 1544131508}
+  slot2: {fileID: 513683383}
+  slot3: {fileID: 784477304}
+  slot4: {fileID: 385519152}
+  slot5: {fileID: 1388661587}
+  slot6: {fileID: 251947382}
+  slot7: {fileID: 263296191}
+  slot8: {fileID: 1118158322}
+  bloco: {fileID: 1996248415}
 --- !u!4 &7316210180736220963
 Transform:
   m_ObjectHideFlags: 0
