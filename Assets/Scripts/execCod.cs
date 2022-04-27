@@ -5,12 +5,6 @@ using UnityEngine;
 public class execCod : MonoBehaviour
 {
     public GameObject Trix;
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
@@ -18,7 +12,6 @@ public class execCod : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-
             if (hit.collider.gameObject == this.gameObject)
             {
                 Debug.Log("Executar codigo");
