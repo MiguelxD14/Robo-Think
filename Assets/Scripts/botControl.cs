@@ -5,7 +5,7 @@ using UnityEngine;
 public class botControl : MonoBehaviour
 {
     public GameObject Op1, Op2, Op3, Op4, Op5;
-    public bool op1,op2, op3, op4,op5;
+    public bool isSelected;
     GameObject trix;
     public float speed = 2.0f;
 
@@ -93,27 +93,32 @@ public class botControl : MonoBehaviour
         {
             if (hit.collider.gameObject == Op1)
             {
-                op1 = true;
-                BeginMovement(1);               
+                Op1.GetComponent<Renderer>().material.color = Color.yellow;
+               
+                BeginMovement(1);
             }
             if (hit.collider.gameObject == Op2)
             {
-                op2 = true;
+                Op2.GetComponent<Renderer>().material.color = Color.yellow;
+               
                 BeginMovement(2);               
             }
             if (hit.collider.gameObject == Op3)
             {
-                op3 = true;
+                Op3.GetComponent<Renderer>().material.color = Color.yellow;
+              
                 BeginMovement(3);
             }
             if (hit.collider.gameObject == Op4)
             {
-                op4 = true;
+                Op4.GetComponent<Renderer>().material.color = Color.yellow;
+             
                 BeginMovement(4);
             }
             if (hit.collider.gameObject == Op5)
             {
-                op5 = true;
+                Op5.GetComponent<Renderer>().material.color = Color.yellow;
+               
                 BeginMovement(5);
             }
 

@@ -9,7 +9,6 @@ public class execCod : MonoBehaviour
     {
 
         Debug.Log("Executar codigo");
-        Trix.GetComponent<botControl>().enabled = true;
 
     }
 }

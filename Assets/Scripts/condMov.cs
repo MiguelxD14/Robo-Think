@@ -19,7 +19,6 @@ public class condMov : MonoBehaviour
 
         }
 
-
         if (collision.gameObject.tag != "Anda")
         {
             Debug.Log("Não é possivel se mover");

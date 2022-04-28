@@ -1199,11 +1199,7 @@ MonoBehaviour:
   Op3: {fileID: 945412421}
   Op4: {fileID: 1764964415}
   Op5: {fileID: 1987766640}
-  op1: 0
-  op2: 0
-  op3: 0
-  op4: 0
-  op5: 0
+  isSelected: 0
   speed: 1
   condition: {fileID: 1950313874}
 --- !u!1 &784477304
@@ -1707,7 +1703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7beba053903517b46b66ef77614060c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayLength: 5
+  rayLength: 10
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
