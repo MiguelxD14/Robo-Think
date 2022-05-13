@@ -18,10 +18,7 @@ public class ray : MonoBehaviour
                 Debug.Log(hit.collider.name);   
 
             }
-
-
         }
-
 
     }
 }

@@ -18,7 +18,6 @@ public class botControl : MonoBehaviour
 
     Vector3 targetPoint;
 
-
     Animator animator;
     private void Start()
     {
@@ -94,9 +93,12 @@ public class botControl : MonoBehaviour
             if (hit.collider.gameObject == Op1)
             {
                 Op1.GetComponent<Renderer>().material.color = Color.yellow;
-               
-                BeginMovement(1);
             }
+            if (isSelected == true)
+                {
+                    BeginMovement(1);
+                }
+
             if (hit.collider.gameObject == Op2)
             {
                 Op2.GetComponent<Renderer>().material.color = Color.yellow;
