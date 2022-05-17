@@ -34,13 +34,10 @@ public class botControl : MonoBehaviour
             if (hit.collider.gameObject == Op1)
             {
                 Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                if (isSelected == true)
-                {
-                    BeginMovement(1);
-                }
+
+               BeginMovement(1); 
             }
             
-
             if (hit.collider.gameObject == Op2)
             {
                 Op2.GetComponent<Renderer>().material.color = Color.yellow;
