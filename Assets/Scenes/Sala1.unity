@@ -3378,7 +3378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6393633462692127662}
   m_LocalRotation: {x: 0.500844, y: 0.49915504, z: -0.49915415, w: -0.500844}
-  m_LocalPosition: {x: -17.799225, y: 3.2386537, z: -16.992393}
+  m_LocalPosition: {x: -17.79, y: 4.85, z: -16.99}
   m_LocalScale: {x: -0.41629434, y: -0.5491835, z: -0.02678754}
   m_Children: []
   m_Father: {fileID: 543450651635793420}
@@ -3425,13 +3425,13 @@ Light:
   m_GameObject: {fileID: 7837150727796571958}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3467,7 +3467,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3503,13 +3503,13 @@ Light:
   m_GameObject: {fileID: 9020073024628075351}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3766,13 +3766,13 @@ Light:
   m_GameObject: {fileID: 8905693358657514781}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -3808,7 +3808,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -4249,13 +4249,13 @@ Light:
   m_GameObject: {fileID: 6393633462692127662}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -4394,7 +4394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8905693358657514781}
   m_LocalRotation: {x: 0.0011951923, y: -0.0011944771, z: -0.70710605, w: -0.7071055}
-  m_LocalPosition: {x: 9.578139, y: 3.2386537, z: 24.923012}
+  m_LocalPosition: {x: 9.58, y: 5.17, z: 24.92}
   m_LocalScale: {x: -0.41629434, y: -0.5491835, z: -0.02678754}
   m_Children: []
   m_Father: {fileID: 543450651635793420}
@@ -4850,13 +4850,13 @@ Light:
   m_GameObject: {fileID: 6413863234488482539}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 591.2
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -4979,13 +4979,13 @@ Light:
   m_GameObject: {fileID: 7363092374509367074}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -5021,7 +5021,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5179,13 +5179,13 @@ Light:
   m_GameObject: {fileID: 1999057199105233034}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -5221,7 +5221,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5287,13 +5287,13 @@ Light:
   m_GameObject: {fileID: 6253597846232618577}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -5329,7 +5329,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -5682,13 +5682,13 @@ Light:
   m_GameObject: {fileID: 5355798553365785232}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -5724,7 +5724,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6722,7 +6722,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8691213527673359561}
   m_LocalRotation: {x: 0.49915457, y: 0.50084364, z: 0.50084436, w: 0.4991547}
-  m_LocalPosition: {x: 16.366287, y: 3.2386537, z: -16.992401}
+  m_LocalPosition: {x: 16.36, y: 4.95, z: -16.992401}
   m_LocalScale: {x: -0.41629434, y: -0.5491835, z: -0.02678754}
   m_Children: []
   m_Father: {fileID: 543450651635793420}
@@ -7210,7 +7210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7363092374509367074}
   m_LocalRotation: {x: 0.500844, y: 0.49915504, z: -0.49915415, w: -0.500844}
-  m_LocalPosition: {x: -17.799225, y: 3.2386537, z: 10.861366}
+  m_LocalPosition: {x: -17.79, y: 4.57, z: 10.86}
   m_LocalScale: {x: -0.41629434, y: -0.5491835, z: -0.02678754}
   m_Children: []
   m_Father: {fileID: 543450651635793420}
@@ -7459,13 +7459,13 @@ Light:
   m_GameObject: {fileID: 8691213527673359561}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -7501,7 +7501,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -7564,13 +7564,13 @@ Light:
   m_GameObject: {fileID: 325645178247231147}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 0.4192724, g: 0.8064697, b: 1, a: 1}
-  m_Intensity: 607.19995
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 2
+  m_Range: 4.5
+  m_SpotAngle: 20
+  m_InnerSpotAngle: 1
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -7606,7 +7606,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
