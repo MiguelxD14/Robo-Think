@@ -25,65 +25,6 @@ public class botControl : MonoBehaviour
     }
     void Update()
     {
-        #region codigo antigo
-        /*
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            
-            if (hit.collider.gameObject != Op1)
-            {
-
-                animator.SetBool("Anda", false);
-
-            }
-            if (hit.collider.gameObject == Op1)
-            {
-            animator.SetBool("Anda", true);
-            transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Anda").transform.position, speed * Time.deltaTime);
-
-            }
-           
-            if (hit.collider.gameObject == Op2)
-            {
-             animator.SetBool("Anda", true);
-             Debug.Log("botão 2");
-             transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Anda").transform.position, speed * Time.deltaTime);
-
-            }
-
-            if (hit.collider.gameObject == Op3)
-            {
-
-             animator.SetBool("Anda", true);
-             Debug.Log("botão 3");
-             transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Anda").transform.position, speed * Time.deltaTime);
-
-            }
-
-            if (hit.collider.gameObject == Op4)
-            {
-
-             animator.SetBool("Anda", true);
-             Debug.Log("botão 4");
-             transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Anda").transform.position, speed * Time.deltaTime);
-
-            }
-
-            if (hit.collider.gameObject == Op5)
-            {
-
-             animator.SetBool("Anda", true);
-             Debug.Log("botão 5");
-             transform.position = Vector3.MoveTowards(transform.position, GameObject.FindWithTag("Anda").transform.position, speed * Time.deltaTime);
-
-            }
-        }
-            */
-        #endregion
-
         #region codigo do clique
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -93,11 +34,12 @@ public class botControl : MonoBehaviour
             if (hit.collider.gameObject == Op1)
             {
                 Op1.GetComponent<Renderer>().material.color = Color.yellow;
-            }
-            if (isSelected == true)
+                if (isSelected == true)
                 {
                     BeginMovement(1);
                 }
+            }
+            
 
             if (hit.collider.gameObject == Op2)
             {
