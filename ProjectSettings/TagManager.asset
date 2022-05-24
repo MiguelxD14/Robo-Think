@@ -12,6 +12,7 @@ TagManager:
   - Anda
   - Bloco de comando
   - Id
+  - canGrab
   layers:
   - Default
   - TransparentFX
