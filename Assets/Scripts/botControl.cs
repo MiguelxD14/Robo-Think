@@ -8,6 +8,7 @@ public class botControl : MonoBehaviour
     public bool isSelected;
     GameObject trix;
     public float speed = 2.0f;
+    public float rayLength;
 
     float distance;
     bool moving = false;
@@ -29,38 +30,59 @@ public class botControl : MonoBehaviour
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, rayLength))
         {
             if (hit.collider.gameObject == Op1)
             {
-                Op1.GetComponent<Renderer>().material.color = Color.yellow;
-
-               BeginMovement(1); 
+               Debug.Log("Botão 1");
+                if(Input.GetMouseButtonDown(0))
+                {
+                    Op1.GetComponent<Renderer>().material.color = Color.yellow;
+                    BeginMovement(1);
+                }
+              
             }
+            Debug.Log(hit.collider.gameObject.name);
             
             if (hit.collider.gameObject == Op2)
             {
-                Op2.GetComponent<Renderer>().material.color = Color.yellow;
-               
-                BeginMovement(2);               
+                Debug.Log("Botão 2");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Op2.GetComponent<Renderer>().material.color = Color.yellow;
+                    BeginMovement(2);
+                }
+                               
             }
             if (hit.collider.gameObject == Op3)
             {
-                Op3.GetComponent<Renderer>().material.color = Color.yellow;
-              
-                BeginMovement(3);
+                Debug.Log("Botão 3");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Op3.GetComponent<Renderer>().material.color = Color.yellow;
+                    BeginMovement(3);
+                }
+                    
             }
             if (hit.collider.gameObject == Op4)
             {
-                Op4.GetComponent<Renderer>().material.color = Color.yellow;
-             
-                BeginMovement(4);
+                Debug.Log("Botão 4");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Op4.GetComponent<Renderer>().material.color = Color.yellow;
+                    BeginMovement(4);
+                }
+                   
             }
             if (hit.collider.gameObject == Op5)
             {
-                Op5.GetComponent<Renderer>().material.color = Color.yellow;
-               
-                BeginMovement(5);
+                Debug.Log("Botão 5");
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Op5.GetComponent<Renderer>().material.color = Color.yellow;
+                    BeginMovement(5);
+                }
+                    
             }
 
         }

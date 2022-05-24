@@ -7,16 +7,11 @@ public class restartScene : MonoBehaviour
 {
     void OnMouseDown()
     {
-       
-
             SceneManager.LoadScene("Sala1");
             Debug.Log("Restart");
             
-      
-            
-
     }
       
-    }
+   }
 
 

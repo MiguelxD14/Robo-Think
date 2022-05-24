@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class SistemaFps : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform mao;
+    public GameObject bloco;
+
+    void OnMouseDown()
     {
-        
+        if (Input.GetMouseButton(0))
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            bloco.transform.position = mao.transform.position;
+            bloco.transform.rotation = mao.transform.rotation;
+            bloco.transform.SetParent(mao);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void OnMouseUp()
+        {
+            bloco.transform.parent = null;
+            GetComponent<Rigidbody>().isKinematic = false;
+        }
+
     }
-}
+
+
+
+
+    
