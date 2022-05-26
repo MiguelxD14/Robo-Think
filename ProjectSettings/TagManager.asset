@@ -13,6 +13,7 @@ TagManager:
   - Bloco de comando
   - Id
   - canGrab
+  - slot
   layers:
   - Default
   - TransparentFX

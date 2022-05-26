@@ -11,10 +11,10 @@ public class SistemaFps : MonoBehaviour
 
     bool canGrab;
 
-    private void Update()
+    public void Update()
     {
+        // No update basicamente temos a verificação do paradeiro do bloco, se o jogador está ou não com ele, e há indicação dos botões para cada ação.
         CheckGrab();
-
         if (canGrab)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -25,24 +25,23 @@ public class SistemaFps : MonoBehaviour
                 Pegar();
             }
         }
-
         if (blocoAtual != null)
         {
             if (Input.GetKeyDown(KeyCode.Q))
             {
                 Soltar();
-
             }
         }
 
     }
-        private void CheckGrab()
+        public void CheckGrab()
         {
+        // Checa se é possivel ou não pegar o bloco.
             RaycastHit hit;
 
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
             {
-                if (hit.transform.tag == "canGrab")
+                if (hit.transform.tag == "Bloco de comando")
                 {
                     Debug.Log("Pegue o bloco");
                     canGrab = true;
@@ -52,12 +51,12 @@ public class SistemaFps : MonoBehaviour
             else
             {
                 canGrab = false;
-
             }
         }
  
-    private void Pegar()
+    public void Pegar()
     {
+        //Responsavel por pegar o  bloco
         blocoAtual = bloco;
         blocoAtual.transform.position = mao.position;
         blocoAtual.transform.parent = mao;
@@ -65,12 +64,13 @@ public class SistemaFps : MonoBehaviour
         blocoAtual.GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    private void Soltar()
+    public void Soltar()
     {
+        //Responsavel por soltar o bloco
         blocoAtual = bloco;
         blocoAtual.transform.parent = null;
         blocoAtual.GetComponent<Rigidbody>().isKinematic = false;
-        blocoAtual = null;
+      //blocoAtual = null;
 
     }
 }
