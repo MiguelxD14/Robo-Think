@@ -703,6 +703,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -3410185793394415013, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 585220623989814957, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
       propertyPath: m_Name
@@ -831,7 +836,7 @@ GameObject:
   - component: {fileID: 442336111}
   m_Layer: 0
   m_Name: Hand
-  m_TagString: Untagged
+  m_TagString: mao
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3382,6 +3387,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0474658, y: 0.29640114, z: 0.08818751}
   m_Center: {x: 0.02373296, y: 0.016507087, z: -0.019439552}
+--- !u!114 &1996248419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996248415}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5dd85d6ec30bc47a0c7d279d9cc423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Op1: {fileID: 1669996406}
+  Op2: {fileID: 530493786}
+  Op3: {fileID: 945412421}
+  Op4: {fileID: 1764964415}
+  Op5: {fileID: 1987766640}
+  isSelected: 0
+  speed: 1
+  rayLength: 5
+  condition: {fileID: 1950313874}
 --- !u!1001 &2090455607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4173,8 +4199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b8c84d3b5f3c4ca01deeb818d3e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Trix: {fileID: 777056491}
-  botControl: {fileID: 777056496}
+  botaoExec: {fileID: 0}
 --- !u!23 &1079662025226651077
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7587,6 +7612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d97959f91d5c94d84147a70cf23ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mao: {fileID: 0}
   slot1: {fileID: 1971915880}
   slot2: {fileID: 24401917}
   slot3: {fileID: 1347613779}
@@ -7598,6 +7624,7 @@ MonoBehaviour:
   rayLength: 15
   podeAtrelar: 0
   estaAtrelado: 0
+  estaNaMao: 0
 --- !u!65 &7209663661760524702
 BoxCollider:
   m_ObjectHideFlags: 0

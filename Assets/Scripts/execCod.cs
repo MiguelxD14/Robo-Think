@@ -4,20 +4,32 @@ using UnityEngine;
 
 public class execCod : MonoBehaviour
 {
-    public GameObject Trix;
-    public botControl botControl;
+    GameObject tela;
+    GameObject slots;
+    GameObject blocoMov;
+    public GameObject botaoExec;
 
-    private void Start()
+
+
+    public void Start()
     {
-        botControl.GetComponent<botControl>().isSelected = false;
+        slots = GameObject.FindGameObjectWithTag("slot");
+        blocoMov = GameObject.FindGameObjectWithTag("Bloco de comando");
     }
-    void OnMouseDown()
+    public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+      if(slots.transform.parent != null)
         {
-           botControl.isSelected = true;
-           Debug.Log("Executar codigo");
+            Executar();
+        }
+    }
+
+    public void Executar()
+    {
+        if(blocoMov.transform.parent == slots.transform.parent)
+        {
+
         }
 
-    }
+    }  
 }

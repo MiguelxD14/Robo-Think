@@ -32,7 +32,6 @@ public class SistemaFps : MonoBehaviour
                 Soltar();
             }
         }
-
     }
         public void CheckGrab()
         {
@@ -71,7 +70,6 @@ public class SistemaFps : MonoBehaviour
         blocoAtual.transform.parent = null;
         blocoAtual.GetComponent<Rigidbody>().isKinematic = false;
       //blocoAtual = null;
-
     }
 }
     

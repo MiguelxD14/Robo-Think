@@ -5,12 +5,16 @@ using UnityEngine;
 public class atrelar : MonoBehaviour
 {
     GameObject player;
+    public GameObject mao;
     public GameObject slot1, slot2,slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject slot;
     GameObject bloco;
     public float rayLength;
     public bool podeAtrelar;
     public bool estaAtrelado;
+    public bool estaNaMao;
+
+
 
     public void Start()
     {
@@ -19,6 +23,7 @@ public class atrelar : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
         bloco.transform.parent = null;
+        mao = GameObject.FindGameObjectWithTag("mao");
     }
     public void Update()
     {
@@ -28,7 +33,6 @@ public class atrelar : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, rayLength))
         {
-            //slot1
             if (hit.collider.gameObject == slot1)
             {
                 Debug.Log(gameObject.name);
@@ -145,7 +149,7 @@ public class atrelar : MonoBehaviour
     public void Checar()
     {
     //Checa se é possivel ou não atrelar o bloco, analisando se o espaço selecionado está ou não vazio.
-      if(bloco.transform.parent==null)
+      if(bloco.transform.parent== null)
         {
             estaAtrelado = false;
             if(bloco.transform.parent == slot.transform.parent)
@@ -189,7 +193,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar3()
     {
-        //Slot2
+        //Slot3
         bloco.transform.position = slot3.transform.position;
         bloco.transform.rotation = slot3.transform.rotation;
         bloco.transform.parent = slot3.transform;
@@ -198,7 +202,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar4()
     {
-        //Slot2
+        //Slot4
         bloco.transform.position = slot4.transform.position;
         bloco.transform.rotation = slot4.transform.rotation;
         bloco.transform.parent = slot4.transform;
@@ -207,7 +211,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar5()
     {
-        //Slot2
+        //Slot5
         bloco.transform.position = slot5.transform.position;
         bloco.transform.rotation = slot5.transform.rotation;
         bloco.transform.parent = slot5.transform;
@@ -216,7 +220,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar6()
     {
-        //Slot2
+        //Slot6
         bloco.transform.position = slot6.transform.position;
         bloco.transform.rotation = slot6.transform.rotation;
         bloco.transform.parent = slot6.transform;
@@ -225,7 +229,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar7()
     {
-        //Slot2
+        //Slot7
         bloco.transform.position = slot7.transform.position;
         bloco.transform.rotation = slot7.transform.rotation;
         bloco.transform.parent = slot7.transform;
@@ -234,7 +238,7 @@ public class atrelar : MonoBehaviour
     }
     public void Atrelar8()
     {
-        //Slot2
+        //Slot8
         bloco.transform.position = slot8.transform.position;
         bloco.transform.rotation = slot8.transform.rotation;
         bloco.transform.parent = slot8.transform;
