@@ -179,6 +179,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot1.transform.rotation;
         bloco.transform.parent = slot1.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
+        ChecarSlots();
     }
     public void Atrelar2()
     {
@@ -187,7 +188,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot2.transform.rotation;
         bloco.transform.parent = slot2.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar3()
     {
@@ -196,7 +197,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot3.transform.rotation;
         bloco.transform.parent = slot3.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar4()
     {
@@ -205,7 +206,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot4.transform.rotation;
         bloco.transform.parent = slot4.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar5()
     {
@@ -214,7 +215,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot5.transform.rotation;
         bloco.transform.parent = slot5.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar6()
     {
@@ -223,7 +224,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot6.transform.rotation;
         bloco.transform.parent = slot6.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar7()
     {
@@ -232,7 +233,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot7.transform.rotation;
         bloco.transform.parent = slot7.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Atrelar8()
     {
@@ -241,7 +242,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.rotation = slot8.transform.rotation;
         bloco.transform.parent = slot8.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
-
+        ChecarSlots();
     }
     public void Recuperar()
     {
@@ -255,9 +256,66 @@ public class atrelar : MonoBehaviour
     {
         if(bloco.transform.parent == slot1.transform)
         {
-           
+            Debug.Log("O bloco está no slot 1");
 
         }
+        else
+        if (bloco.transform.parent == slot2.transform)
+        {
+            Debug.Log("O bloco está no slot 2");
+
+        }
+        else
+        if (bloco.transform.parent == slot3.transform)
+        {
+            Debug.Log("O bloco está no slot 3");
+
+        }
+        else
+        if (bloco.transform.parent == slot4.transform)
+        {
+            Debug.Log("O bloco está no slot 4");
+
+        }
+        else
+        if (bloco.transform.parent == slot5.transform)
+        {
+            Debug.Log("O bloco está no slot 5");
+
+        }
+        else
+        if (bloco.transform.parent == slot5.transform)
+        {
+            Debug.Log("O bloco está no slot 5");
+
+        }
+        else
+        if (bloco.transform.parent == slot6.transform)
+        {
+            Debug.Log("O bloco está no slot 6");
+
+        }
+        else
+        if (bloco.transform.parent == slot7.transform)
+        {
+            Debug.Log("O bloco está no slot 7");
+
+        }
+        else
+        if (bloco.transform.parent == slot8.transform)
+        {
+            Debug.Log("O bloco está no slot 8");
+
+        }
+
+
+
+
+
+
+
+
+
     }
 
 }
