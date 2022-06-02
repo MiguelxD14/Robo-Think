@@ -14,6 +14,9 @@ public class atrelar : MonoBehaviour
     public bool estaAtrelado;
     public bool estaNaMao;
 
+    public botControl linkBot;
+    public GameObject botaoExecutar;
+
 
     public void Start()
     {
@@ -23,6 +26,7 @@ public class atrelar : MonoBehaviour
         slot = GameObject.FindGameObjectWithTag("slot");
         bloco.transform.parent = null;
         mao = GameObject.FindGameObjectWithTag("mao");
+        
     }
     public void Update()
     {
@@ -252,7 +256,6 @@ public class atrelar : MonoBehaviour
    
     }
 
-
     // Responsavel por checar se o bloco de comando está atrelado ao slot selecionado, ou seja, se é um parent
     public void ChecarSlots()
     {
@@ -310,12 +313,27 @@ public class atrelar : MonoBehaviour
 
         }
 
+    }
 
+    public void Ativar()
+    {
+        Debug.Log("Ativando");
+        RaycastHit hit;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Clique no botão funciona");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, rayLength))
+            {
+                if (hit.collider.gameObject == botaoExecutar)
+                {
+                    Debug.Log("Cliquei no botão");
+                    linkBot.isSelected = true;
 
+                }
+            }
 
-
-
-
+        }
 
 
     }

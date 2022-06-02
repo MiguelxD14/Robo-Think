@@ -13,7 +13,6 @@ public class botControl : MonoBehaviour
     public int opc;
 
 
-    public GameObject botaoExecutar;
 
     float distance;
     bool moving = false;
@@ -68,17 +67,13 @@ public class botControl : MonoBehaviour
                 }
 
             }
-            #endregion
-           
-
-            
+            #endregion  
 
         }
         // sistema de opções
         if (opc != 0)
         {
             Debug.Log("Opc funciona");
-            Ativar();
             if (isSelected == true)
             {
                 Debug.Log("is selected funciona");
@@ -119,7 +114,6 @@ public class botControl : MonoBehaviour
             //pega a posição até onde o robô vai andar
             targetPoint = condition.waypoint.position;
         }
-
     }
 
     public void Move()
@@ -147,28 +141,5 @@ public class botControl : MonoBehaviour
                 //Move();
             }
         }
-    }
-
-    public void Ativar()
-    {
-        Debug.Log("Ativando");
-        RaycastHit hit;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Clique no botão funciona");
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength))
-            {
-                if (hit.collider.gameObject == botaoExecutar)
-                {
-                        Debug.Log("Cliquei no botão");
-                        isSelected = true;
-                    
-                }
-            }
-
-        }
-            
-       
     }
 }
