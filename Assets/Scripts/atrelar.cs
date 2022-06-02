@@ -252,6 +252,8 @@ public class atrelar : MonoBehaviour
    
     }
 
+
+    // Responsavel por checar se o bloco de comando está atrelado ao slot selecionado, ou seja, se é um parent
     public void ChecarSlots()
     {
         if(bloco.transform.parent == slot1.transform)
