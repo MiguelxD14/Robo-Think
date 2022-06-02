@@ -1369,7 +1369,6 @@ MonoBehaviour:
   speed: 1
   rayLength: 5
   opc: 0
-  botaoExecutar: {fileID: 1051725168282182460}
   condition: {fileID: 1950313874}
 --- !u!1 &812275359
 GameObject:
@@ -7575,6 +7574,8 @@ MonoBehaviour:
   podeAtrelar: 0
   estaAtrelado: 0
   estaNaMao: 0
+  linkBot: {fileID: 777056496}
+  botaoExecutar: {fileID: 1051725168282182460}
 --- !u!65 &7209663661760524702
 BoxCollider:
   m_ObjectHideFlags: 0
