@@ -15,7 +15,6 @@ public class atrelar : MonoBehaviour
     public bool estaNaMao;
 
 
-
     public void Start()
     {
     // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situações e salas do projeto.
@@ -149,7 +148,7 @@ public class atrelar : MonoBehaviour
     public void Checar()
     {
     //Checa se é possivel ou não atrelar o bloco, analisando se o espaço selecionado está ou não vazio.
-      if(bloco.transform.parent== null)
+      if(bloco.transform.parent == null)
         {
             estaAtrelado = false;
             if(bloco.transform.parent == slot.transform.parent)
@@ -159,18 +158,17 @@ public class atrelar : MonoBehaviour
         }
         
         // Slot1
-        if (estaAtrelado == true)
+        if (slot1 && estaAtrelado == true)
         {
             podeAtrelar = false;
             Debug.Log("Não é possivel atrelar no slot");
         }
 
-        if (estaAtrelado == false)
+        if (slot1 && estaAtrelado == false)
         {
             podeAtrelar = true;
             Debug.Log("É possivel atrelar no slot");
         }
-
     }
 
     public void Atrelar1()
@@ -245,8 +243,6 @@ public class atrelar : MonoBehaviour
         bloco.GetComponent<Rigidbody>().useGravity = false;
 
     }
-
-
     public void Recuperar()
     {
         bloco.transform.parent = null;
@@ -254,6 +250,16 @@ public class atrelar : MonoBehaviour
         player.GetComponent<SistemaFps>().Pegar();
    
     }
+
+    public void ChecarSlots()
+    {
+        if(bloco.transform.parent == slot1.transform)
+        {
+           
+
+        }
+    }
+
 }
 
 

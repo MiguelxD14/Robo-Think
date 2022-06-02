@@ -10,6 +10,11 @@ public class botControl : MonoBehaviour
     public float speed = 2.0f;
     public float rayLength;
 
+    public int opc;
+
+
+    public GameObject botaoExecutar;
+
     float distance;
     bool moving = false;
     int moveCount = 0;
@@ -22,72 +27,65 @@ public class botControl : MonoBehaviour
     Animator animator;
     private void Start()
     {
+        isSelected = false;
         animator = GetComponent<Animator>();
     }
-    void Update()
+    public void Update()
     {
         #region codigo do clique
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit, rayLength))
+        if (Input.GetMouseButtonDown(0))
         {
-            if (hit.collider.gameObject == Op1)
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, rayLength))
             {
-               Debug.Log("Botão 1");
-                if(Input.GetMouseButtonDown(0))
+                Debug.Log(hit.collider.gameObject.name);
+                if (hit.collider.gameObject == Op1)
                 {
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    BeginMovement(1);
+                    opc = 1; 
                 }
-              
-            }
-            Debug.Log(hit.collider.gameObject.name);
-            
-            if (hit.collider.gameObject == Op2)
-            {
-                Debug.Log("Botão 2");
-                if (Input.GetMouseButtonDown(0))
+
+                if (hit.collider.gameObject == Op2)
                 {
                     Op2.GetComponent<Renderer>().material.color = Color.yellow;
-                    BeginMovement(2);
+                    opc = 2;
                 }
-                               
-            }
-            if (hit.collider.gameObject == Op3)
-            {
-                Debug.Log("Botão 3");
-                if (Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject == Op3)
                 {
                     Op3.GetComponent<Renderer>().material.color = Color.yellow;
-                    BeginMovement(3);
+                    opc = 3;
                 }
-                    
-            }
-            if (hit.collider.gameObject == Op4)
-            {
-                Debug.Log("Botão 4");
-                if (Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject == Op4)
                 {
                     Op4.GetComponent<Renderer>().material.color = Color.yellow;
-                    BeginMovement(4);
+                    opc = 4;
                 }
-                   
-            }
-            if (hit.collider.gameObject == Op5)
-            {
-                Debug.Log("Botão 5");
-                if (Input.GetMouseButtonDown(0))
+                if (hit.collider.gameObject == Op5)
                 {
                     Op5.GetComponent<Renderer>().material.color = Color.yellow;
-                    BeginMovement(5);
+                    opc = 5;
                 }
-                    
+
             }
+            #endregion
+           
+
+            
 
         }
-        #endregion
-
+        // sistema de opções
+        if (opc != 0)
+        {
+            Debug.Log("Opc funciona");
+            Ativar();
+            if (isSelected == true)
+            {
+                Debug.Log("is selected funciona");
+                BeginMovement(opc);
+                opc = 0;
+            }
+        }
 
 
         //verifica se o piso na frente do robô é andável
@@ -98,6 +96,7 @@ public class botControl : MonoBehaviour
         {
             if (moving)
             {
+                Debug.Log("moving");
                 Move();
             }
         }
@@ -107,10 +106,12 @@ public class botControl : MonoBehaviour
             moving = false;
             moveCount = 0;
         }
-    }
 
+    }
+    
     public void BeginMovement(int count)
     {
+        Debug.Log("Begin Mov funciona");
         if (canMove)
         {
             moving = true;
@@ -118,7 +119,7 @@ public class botControl : MonoBehaviour
             //pega a posição até onde o robô vai andar
             targetPoint = condition.waypoint.position;
         }
-        
+
     }
 
     public void Move()
@@ -146,5 +147,28 @@ public class botControl : MonoBehaviour
                 //Move();
             }
         }
+    }
+
+    public void Ativar()
+    {
+        Debug.Log("Ativando");
+        RaycastHit hit;
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("Clique no botão funciona");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, rayLength))
+            {
+                if (hit.collider.gameObject == botaoExecutar)
+                {
+                        Debug.Log("Cliquei no botão");
+                        isSelected = true;
+                    
+                }
+            }
+
+        }
+            
+       
     }
 }

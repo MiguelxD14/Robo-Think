@@ -12,7 +12,7 @@ public class condMov : MonoBehaviour
         if (collision.gameObject.tag == "Anda")
         {
 
-            Debug.Log("É possivel se mover");
+           // Debug.Log("É possivel se mover");
             canMove = true;
             waypoint = collision.gameObject.transform;
             //Trix.GetComponent<botControl>().enabled = true;
@@ -21,7 +21,7 @@ public class condMov : MonoBehaviour
 
         if (collision.gameObject.tag != "Anda")
         {
-            Debug.Log("Não é possivel se mover");
+          //  Debug.Log("Não é possivel se mover");
             canMove = false;
             //Trix.GetComponent<botControl>().enabled = false;
 

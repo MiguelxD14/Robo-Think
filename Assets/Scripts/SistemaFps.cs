@@ -42,7 +42,7 @@ public class SistemaFps : MonoBehaviour
             {
                 if (hit.transform.tag == "Bloco de comando")
                 {
-                    Debug.Log("Pegue o bloco");
+                   // Debug.Log("Pegue o bloco");
                     canGrab = true;
                     bloco = hit.transform.gameObject;
                 }

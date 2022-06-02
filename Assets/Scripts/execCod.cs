@@ -9,27 +9,24 @@ public class execCod : MonoBehaviour
     GameObject blocoMov;
     public GameObject botaoExec;
 
-
-
     public void Start()
     {
         slots = GameObject.FindGameObjectWithTag("slot");
         blocoMov = GameObject.FindGameObjectWithTag("Bloco de comando");
     }
-    public void Update()
+
+    public void OnMouseDown()
     {
-      if(slots.transform.parent != null)
+
+        if (Input.GetMouseButtonDown(0))
         {
-            Executar();
+            Debug.Log("Executando");
+
         }
+
     }
 
-    public void Executar()
-    {
-        if(blocoMov.transform.parent == slots.transform.parent)
-        {
+    }
 
-        }
+  
 
-    }  
-}
