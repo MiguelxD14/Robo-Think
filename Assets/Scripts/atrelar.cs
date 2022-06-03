@@ -5,7 +5,6 @@ using UnityEngine;
 public class atrelar : MonoBehaviour
 {
     GameObject player;
-    public GameObject mao;
     public GameObject slot1, slot2,slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject slot;
     GameObject bloco;
@@ -25,7 +24,6 @@ public class atrelar : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
         bloco.transform.parent = null;
-        mao = GameObject.FindGameObjectWithTag("mao");
         
     }
     public void Update()
