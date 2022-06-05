@@ -7,12 +7,11 @@ public class botControl : MonoBehaviour
     public GameObject Op1, Op2, Op3, Op4, Op5;
     public bool isSelected;
     GameObject trix;
+    GameObject bloco;
     public float speed = 2.0f;
     public float rayLength;
 
     public int opc;
-
-
 
     float distance;
     bool moving = false;
@@ -26,13 +25,14 @@ public class botControl : MonoBehaviour
     Animator animator;
     private void Start()
     {
-        isSelected = false;
+        bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
         animator = GetComponent<Animator>();
     }
     public void Update()
     {
         #region codigo do clique
         RaycastHit hit;
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -42,7 +42,7 @@ public class botControl : MonoBehaviour
                 if (hit.collider.gameObject == Op1)
                 {
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 1; 
+                    opc = 1;
                 }
 
                 if (hit.collider.gameObject == Op2)
@@ -67,7 +67,7 @@ public class botControl : MonoBehaviour
                 }
 
             }
-            #endregion  
+            #endregion
 
         }
         // sistema de opções
@@ -81,7 +81,6 @@ public class botControl : MonoBehaviour
                 opc = 0;
             }
         }
-
 
         //verifica se o piso na frente do robô é andável
         canMove = condition.canMove;
@@ -103,7 +102,7 @@ public class botControl : MonoBehaviour
         }
 
     }
-    
+
     public void BeginMovement(int count)
     {
         Debug.Log("Begin Mov funciona");
@@ -142,4 +141,5 @@ public class botControl : MonoBehaviour
             }
         }
     }
+
 }

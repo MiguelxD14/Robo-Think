@@ -12,6 +12,7 @@ public class atrelar : MonoBehaviour
     public bool podeAtrelar;
     public bool estaAtrelado;
     public bool estaNaMao;
+    public bool podeExecutar;
 
     public botControl linkBot;
     public GameObject botaoExecutar;
@@ -23,8 +24,7 @@ public class atrelar : MonoBehaviour
         bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
-        bloco.transform.parent = null;
-        
+        podeExecutar = false;
     }
     public void Update()
     {
@@ -145,7 +145,9 @@ public class atrelar : MonoBehaviour
                     Recuperar();
                 }
             }
+
         }
+        Ativar();
     }
     public void Checar()
     {
@@ -182,6 +184,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot1.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+       
     }
     public void Atrelar2()
     {
@@ -191,6 +194,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot2.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+        
     }
     public void Atrelar3()
     {
@@ -200,6 +204,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot3.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+        
     }
     public void Atrelar4()
     {
@@ -209,6 +214,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot4.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+        
     }
     public void Atrelar5()
     {
@@ -218,6 +224,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot5.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+       
     }
     public void Atrelar6()
     {
@@ -227,6 +234,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot6.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+       
     }
     public void Atrelar7()
     {
@@ -236,6 +244,7 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot7.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+       
     }
     public void Atrelar8()
     {
@@ -245,69 +254,76 @@ public class atrelar : MonoBehaviour
         bloco.transform.parent = slot8.transform;
         bloco.GetComponent<Rigidbody>().useGravity = false;
         ChecarSlots();
+        
     }
     public void Recuperar()
     {
         bloco.transform.parent = null;
         bloco.GetComponent<Rigidbody>().useGravity = true;
         player.GetComponent<SistemaFps>().Pegar();
-   
+
     }
 
     // Responsavel por checar se o bloco de comando está atrelado ao slot selecionado, ou seja, se é um parent
     public void ChecarSlots()
     {
+        if(bloco.transform.parent == null)
+        {
+            podeExecutar = false;
+        }
+        else
         if(bloco.transform.parent == slot1.transform)
         {
             Debug.Log("O bloco está no slot 1");
-
+            podeExecutar = true;
+            Ativar();
         }
         else
         if (bloco.transform.parent == slot2.transform)
         {
             Debug.Log("O bloco está no slot 2");
+            podeExecutar = true;
 
         }
         else
         if (bloco.transform.parent == slot3.transform)
         {
             Debug.Log("O bloco está no slot 3");
+            podeExecutar = true;
 
         }
         else
         if (bloco.transform.parent == slot4.transform)
         {
             Debug.Log("O bloco está no slot 4");
+            podeExecutar = true;
 
         }
         else
         if (bloco.transform.parent == slot5.transform)
         {
             Debug.Log("O bloco está no slot 5");
-
-        }
-        else
-        if (bloco.transform.parent == slot5.transform)
-        {
-            Debug.Log("O bloco está no slot 5");
+            podeExecutar = true;
 
         }
         else
         if (bloco.transform.parent == slot6.transform)
         {
             Debug.Log("O bloco está no slot 6");
+            podeExecutar = true;
 
         }
         else
         if (bloco.transform.parent == slot7.transform)
         {
             Debug.Log("O bloco está no slot 7");
-
+            podeExecutar = true;
         }
         else
         if (bloco.transform.parent == slot8.transform)
         {
             Debug.Log("O bloco está no slot 8");
+            podeExecutar = true;
 
         }
 
@@ -315,7 +331,6 @@ public class atrelar : MonoBehaviour
 
     public void Ativar()
     {
-        Debug.Log("Ativando");
         RaycastHit hit;
         if (Input.GetMouseButtonDown(0))
         {
@@ -327,13 +342,11 @@ public class atrelar : MonoBehaviour
                 {
                     Debug.Log("Cliquei no botão");
                     linkBot.isSelected = true;
-
+                   
                 }
             }
 
         }
-
-
     }
 
 }

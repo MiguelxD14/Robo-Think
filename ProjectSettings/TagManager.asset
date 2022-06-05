@@ -16,6 +16,7 @@ TagManager:
   - slot
   - mao
   - Tela de comando
+  - opMov
   layers:
   - Default
   - TransparentFX

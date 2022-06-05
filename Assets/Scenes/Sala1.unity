@@ -618,6 +618,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -9203324390398772745, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -9041267756353341082, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
       propertyPath: m_Name
@@ -627,6 +632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -9041267756353341082, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
@@ -693,6 +703,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -5754060345647867467, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -5569043992460113364, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
       propertyPath: m_Name
@@ -702,6 +717,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5569043992460113364, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: -3410185793394415013, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
@@ -717,6 +737,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 585220623989814957, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
@@ -7542,6 +7567,7 @@ GameObject:
   - component: {fileID: 3852340865441581862}
   - component: {fileID: 7209663661760524701}
   - component: {fileID: 7209663661760524702}
+  - component: {fileID: 7209663661760524703}
   m_Layer: 0
   m_Name: Tela de comando
   m_TagString: Tela de comando
@@ -7573,6 +7599,7 @@ MonoBehaviour:
   podeAtrelar: 0
   estaAtrelado: 0
   estaNaMao: 0
+  podeExecutar: 0
   linkBot: {fileID: 777056496}
   botaoExecutar: {fileID: 1051725168282182460}
 --- !u!65 &7209663661760524702
@@ -7588,6 +7615,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6766479, y: 0.8720162, z: 0.03696412}
   m_Center: {x: -0.13964278, y: 0.41377836, z: 0.068951175}
+--- !u!114 &7209663661760524703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209663661760524700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d21518e601c91419c658f433d72d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slots:
+  - {fileID: 1971915880}
+  - {fileID: 24401917}
+  - {fileID: 1347613779}
+  - {fileID: 1502114981}
+  - {fileID: 1742270771}
+  - {fileID: 1561032939}
+  - {fileID: 645639999}
+  - {fileID: 558981699}
+  executando: 0
+  executar: {fileID: 7209663661760524701}
 --- !u!4 &7316210180736220963
 Transform:
   m_ObjectHideFlags: 0
