@@ -275,55 +275,55 @@ public class atrelar : MonoBehaviour
         if(bloco.transform.parent == slot1.transform)
         {
             Debug.Log("O bloco está no slot 1");
-            podeExecutar = true;
+           
             Ativar();
         }
         else
         if (bloco.transform.parent == slot2.transform)
         {
             Debug.Log("O bloco está no slot 2");
-            podeExecutar = true;
+            
 
         }
         else
         if (bloco.transform.parent == slot3.transform)
         {
             Debug.Log("O bloco está no slot 3");
-            podeExecutar = true;
+           
 
         }
         else
         if (bloco.transform.parent == slot4.transform)
         {
             Debug.Log("O bloco está no slot 4");
-            podeExecutar = true;
+            
 
         }
         else
         if (bloco.transform.parent == slot5.transform)
         {
             Debug.Log("O bloco está no slot 5");
-            podeExecutar = true;
+            
 
         }
         else
         if (bloco.transform.parent == slot6.transform)
         {
             Debug.Log("O bloco está no slot 6");
-            podeExecutar = true;
+            
 
         }
         else
         if (bloco.transform.parent == slot7.transform)
         {
             Debug.Log("O bloco está no slot 7");
-            podeExecutar = true;
+         
         }
         else
         if (bloco.transform.parent == slot8.transform)
         {
             Debug.Log("O bloco está no slot 8");
-            podeExecutar = true;
+          
 
         }
 
@@ -340,6 +340,7 @@ public class atrelar : MonoBehaviour
             {
                 if (hit.collider.gameObject == botaoExecutar)
                 {
+                    podeExecutar = true;
                     Debug.Log("Cliquei no botão");
                     linkBot.isSelected = true;
                    

@@ -21,11 +21,13 @@ public class ChecarSlots : MonoBehaviour
             Debug.Log("Iniciar checagem");
             for(int i = 0; i < slots.Length; i++)
             {
-                if (slots[i].transform.parent == null)
+                Debug.Log(slots[i].name);
+                if (slots[i].transform.GetChild(i) == null)
                 {
-                    Debug.Log("Nada acontece");
+                    Debug.Log("Erro");
+                    break;
                 }
-
+               
             }
             
         }
