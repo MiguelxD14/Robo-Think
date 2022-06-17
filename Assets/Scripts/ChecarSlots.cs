@@ -22,12 +22,18 @@ public class ChecarSlots : MonoBehaviour
             for(int i = 0; i < slots.Length; i++)
             {
                 Debug.Log(slots[i].name);
-                if (slots[i].transform.GetChild(i) == null)
+                if (slots[i].transform.childCount <= 0)
                 {
                     Debug.Log("Erro");
+                    executar.podeExecutar = false;
                     break;
                 }
-               
+                else
+                {
+                    Debug.Log("Teste de função");
+                }
+                 
+                
             }
             
         }
