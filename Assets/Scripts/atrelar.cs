@@ -37,7 +37,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot1)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+               // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar1();
@@ -51,7 +51,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot2)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+              //  Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar2();
@@ -65,7 +65,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot3)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+               // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar3();
@@ -79,7 +79,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot4)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+              //  Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar4();
@@ -93,7 +93,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot5)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+               // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar5();
@@ -107,7 +107,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot6)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+               // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar6();
@@ -121,7 +121,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot7)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+               // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar7();
@@ -135,7 +135,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot8)
             {
                 Debug.Log(gameObject.name);
-                Checar();
+                //Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar8();
@@ -147,33 +147,22 @@ public class atrelar : MonoBehaviour
             }
 
         }
-        Ativar();
-    }
-    public void Checar()
-    {
-    //Checa se é possivel ou não atrelar o bloco, analisando se o espaço selecionado está ou não vazio.
-      if(bloco.transform.parent == null)
-        {
-            estaAtrelado = false;
-            if(bloco.transform.parent == slot.transform.parent)
-            {
-                estaAtrelado = true;
-            }
-        }
         
-        // Slot1
-        if (slot1 && estaAtrelado == true)
-        {
-            podeAtrelar = false;
-            Debug.Log("Não é possivel atrelar no slot");
-        }
-
-        if (slot1 && estaAtrelado == false)
-        {
-            podeAtrelar = true;
-            Debug.Log("É possivel atrelar no slot");
-        }
+            Ativar();
+        
     }
+    //public void Checar()
+    //{
+    ////Checa se é possivel ou não atrelar o bloco, analisando se o espaço selecionado está ou não vazio.
+    //  if(bloco.transform.parent == null)
+    //    {
+    //        estaAtrelado = false;
+    //        if(bloco.transform.parent == slot.transform.parent)
+    //        {
+    //            estaAtrelado = true;
+    //        }
+    //    }
+    //}
 
     public void Atrelar1()
     {
@@ -274,80 +263,62 @@ public class atrelar : MonoBehaviour
         else
         if(bloco.transform.parent == slot1.transform)
         {
-            Debug.Log("O bloco está no slot 1");
            
             Ativar();
         }
         else
         if (bloco.transform.parent == slot2.transform)
         {
-            Debug.Log("O bloco está no slot 2");
-            
-
+         
         }
         else
         if (bloco.transform.parent == slot3.transform)
         {
-            Debug.Log("O bloco está no slot 3");
-           
-
+         
         }
         else
         if (bloco.transform.parent == slot4.transform)
         {
-            Debug.Log("O bloco está no slot 4");
-            
-
+          
         }
         else
         if (bloco.transform.parent == slot5.transform)
         {
-            Debug.Log("O bloco está no slot 5");
-            
-
+         
         }
         else
         if (bloco.transform.parent == slot6.transform)
         {
-            Debug.Log("O bloco está no slot 6");
-            
-
+          
         }
         else
         if (bloco.transform.parent == slot7.transform)
         {
-            Debug.Log("O bloco está no slot 7");
-         
+          
         }
         else
         if (bloco.transform.parent == slot8.transform)
         {
-            Debug.Log("O bloco está no slot 8");
-          
-
+           
         }
 
     }
 
     public void Ativar()
     {
-        RaycastHit hit;
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Clique no botão funciona");
+      RaycastHit hit;
+       if (Input.GetMouseButtonDown(0))
+          {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength))
-            {
-                if (hit.collider.gameObject == botaoExecutar)
+                if (Physics.Raycast(ray, out hit, rayLength))
                 {
-                    podeExecutar = true;
-                    Debug.Log("Cliquei no botão");
-                    linkBot.isSelected = true;
-                   
+                  if (hit.collider.gameObject == botaoExecutar)
+                   {
+                     podeExecutar = true;
+                     linkBot.isSelected = true;
+                   }
                 }
             }
-
-        }
     }
 
 }

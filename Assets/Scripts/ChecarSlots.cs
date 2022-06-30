@@ -8,13 +8,14 @@ public class ChecarSlots : MonoBehaviour
     public bool executando;
     public atrelar executar;
     GameObject bloco;
+    public bool acao;
 
     private void Start()
     {
         bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
     }
 
-    void Update()
+    public void Update()
     {
         if (executar.podeExecutar == true)
         {
@@ -30,10 +31,9 @@ public class ChecarSlots : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Teste de função");
+                  
                 }
                  
-                
             }
             
         }
