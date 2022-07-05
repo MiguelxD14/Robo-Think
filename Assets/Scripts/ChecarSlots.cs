@@ -9,8 +9,9 @@ public class ChecarSlots : MonoBehaviour
     public atrelar executar;
     GameObject bloco;
     public bool acao;
+    public botControl linkBot;
 
-    private void Start()
+   public void Start()
     {
         bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
     }
@@ -25,17 +26,19 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0)
                 {
-                    Debug.Log("Erro");
                     executar.podeExecutar = false;
                     break;
                 }
                 else
                 {
-                  
-                }
-                 
-            }
-            
+                    exec();
+                }    
+            }  
         }
+    }
+
+    public void exec()
+    {
+        linkBot.isSelected = true;
     }
 }

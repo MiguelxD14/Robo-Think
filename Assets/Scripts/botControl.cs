@@ -5,7 +5,7 @@ using UnityEngine;
 public class botControl : MonoBehaviour
 {
     public GameObject Op1, Op2, Op3, Op4, Op5;
-    public bool isSelected;
+    public bool isSelected = false;
     GameObject trix;
     GameObject bloco;
     public float speed = 2.0f;
@@ -73,10 +73,8 @@ public class botControl : MonoBehaviour
         // sistema de opções
         if (opc != 0)
         {
-            Debug.Log("Opc funciona");
             if (isSelected == true)
-            {
-                Debug.Log("is selected funciona");
+            { 
                 BeginMovement(opc);
                 opc = 0;
             }
@@ -90,7 +88,6 @@ public class botControl : MonoBehaviour
         {
             if (moving)
             {
-                Debug.Log("moving");
                 Move();
             }
         }
@@ -105,7 +102,6 @@ public class botControl : MonoBehaviour
 
     public void BeginMovement(int count)
     {
-        Debug.Log("Begin Mov funciona");
         if (canMove)
         {
             moving = true;
@@ -123,13 +119,11 @@ public class botControl : MonoBehaviour
         distance = Vector3.Distance(transform.position, targetPoint);
         //define a velocidade de movimento do robô no movimento para a frente relativa à ele
         transform.position += transform.forward * speed * Time.deltaTime;
-        Debug.Log(targetPoint);
         //quandoa distancia entre ele e o ponto de destino for menor que o valor indicado ele para de andar e recalcula o movimento
         if (distance < 0.5f)
         {
             animator.SetBool("Anda", false);
             moveCount--;
-            Debug.Log(moveCount);
             if (moveCount <= 0)
             {
                 moving = false;

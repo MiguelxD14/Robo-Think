@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class atrelar : MonoBehaviour
 {
+    public GameObject slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject player;
-    public GameObject slot1, slot2,slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject slot;
     GameObject bloco;
     public float rayLength;
-    public bool podeAtrelar;
-    public bool estaAtrelado;
-    public bool estaNaMao;
     public bool podeExecutar;
-
-    public botControl linkBot;
     public GameObject botaoExecutar;
 
 
@@ -151,19 +146,6 @@ public class atrelar : MonoBehaviour
             Ativar();
         
     }
-    //public void Checar()
-    //{
-    ////Checa se é possivel ou não atrelar o bloco, analisando se o espaço selecionado está ou não vazio.
-    //  if(bloco.transform.parent == null)
-    //    {
-    //        estaAtrelado = false;
-    //        if(bloco.transform.parent == slot.transform.parent)
-    //        {
-    //            estaAtrelado = true;
-    //        }
-    //    }
-    //}
-
     public void Atrelar1()
     {
         //Codigo responsavel por atrelar o bloco a tela de comando;
@@ -312,10 +294,13 @@ public class atrelar : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, rayLength))
                 {
-                  if (hit.collider.gameObject == botaoExecutar)
+                  if (hit.collider.gameObject == botaoExecutar)// se o player clicar no botão de executar
                    {
-                     podeExecutar = true;
-                     linkBot.isSelected = true;
+                    if (bloco.transform.parent != null)// verifica se o bloco está atrelado 
+                    {
+                        podeExecutar = true;
+                    }
+                       
                    }
                 }
             }

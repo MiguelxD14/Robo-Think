@@ -14,9 +14,7 @@ public class ray : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out hit, rayLength, layerMask))
             {
-
-                Debug.Log(hit.collider.name);   
-
+                Debug.Log(hit.collider.name);
             }
         }
 
