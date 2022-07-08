@@ -8,8 +8,10 @@ public class atrelar : MonoBehaviour
     GameObject player;
     GameObject slot;
     GameObject bloco;
+    public GameObject mao;
     public float rayLength;
     public bool podeExecutar;
+    public bool podeAtrelar;
     public GameObject botaoExecutar;
 
 
@@ -20,6 +22,7 @@ public class atrelar : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
         podeExecutar = false;
+        podeAtrelar = false;
     }
     public void Update()
     {
@@ -32,7 +35,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot1)
             {
                 
-               // Checar();
+             
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar1();
@@ -46,7 +49,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot2)
             {
                 
-              //  Checar();
+             
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar2();
@@ -60,7 +63,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot3)
             {
                 
-               // Checar();
+              
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar3();
@@ -74,7 +77,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot4)
             {
                
-              //  Checar();
+             
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar4();
@@ -88,7 +91,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot5)
             {
                 
-               // Checar();
+             
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar5();
@@ -102,7 +105,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot6)
             {
                 
-               // Checar();
+              
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar6();
@@ -115,8 +118,8 @@ public class atrelar : MonoBehaviour
             //slot7
             if (hit.collider.gameObject == slot7)
             {
-                
-               // Checar();
+
+               
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar7();
@@ -129,8 +132,8 @@ public class atrelar : MonoBehaviour
             //slot8
             if (hit.collider.gameObject == slot8)
             {
-                
-                //Checar();
+
+              
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar8();
@@ -143,88 +146,120 @@ public class atrelar : MonoBehaviour
 
         }
         
-            Ativar();
+        Ativar();
         
     }
     public void Atrelar1()
     {
         //Codigo responsavel por atrelar o bloco a tela de comando;
         // Slot1
-        bloco.transform.position = slot1.transform.position;
-        bloco.transform.rotation = slot1.transform.rotation;
-        bloco.transform.parent = slot1.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot1.transform.position;
+            bloco.transform.rotation = slot1.transform.rotation;
+            bloco.transform.parent = slot1.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
+        
        
     }
     public void Atrelar2()
     {
         //Slot2
-        bloco.transform.position = slot2.transform.position;
-        bloco.transform.rotation = slot2.transform.rotation;
-        bloco.transform.parent = slot2.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
-        
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot2.transform.position;
+            bloco.transform.rotation = slot2.transform.rotation;
+            bloco.transform.parent = slot2.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
     }
     public void Atrelar3()
     {
         //Slot3
-        bloco.transform.position = slot3.transform.position;
-        bloco.transform.rotation = slot3.transform.rotation;
-        bloco.transform.parent = slot3.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot3.transform.position;
+            bloco.transform.rotation = slot3.transform.rotation;
+            bloco.transform.parent = slot3.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
         
     }
     public void Atrelar4()
     {
         //Slot4
-        bloco.transform.position = slot4.transform.position;
-        bloco.transform.rotation = slot4.transform.rotation;
-        bloco.transform.parent = slot4.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot4.transform.position;
+            bloco.transform.rotation = slot4.transform.rotation;
+            bloco.transform.parent = slot4.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
         
     }
     public void Atrelar5()
     {
         //Slot5
-        bloco.transform.position = slot5.transform.position;
-        bloco.transform.rotation = slot5.transform.rotation;
-        bloco.transform.parent = slot5.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot5.transform.position;
+            bloco.transform.rotation = slot5.transform.rotation;
+            bloco.transform.parent = slot5.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
        
     }
     public void Atrelar6()
     {
         //Slot6
-        bloco.transform.position = slot6.transform.position;
-        bloco.transform.rotation = slot6.transform.rotation;
-        bloco.transform.parent = slot6.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot6.transform.position;
+            bloco.transform.rotation = slot6.transform.rotation;
+            bloco.transform.parent = slot6.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
        
     }
     public void Atrelar7()
     {
         //Slot7
-        bloco.transform.position = slot7.transform.position;
-        bloco.transform.rotation = slot7.transform.rotation;
-        bloco.transform.parent = slot7.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot7.transform.position;
+            bloco.transform.rotation = slot7.transform.rotation;
+            bloco.transform.parent = slot7.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
        
     }
     public void Atrelar8()
     {
         //Slot8
-        bloco.transform.position = slot8.transform.position;
-        bloco.transform.rotation = slot8.transform.rotation;
-        bloco.transform.parent = slot8.transform;
-        bloco.GetComponent<Rigidbody>().useGravity = false;
-        ChecarSlots();
+        if (bloco.transform.parent == mao.transform)
+        {
+            podeAtrelar = true;
+            bloco.transform.position = slot8.transform.position;
+            bloco.transform.rotation = slot8.transform.rotation;
+            bloco.transform.parent = slot8.transform;
+            bloco.GetComponent<Rigidbody>().useGravity = false;
+            //ChecarSlots();
+        }
         
     }
     public void Recuperar()
@@ -236,55 +271,55 @@ public class atrelar : MonoBehaviour
     }
 
     // Responsavel por checar se o bloco de comando está atrelado ao slot selecionado, ou seja, se é um parent
-    public void ChecarSlots()
-    {
-        if(bloco.transform.parent == null)
-        {
-            podeExecutar = false;
-        }
-        else
-        if(bloco.transform.parent == slot1.transform)
-        {
+    //public void ChecarSlots()
+    //{
+    //    if(bloco.transform.parent == null)
+    //    {
+    //        podeExecutar = false;
+    //    }
+    //    else
+    //    if(bloco.transform.parent == slot1.transform)
+    //    {
            
-            Ativar();
-        }
-        else
-        if (bloco.transform.parent == slot2.transform)
-        {
+    //        Ativar();
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot2.transform)
+    //    {
          
-        }
-        else
-        if (bloco.transform.parent == slot3.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot3.transform)
+    //    {
          
-        }
-        else
-        if (bloco.transform.parent == slot4.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot4.transform)
+    //    {
           
-        }
-        else
-        if (bloco.transform.parent == slot5.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot5.transform)
+    //    {
          
-        }
-        else
-        if (bloco.transform.parent == slot6.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot6.transform)
+    //    {
           
-        }
-        else
-        if (bloco.transform.parent == slot7.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot7.transform)
+    //    {
           
-        }
-        else
-        if (bloco.transform.parent == slot8.transform)
-        {
+    //    }
+    //    else
+    //    if (bloco.transform.parent == slot8.transform)
+    //    {
            
-        }
+    //    }
 
-    }
+    //}
 
     public void Ativar()
     {
@@ -305,6 +340,17 @@ public class atrelar : MonoBehaviour
                 }
             }
     }
+
+    //public void Checar()
+    //{
+        
+    //    else
+    //    {
+    //        podeAtrelar = false;
+            
+    //    }
+
+    //}
 
 }
 

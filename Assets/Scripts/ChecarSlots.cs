@@ -7,6 +7,7 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
+    Renderer Rend;
 
     public void Update()
     {
@@ -16,13 +17,17 @@ public class ChecarSlots : MonoBehaviour
             for (int i = 0; i < slots.Length; i++)
             {
                 Debug.Log(slots[i].name);
-                if (slots[i] == slots[7])
+                if (slots[i].transform.childCount <= 0)
                 {
+                    Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
+                    Rend.enabled = true;
+                    Rend.material.color = Color.red;
                     executar.podeExecutar = false;
                     break;
                 }
                 if (slots[i].transform.childCount > 0)
                 {
+                    slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.blue;
                     Debug.Log("Ativar função do slot = " + slots[i].name);
                     linkBot.isSelected = true;
                 }
