@@ -38,7 +38,6 @@ public class botControl : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, rayLength))
             {
-                Debug.Log(hit.collider.gameObject.name);
                 if (hit.collider.gameObject == Op1)
                 {
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;

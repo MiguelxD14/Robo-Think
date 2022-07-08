@@ -7596,11 +7596,7 @@ MonoBehaviour:
   slot7: {fileID: 645639999}
   slot8: {fileID: 558981699}
   rayLength: 15
-  podeAtrelar: 0
-  estaAtrelado: 0
-  estaNaMao: 0
   podeExecutar: 0
-  linkBot: {fileID: 777056496}
   botaoExecutar: {fileID: 1051725168282182460}
 --- !u!65 &7209663661760524702
 BoxCollider:
@@ -7636,8 +7632,8 @@ MonoBehaviour:
   - {fileID: 1561032939}
   - {fileID: 645639999}
   - {fileID: 558981699}
-  executando: 0
   executar: {fileID: 7209663661760524701}
+  linkBot: {fileID: 777056496}
 --- !u!4 &7316210180736220963
 Transform:
   m_ObjectHideFlags: 0
