@@ -23,7 +23,7 @@ public class ChecarSlots : MonoBehaviour
                 }
                 if (slots[i].transform.childCount > 0)
                 {
-                    Debug.Log(slots[i].name + "iniciar função");
+                    Debug.Log("Ativar função do slot = " + slots[i].name);
                     linkBot.isSelected = true;
                 }
             }

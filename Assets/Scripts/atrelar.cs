@@ -31,7 +31,7 @@ public class atrelar : MonoBehaviour
         {
             if (hit.collider.gameObject == slot1)
             {
-                Debug.Log(gameObject.name);
+                
                // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -45,7 +45,7 @@ public class atrelar : MonoBehaviour
             // slot2
             if (hit.collider.gameObject == slot2)
             {
-                Debug.Log(gameObject.name);
+                
               //  Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -59,7 +59,7 @@ public class atrelar : MonoBehaviour
             //slot3
             if (hit.collider.gameObject == slot3)
             {
-                Debug.Log(gameObject.name);
+                
                // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -73,7 +73,7 @@ public class atrelar : MonoBehaviour
             //slot4
             if (hit.collider.gameObject == slot4)
             {
-                Debug.Log(gameObject.name);
+               
               //  Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -87,7 +87,7 @@ public class atrelar : MonoBehaviour
             //slot5
             if (hit.collider.gameObject == slot5)
             {
-                Debug.Log(gameObject.name);
+                
                // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -101,7 +101,7 @@ public class atrelar : MonoBehaviour
             //slot6
             if (hit.collider.gameObject == slot6)
             {
-                Debug.Log(gameObject.name);
+                
                // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -115,7 +115,7 @@ public class atrelar : MonoBehaviour
             //slot7
             if (hit.collider.gameObject == slot7)
             {
-                Debug.Log(gameObject.name);
+                
                // Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
@@ -129,7 +129,7 @@ public class atrelar : MonoBehaviour
             //slot8
             if (hit.collider.gameObject == slot8)
             {
-                Debug.Log(gameObject.name);
+                
                 //Checar();
                 if (Input.GetMouseButtonDown(0))
                 {
