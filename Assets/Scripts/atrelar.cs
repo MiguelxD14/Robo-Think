@@ -17,7 +17,7 @@ public class atrelar : MonoBehaviour
 
     public void Start()
     {
-    // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situações e salas do projeto.
+    // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situaï¿½ï¿½es e salas do projeto.
         bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
@@ -26,7 +26,7 @@ public class atrelar : MonoBehaviour
     }
     public void Update()
     {
-    //Faz a verificação baseado onde o player está olhando;
+    //Faz a verificaï¿½ï¿½o baseado onde o player estï¿½ olhando;
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -269,7 +269,7 @@ public class atrelar : MonoBehaviour
 
     }
 
-    // Responsavel por checar se o bloco de comando está atrelado ao slot selecionado, ou seja, se é um parent
+    // Responsavel por checar se o bloco de comando estï¿½ atrelado ao slot selecionado, ou seja, se ï¿½ um parent
     //public void ChecarSlots()
     //{
     //    if(bloco.transform.parent == null)
@@ -328,9 +328,9 @@ public class atrelar : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, rayLength))
                 {
-                  if (hit.collider.gameObject == botaoExecutar)// se o player clicar no botão de executar
+                  if (hit.collider.gameObject == botaoExecutar)// se o player clicar no botï¿½o de executar
                    {
-                    if (bloco.transform.parent != null)// verifica se o bloco está atrelado 
+                    if (bloco.transform.parent != null)// verifica se o bloco estï¿½ atrelado 
                     {
                         podeExecutar = true;
                     }
