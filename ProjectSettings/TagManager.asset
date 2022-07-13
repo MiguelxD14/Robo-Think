@@ -17,6 +17,9 @@ TagManager:
   - mao
   - Tela de comando
   - opMov
+  - Robo
+  - Luz
+  - Porta
   layers:
   - Default
   - TransparentFX

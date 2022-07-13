@@ -162,8 +162,7 @@ public class atrelar : MonoBehaviour
             bloco.GetComponent<Rigidbody>().useGravity = false;
             //ChecarSlots();
         }
-        
-       
+
     }
     public void Atrelar2()
     {
