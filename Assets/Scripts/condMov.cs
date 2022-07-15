@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class condMov : MonoBehaviour
 {
-    public GameObject Trix;
+    public GameObject robo;
     public bool canMove;
     public Transform waypoint;
     private void OnTriggerStay(Collider collision)
