@@ -35,7 +35,7 @@ public class atrelar : MonoBehaviour
             if (hit.collider.gameObject == slot1)
             {
                 
-             
+
                 if (Input.GetMouseButtonDown(0))
                 {
                     Atrelar1();
@@ -269,57 +269,6 @@ public class atrelar : MonoBehaviour
 
     }
 
-    // Responsavel por checar se o bloco de comando est� atrelado ao slot selecionado, ou seja, se � um parent
-    //public void ChecarSlots()
-    //{
-    //    if(bloco.transform.parent == null)
-    //    {
-    //        podeExecutar = false;
-    //    }
-    //    else
-    //    if(bloco.transform.parent == slot1.transform)
-    //    {
-           
-    //        Ativar();
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot2.transform)
-    //    {
-         
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot3.transform)
-    //    {
-         
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot4.transform)
-    //    {
-          
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot5.transform)
-    //    {
-         
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot6.transform)
-    //    {
-          
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot7.transform)
-    //    {
-          
-    //    }
-    //    else
-    //    if (bloco.transform.parent == slot8.transform)
-    //    {
-           
-    //    }
-
-    //}
-
     public void Ativar()
     {
       RaycastHit hit;
@@ -339,17 +288,6 @@ public class atrelar : MonoBehaviour
                 }
             }
     }
-
-    //public void Checar()
-    //{
-        
-    //    else
-    //    {
-    //        podeAtrelar = false;
-            
-    //    }
-
-    //}
 
 }
 

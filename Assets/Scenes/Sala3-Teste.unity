@@ -2248,10 +2248,29 @@ MonoBehaviour:
   Op4: {fileID: 262475975}
   Op5: {fileID: 262475974}
   isSelected: 0
-  speed: 2
+  speed: 1
   rayLength: 5
   opc: 0
   condition: {fileID: 1816453849}
+--- !u!95 &428097290
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428097283}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 41a07c2f3ec80364b8899b53e10e58f4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &432240275
 GameObject:
   m_ObjectHideFlags: 0
