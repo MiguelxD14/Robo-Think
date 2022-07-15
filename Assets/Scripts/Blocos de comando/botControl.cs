@@ -113,7 +113,7 @@ public class botControl : MonoBehaviour
     public void Move()
     {
         //TODO fazer mover para frente até chegar no ponto atual de movimento e setar as animações
-        animator.SetBool("Anda", true);
+       animator.SetBool("Anda", true);
         //calcula a distância entre o robô e o piso a frente dele
         distance = Vector3.Distance(transform.position, targetPoint);
         //define a velocidade de movimento do robô no movimento para a frente relativa à ele

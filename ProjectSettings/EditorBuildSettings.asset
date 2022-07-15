@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sala2-Teste.unity
     guid: 1b20d4152e2bce14f8491953e9dec547
+  - enabled: 1
+    path: Assets/Scenes/Sala3-Teste.unity
+    guid: f55d05d3cb96f694e8de48d2fea753af
+  - enabled: 1
+    path: Assets/Scenes/Sala4-Teste.unity
+    guid: efc0dc5241c375d4d95327fca818c850
   m_configObjects: {}
