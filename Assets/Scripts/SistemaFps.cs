@@ -6,14 +6,14 @@ public class SistemaFps : MonoBehaviour
 {
     public Transform mao;
     public float distance = 10f;
-    GameObject blocoAtual;
-    GameObject bloco;
+    public GameObject blocoAtual;
+    public GameObject bloco;
 
     bool canGrab;
 
     public void Update()
     {
-        // No update basicamente temos a verificação do paradeiro do bloco, se o jogador está ou não com ele, e há indicação dos botões para cada ação.
+        // No update basicamente temos a verificaï¿½ï¿½o do paradeiro do bloco, se o jogador estï¿½ ou nï¿½o com ele, e hï¿½ indicaï¿½ï¿½o dos botï¿½es para cada aï¿½ï¿½o.
         CheckGrab();
         if (canGrab)
         {
@@ -35,7 +35,7 @@ public class SistemaFps : MonoBehaviour
     }
         public void CheckGrab()
         {
-        // Checa se é possivel ou não pegar o bloco.
+        // Checa se ï¿½ possivel ou nï¿½o pegar o bloco.
             RaycastHit hit;
 
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
@@ -66,10 +66,12 @@ public class SistemaFps : MonoBehaviour
     public void Soltar()
     {
         //Responsavel por soltar o bloco
+       
         blocoAtual = bloco;
         blocoAtual.transform.parent = null;
         blocoAtual.GetComponent<Rigidbody>().isKinematic = false;
-      //blocoAtual = null;
+        blocoAtual = null;
+       
     }
 }
     

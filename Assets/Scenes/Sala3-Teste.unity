@@ -492,6 +492,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: rot_-90
       objectReference: {fileID: 0}
+    - target: {fileID: 401122468259050895, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 193b962edb45e804886dbe896fa718ee,
         type: 3}
       propertyPath: m_Name
@@ -502,10 +507,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: rot_180
       objectReference: {fileID: 0}
+    - target: {fileID: 3566207899841815972, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op3
+      objectReference: {fileID: 0}
     - target: {fileID: 8869669039281602302, guid: 193b962edb45e804886dbe896fa718ee,
         type: 3}
       propertyPath: m_Name
       value: rot_90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869669039281602302, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b962edb45e804886dbe896fa718ee, type: 3}
@@ -2230,6 +2245,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9751f8170f216419f6f615c123409b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opc: 0
+  rayLength: 5
+  giro: 0
+  speed: 1
 --- !u!114 &428097289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3592,6 +3611,7 @@ MonoBehaviour:
   - {fileID: 184721834}
   executar: {fileID: 741400989}
   linkBot: {fileID: 428097289}
+  linkGiro: {fileID: 0}
 --- !u!65 &741400988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3625,10 +3645,11 @@ MonoBehaviour:
   slot6: {fileID: 1311561938}
   slot7: {fileID: 1709260593}
   slot8: {fileID: 184721834}
+  bloco: {fileID: 0}
   mao: {fileID: 1451141690}
   rayLength: 15
   podeExecutar: 0
-  podeAtrelar: 0
+  podeAtrelar: 0000000000000000
   botaoExecutar: {fileID: 298323205}
 --- !u!23 &741400990
 MeshRenderer:
@@ -8165,6 +8186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mao: {fileID: 1451141691}
   distance: 10
+  blocoAtual: {fileID: 0}
+  bloco: {fileID: 0}
 --- !u!143 &1909102828
 CharacterController:
   m_ObjectHideFlags: 0

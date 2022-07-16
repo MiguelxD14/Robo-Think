@@ -7,25 +7,28 @@ public class atrelar : MonoBehaviour
     public GameObject slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject player;
     GameObject slot;
-    GameObject bloco;
+    public GameObject bloco;
     public GameObject mao;
     public float rayLength;
     public bool podeExecutar;
-    public bool podeAtrelar;
+    public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
+   
 
 
     public void Start()
     {
     // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situa��es e salas do projeto.
-        bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
+       
         player = GameObject.FindGameObjectWithTag("Player");
+       
         slot = GameObject.FindGameObjectWithTag("slot");
-        podeExecutar = false;
-        podeAtrelar = false;
+
+
     }
     public void Update()
     {
+          bloco = player.GetComponent<SistemaFps>().blocoAtual;
     //Faz a verifica��o baseado onde o player est� olhando;
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -43,6 +46,8 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[0] = false;
+
                 }
             }
             // slot2
@@ -57,6 +62,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[1] = false;
                 }
             }
             //slot3
@@ -71,6 +77,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[2] = false;
                 }
             }
             //slot4
@@ -85,6 +92,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[3] = false;
                 }
             }
             //slot5
@@ -99,6 +107,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[4] = false;
                 }
             }
             //slot6
@@ -113,6 +122,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[5] = false;
                 }
             }
             //slot7
@@ -127,6 +137,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[6] = false;
                 }
             }
             //slot8
@@ -141,6 +152,7 @@ public class atrelar : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     Recuperar();
+                     podeAtrelar[7] = false;
                 }
             }
 
@@ -155,7 +167,7 @@ public class atrelar : MonoBehaviour
         // Slot1
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[0] = true;
             bloco.transform.position = slot1.transform.position;
             bloco.transform.rotation = slot1.transform.rotation;
             bloco.transform.parent = slot1.transform;
@@ -169,7 +181,7 @@ public class atrelar : MonoBehaviour
         //Slot2
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[1] = true;
             bloco.transform.position = slot2.transform.position;
             bloco.transform.rotation = slot2.transform.rotation;
             bloco.transform.parent = slot2.transform;
@@ -182,7 +194,7 @@ public class atrelar : MonoBehaviour
         //Slot3
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[2] = true;
             bloco.transform.position = slot3.transform.position;
             bloco.transform.rotation = slot3.transform.rotation;
             bloco.transform.parent = slot3.transform;
@@ -196,7 +208,7 @@ public class atrelar : MonoBehaviour
         //Slot4
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[3] = true;
             bloco.transform.position = slot4.transform.position;
             bloco.transform.rotation = slot4.transform.rotation;
             bloco.transform.parent = slot4.transform;
@@ -210,7 +222,7 @@ public class atrelar : MonoBehaviour
         //Slot5
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[4] = true;
             bloco.transform.position = slot5.transform.position;
             bloco.transform.rotation = slot5.transform.rotation;
             bloco.transform.parent = slot5.transform;
@@ -224,7 +236,7 @@ public class atrelar : MonoBehaviour
         //Slot6
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[5] = true;
             bloco.transform.position = slot6.transform.position;
             bloco.transform.rotation = slot6.transform.rotation;
             bloco.transform.parent = slot6.transform;
@@ -238,7 +250,7 @@ public class atrelar : MonoBehaviour
         //Slot7
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[6] = true;
             bloco.transform.position = slot7.transform.position;
             bloco.transform.rotation = slot7.transform.rotation;
             bloco.transform.parent = slot7.transform;
@@ -252,7 +264,7 @@ public class atrelar : MonoBehaviour
         //Slot8
         if (bloco.transform.parent == mao.transform)
         {
-            podeAtrelar = true;
+            podeAtrelar[7] = true;
             bloco.transform.position = slot8.transform.position;
             bloco.transform.rotation = slot8.transform.rotation;
             bloco.transform.parent = slot8.transform;

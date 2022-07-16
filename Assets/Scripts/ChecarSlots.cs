@@ -7,6 +7,7 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
+    public Girar linkGiro;
     Renderer Rend;
 
     public void Update()
@@ -28,8 +29,9 @@ public class ChecarSlots : MonoBehaviour
                 if (slots[i].transform.childCount > 0)
                 {
                     slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.blue;
-                    Debug.Log("Ativar função do slot = " + slots[i].name);
+                    Debug.Log("Ativar funï¿½ï¿½o do slot = " + slots[i].name);
                     linkBot.isSelected = true;
+                    linkGiro.giro = true;
                 }
             }
         }

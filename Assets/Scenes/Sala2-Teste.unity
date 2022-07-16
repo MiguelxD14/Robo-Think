@@ -407,6 +407,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mao: {fileID: 224332173}
   distance: 10
+  blocoAtual: {fileID: 0}
+  bloco: {fileID: 0}
 --- !u!143 &100553465
 CharacterController:
   m_ObjectHideFlags: 0
@@ -774,6 +776,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloco_voar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 474149c95696b2342b91d377edd050e6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloco de comando
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 474149c95696b2342b91d377edd050e6, type: 3}
@@ -2760,6 +2767,7 @@ MonoBehaviour:
   - {fileID: 2086572296}
   executar: {fileID: 821263274}
   linkBot: {fileID: 1863000369}
+  linkGiro: {fileID: 0}
 --- !u!65 &821263273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2793,10 +2801,11 @@ MonoBehaviour:
   slot6: {fileID: 982044843}
   slot7: {fileID: 1263845154}
   slot8: {fileID: 2086572296}
+  bloco: {fileID: 0}
   mao: {fileID: 224332172}
   rayLength: 15
   podeExecutar: 0
-  podeAtrelar: 0
+  podeAtrelar: 0000000000000000
   botaoExecutar: {fileID: 195837989}
 --- !u!23 &821263275
 MeshRenderer:
@@ -6116,20 +6125,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: rot_-90
       objectReference: {fileID: 0}
+    - target: {fileID: 401122468259050895, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 193b962edb45e804886dbe896fa718ee,
         type: 3}
       propertyPath: m_Name
       value: Bloco_girar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloco de comando
       objectReference: {fileID: 0}
     - target: {fileID: 3566207899841815972, guid: 193b962edb45e804886dbe896fa718ee,
         type: 3}
       propertyPath: m_Name
       value: rot_180
       objectReference: {fileID: 0}
+    - target: {fileID: 3566207899841815972, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op3
+      objectReference: {fileID: 0}
     - target: {fileID: 8869669039281602302, guid: 193b962edb45e804886dbe896fa718ee,
         type: 3}
       propertyPath: m_Name
       value: rot_90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869669039281602302, guid: 193b962edb45e804886dbe896fa718ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Op1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 193b962edb45e804886dbe896fa718ee, type: 3}
@@ -6505,6 +6534,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Bloco_pousar
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0baa302331755c543a361b31d75e5c7f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bloco de comando
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0baa302331755c543a361b31d75e5c7f, type: 3}
@@ -7489,6 +7523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b9751f8170f216419f6f615c123409b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  opc: 0
+  rayLength: 5
+  giro: 0
+  speed: 1
 --- !u!114 &1863000369
 MonoBehaviour:
   m_ObjectHideFlags: 0
