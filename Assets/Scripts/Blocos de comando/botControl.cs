@@ -10,6 +10,7 @@ public class botControl : MonoBehaviour
     GameObject bloco;
     public float speed = 2.0f;
     public float rayLength;
+    public float minDistance;
 
     public int opc;
 
@@ -75,7 +76,7 @@ public class botControl : MonoBehaviour
             if (isSelected == true)
             { 
                 BeginMovement(opc);
-                opc = 0;
+                // opc = 0;
             }
         }
 
@@ -92,6 +93,7 @@ public class botControl : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Anda", false);
             //caso o piso não seja andável ele para o movimento na mesma hora
             moving = false;
             moveCount = 0;
@@ -119,9 +121,9 @@ public class botControl : MonoBehaviour
         //define a velocidade de movimento do robô no movimento para a frente relativa à ele
         transform.position += transform.forward * speed * Time.deltaTime;
         //quandoa distancia entre ele e o ponto de destino for menor que o valor indicado ele para de andar e recalcula o movimento
-        if (distance < 0.5f)
+        if (distance < minDistance)
         {
-            animator.SetBool("Anda", false);
+            
             moveCount--;
             if (moveCount <= 0)
             {

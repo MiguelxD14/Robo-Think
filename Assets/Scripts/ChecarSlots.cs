@@ -14,7 +14,13 @@ public class ChecarSlots : MonoBehaviour
     {
         if (executar.podeExecutar == true)
         {
-            Debug.Log("Iniciar checagem");
+           StartCoroutine("Run");
+           executar.podeExecutar = false;
+        }
+    }
+     private IEnumerator Run()
+    {
+        Debug.Log("Iniciar checagem");
             for (int i = 0; i < slots.Length; i++)
             {
                 Debug.Log(slots[i].name);
@@ -30,11 +36,23 @@ public class ChecarSlots : MonoBehaviour
                 {
                     slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.blue;
                     Debug.Log("Ativar fun��o do slot = " + slots[i].name);
-                    linkBot.isSelected = true;
-                    linkGiro.giro = true;
+                    //if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<string>().name = Anda)
+                    //{
+                        linkBot.isSelected = true;
+                    //}
+                    
+                    linkGiro.giro = true; 
+                    
+                    yield return new WaitForSeconds(1);
+                    
                 }
+                Debug.Log(i);
+                 
             }
-        }
+
+           
+           
+        
     }
 }
     

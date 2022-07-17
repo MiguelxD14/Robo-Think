@@ -2767,7 +2767,7 @@ MonoBehaviour:
   - {fileID: 2086572296}
   executar: {fileID: 821263274}
   linkBot: {fileID: 1863000369}
-  linkGiro: {fileID: 0}
+  linkGiro: {fileID: 1863000368}
 --- !u!65 &821263273
 BoxCollider:
   m_ObjectHideFlags: 0

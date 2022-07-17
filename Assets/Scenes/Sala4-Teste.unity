@@ -6598,7 +6598,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
@@ -6608,7 +6608,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
@@ -6623,7 +6623,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
@@ -6721,6 +6721,7 @@ MonoBehaviour:
   isSelected: 0
   speed: 1
   rayLength: 5
+  minDistance: 0.5
   opc: 0
   condition: {fileID: 1972514580}
 --- !u!114 &1697286720
@@ -8397,7 +8398,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972514577}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}

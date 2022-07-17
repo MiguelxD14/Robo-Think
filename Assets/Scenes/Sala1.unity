@@ -1567,6 +1567,7 @@ MonoBehaviour:
   isSelected: 0
   speed: 1
   rayLength: 5
+  minDistance: 0
   opc: 0
   condition: {fileID: 1950313874}
 --- !u!114 &777056497
@@ -3538,7 +3539,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950313871}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
@@ -3806,6 +3807,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 369039865}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1996248416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996248415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f5a186f44a97d46b694bd53b50770c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Anda: 
 --- !u!54 &1996248417
 Rigidbody:
   m_ObjectHideFlags: 0
