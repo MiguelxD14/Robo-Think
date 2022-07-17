@@ -387,6 +387,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tipo: Gira
+--- !u!114 &57298260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57298256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9751f8170f216419f6f615c123409b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opc: 0
+  rayLength: 5
+  giro: 0
 --- !u!1 &141220624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,33 +1587,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d5dd85d6ec30bc47a0c7d279d9cc423, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Op1: {fileID: 1669996406}
-  Op2: {fileID: 530493786}
-  Op3: {fileID: 945412421}
-  Op4: {fileID: 1764964415}
-  Op5: {fileID: 1987766640}
   isSelected: 0
   speed: 1
-  rayLength: 5
   minDistance: 0
   opc: 0
   condition: {fileID: 1950313874}
---- !u!114 &777056497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777056491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b9751f8170f216419f6f615c123409b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opc: 0
-  rayLength: 5
-  giro: 0
-  speed: 1
 --- !u!1 &797335937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3862,6 +3855,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0474658, y: 0.29640114, z: 0.08818751}
   m_Center: {x: 0.02373296, y: 0.016507087, z: -0.019439552}
+--- !u!114 &1996248419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996248415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb670f64c40eaef448516582825d0de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linkBot: {fileID: 777056496}
+  rayLength: 5
 --- !u!1 &2074944016
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,7 +8210,6 @@ MonoBehaviour:
   - {fileID: 558981699}
   executar: {fileID: 7209663661760524701}
   linkBot: {fileID: 777056496}
-  linkGiro: {fileID: 777056497}
 --- !u!4 &7316210180736220963
 Transform:
   m_ObjectHideFlags: 0
