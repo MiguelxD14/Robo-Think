@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class botControl : MonoBehaviour
 {
-    public GameObject Op1, Op2, Op3, Op4, Op5;
     public bool isSelected = false;
     GameObject trix;
-    GameObject bloco;
     public float speed = 2.0f;
-    public float rayLength;
     public float minDistance;
 
     public int opc;
@@ -26,59 +23,11 @@ public class botControl : MonoBehaviour
     Animator animator;
     private void Start()
     {
-        bloco = GameObject.FindGameObjectWithTag("Bloco de comando");
         animator = GetComponent<Animator>();
     }
     public void Update()
     {
-        #region codigo do clique
-        RaycastHit hit;
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength))
-            {
-                if (hit.collider.gameObject == Op1)
-                {
-                    Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 1;
-                }
-
-                if (hit.collider.gameObject == Op2)
-                {
-                    Op2.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 2;
-                }
-                if (hit.collider.gameObject == Op3)
-                {
-                    Op3.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 3;
-                }
-                if (hit.collider.gameObject == Op4)
-                {
-                    Op4.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 4;
-                }
-                if (hit.collider.gameObject == Op5)
-                {
-                    Op5.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 5;
-                }
-
-            }
-            #endregion
-
-        }
-        // sistema de opções
-        if (opc != 0)
-        {
-            if (isSelected == true)
-            { 
-                BeginMovement(opc);
-                // opc = 0;
-            }
-        }
+        OPC();
 
         //verifica se o piso na frente do robô é andável
         canMove = condition.canMove;
@@ -100,6 +49,18 @@ public class botControl : MonoBehaviour
         }
 
     }
+    public void OPC()
+    // sistema de opções
+        {
+        if (opc != 0)
+        {
+            if (isSelected == true)
+            { 
+                BeginMovement(opc);
+                // opc = 0;
+            }
+        }
+        }
 
     public void BeginMovement(int count)
     {
@@ -132,7 +93,7 @@ public class botControl : MonoBehaviour
             else
             {
                 targetPoint = condition.waypoint.position;
-                //Move();
+                
             }
         }
     }

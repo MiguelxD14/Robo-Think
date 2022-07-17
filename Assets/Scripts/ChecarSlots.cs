@@ -7,7 +7,6 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
-    public Girar linkGiro;
     Renderer Rend;
 
     public void Update()
@@ -36,14 +35,17 @@ public class ChecarSlots : MonoBehaviour
                 {
                     slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.blue;
                     Debug.Log("Ativar fun��o do slot = " + slots[i].name);
-                    //if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<string>().name = Anda)
-                    //{
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Anda")
+                    {
                         linkBot.isSelected = true;
-                    //}
+                    }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Gira")
+                    {
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Girar>().giro = true;
+                    }
+                   
                     
-                    linkGiro.giro = true; 
-                    
-                    yield return new WaitForSeconds(1);
+                    yield return new WaitForSeconds(5);
                     
                 }
                 Debug.Log(i);

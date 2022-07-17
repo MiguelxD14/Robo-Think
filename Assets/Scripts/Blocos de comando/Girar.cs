@@ -8,13 +8,16 @@ public class Girar : MonoBehaviour
      public int opc;
      public float rayLength;
      public bool giro;
-     public float speed = 1;
+     GameObject robo;
+
 
      void Start(){
-    Op1 = GameObject.FindGameObjectWithTag("Op1");
-    Op2 = GameObject.FindGameObjectWithTag("Op2");
-    Op3 = GameObject.FindGameObjectWithTag("Op3");
-
+    
+    Op1 = transform.GetChild(1).gameObject;
+    Op2 = transform.GetChild(2).gameObject;
+    Op3 = transform.GetChild(3).gameObject;
+    
+    robo = GameObject.FindGameObjectWithTag("Robo");
      }
     
     void Update()
@@ -28,14 +31,14 @@ public class Girar : MonoBehaviour
                 if (hit.collider.gameObject == Op1)
                 {
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 1;
+                    this.opc = 1;
                     
                 }
 
              if (hit.collider.gameObject == Op2)
                 {
                     Op2.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 2;
+                    this.opc = 2;
                     
 
                 }
@@ -43,7 +46,7 @@ public class Girar : MonoBehaviour
                  if (hit.collider.gameObject == Op3)
                 {
                     Op3.GetComponent<Renderer>().material.color = Color.yellow;
-                    opc = 3;
+                    this.opc = 3;
                     
                     
                 }
@@ -57,23 +60,25 @@ public class Girar : MonoBehaviour
     {
       if(giro == true)
       {
-        if(opc == 1)
+        if(this.opc == 1)
         {
-         this.transform.Rotate(0.0f,90.0f,0.0f);
+        robo.transform.Rotate(0.0f,90.0f,0.0f);
          giro = false;
+         this.opc = 0;
         }
 
-        if(opc == 2)
+        if(this.opc == 2)
         {
-        this.transform.Rotate(0.0f,-90.0f,0.0f);
+        robo.transform.Rotate(0.0f,-90.0f,0.0f);
         giro = false;
+        this.opc = 0;
         }
 
-        if(opc == 3)
+        if(this.opc == 3)
         {
-        this.transform.Rotate(0.0f,180.0f,0.0f);
+        robo.transform.Rotate(0.0f,180.0f,0.0f);
         giro = false;
-
+        this.opc = 0;
         }
 
       }

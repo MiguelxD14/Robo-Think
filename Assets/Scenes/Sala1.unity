@@ -374,6 +374,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &57298259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57298256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d64ae7967515924fbac5eaae1fd975b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tipo: Gira
 --- !u!1 &141220624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3816,10 +3829,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1996248415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45f5a186f44a97d46b694bd53b50770c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d64ae7967515924fbac5eaae1fd975b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Anda: 
+  Tipo: Anda
 --- !u!54 &1996248417
 Rigidbody:
   m_ObjectHideFlags: 0
