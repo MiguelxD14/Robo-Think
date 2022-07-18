@@ -43,6 +43,10 @@ public class ChecarSlots : MonoBehaviour
                     {
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Girar>().giro = true;
                     }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Quebra")
+                    {
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>().quebra = true;
+                    }
                    
                     
                     yield return new WaitForSeconds(5);

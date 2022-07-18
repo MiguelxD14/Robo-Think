@@ -23,6 +23,7 @@ TagManager:
   - 90
   - -90
   - 180
+  - Obstaculo
   layers:
   - Default
   - TransparentFX

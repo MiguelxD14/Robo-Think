@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class Quebrar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject Brok;
+    public bool quebra;
+    Animator animator;
+    
     void Start()
     {
-        
+        Brok = GameObject.FindGameObjectWithTag("Robo");
+        animator = Brok.GetComponent<Animator>();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+         if(quebra == true)
+            {
+            animator.SetBool("Quebra", true);
+            }
+
+            if(quebra == false)
+            {
+            animator.SetBool("Quebra", false);
+            }
     }
+   
 }
