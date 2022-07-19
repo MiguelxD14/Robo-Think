@@ -8,8 +8,8 @@ public class ChecarSlots : MonoBehaviour
     public atrelar executar;
     public botControl linkBot;
     Renderer Rend;
-    public carry_mao Pegar;
-    public carry_mao Soltar;
+    public carry_mao linkCarry;
+    public controle_fliper linkFliper;
     public Animator Carry;
 
     public void Update()
@@ -52,14 +52,24 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
-                       Pegar.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
+                       linkCarry.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
                     {
-                        Soltar.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
+                        linkCarry.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
                        
+                    }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Voa")
+                    {
+                        linkFliper.Voar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Voar>();
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Voar>().voa = true;
+                    }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
+                    {
+                        linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }
                     
                     yield return new WaitForSeconds(6);
