@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Pegar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject Robo;
+    public bool pega;
+    Animator animator;
+    GameObject braco;
+    
     void Start()
     {
-        
+        braco = GameObject.FindGameObjectWithTag("carry_mao");
+        Robo = GameObject.FindGameObjectWithTag("Robo");
+        animator = Robo.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
-        
+        if(pega == true)
+        {
+            animator.SetBool("Pegar",true);
+        }
+        if(pega == false)
+        {
+            animator.SetBool("Pegar", false);
+        }
     }
 }

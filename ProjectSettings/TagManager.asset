@@ -24,6 +24,7 @@ TagManager:
   - -90
   - 180
   - Obstaculo
+  - carry_mao
   layers:
   - Default
   - TransparentFX

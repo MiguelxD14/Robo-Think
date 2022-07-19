@@ -8,6 +8,9 @@ public class ChecarSlots : MonoBehaviour
     public atrelar executar;
     public botControl linkBot;
     Renderer Rend;
+    public carry_mao Pegar;
+    public carry_mao Soltar;
+    public Animator Carry;
 
     public void Update()
     {
@@ -25,10 +28,10 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0)
                 {
-                    Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
-                    Rend.enabled = true;
-                    Rend.material.color = Color.red;
-                    executar.podeExecutar = false;
+                    // Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
+                    // Rend.enabled = true;
+                    // Rend.material.color = Color.red;
+                    // executar.podeExecutar = false;
                     break;
                 }
                 if (slots[i].transform.childCount > 0)
@@ -47,9 +50,19 @@ public class ChecarSlots : MonoBehaviour
                     {
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>().quebra = true;
                     }
-                   
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
+                    {
+                       Pegar.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
+                    }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
+                    {
+                        Soltar.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
+                       
+                    }
                     
-                    yield return new WaitForSeconds(5);
+                    yield return new WaitForSeconds(6);
                     
                 }
                 Debug.Log(i);
