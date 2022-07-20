@@ -3789,8 +3789,8 @@ MonoBehaviour:
   - {fileID: 184721834}
   executar: {fileID: 741400989}
   linkBot: {fileID: 428097289}
-  Pegar: {fileID: 1929303916}
-  Soltar: {fileID: 1929303916}
+  linkCarry: {fileID: 1929303916}
+  linkFliper: {fileID: 0}
   Carry: {fileID: 428097290}
 --- !u!65 &741400988
 BoxCollider:
@@ -8541,8 +8541,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7828772, y: 1, z: 1.2754989}
-  m_Center: {x: 0.13312984, y: 0, z: 0.13774943}
+  m_Size: {x: 1.0273193, y: 1, z: 1.2754989}
+  m_Center: {x: 0.039897382, y: 0, z: 0.13774943}
 --- !u!1 &1936220219
 GameObject:
   m_ObjectHideFlags: 0

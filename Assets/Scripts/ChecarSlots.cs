@@ -71,6 +71,14 @@ public class ChecarSlots : MonoBehaviour
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }
+                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Fliper_pega")
+                    {
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Fliper_Pegar>().flip_pega = true;
+                    }
+                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Fliper_solta")
+                    {
+                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Fliper_Soltar>().flip_solta = true;
+                    }
                     
                     yield return new WaitForSeconds(6);
                     

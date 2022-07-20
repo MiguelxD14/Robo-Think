@@ -8,14 +8,14 @@ public class carry_mao : MonoBehaviour
     public Pegar Pegar;
     public Soltar Soltar;
     public Collider Obstaculo;
-     GameObject Robo;
-      Animator animator;
+    GameObject Robo;
+    Animator animator;
   
   public void Start()
   {
     braco = GameObject.FindGameObjectWithTag("carry_mao");
     Robo = GameObject.FindGameObjectWithTag("Robo");
-     animator = Robo.GetComponent<Animator>();
+    animator = Robo.GetComponent<Animator>();
   }
   public void Update() 
   {

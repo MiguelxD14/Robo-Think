@@ -25,6 +25,7 @@ TagManager:
   - 180
   - Obstaculo
   - carry_mao
+  - fliper_base
   layers:
   - Default
   - TransparentFX
