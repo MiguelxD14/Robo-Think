@@ -80,7 +80,7 @@ public class ChecarSlots : MonoBehaviour
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Fliper_Soltar>().flip_solta = true;
                     }
                     
-                    yield return new WaitForSeconds(6);
+                    yield return new WaitForSeconds(5);
                     
                 }
                 Debug.Log(i);

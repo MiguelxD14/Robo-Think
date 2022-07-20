@@ -33,7 +33,7 @@ public class fliper_PS : MonoBehaviour
            
       } 
 
-      if(Soltar.flip_solta == true && other.gameObject.tag == "Obstaculo")
+      if(Soltar.flip_solta == true && other.gameObject.tag != null || other.gameObject.tag == "Obstaculo")
       {
        
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa 0"))
@@ -49,7 +49,9 @@ public class fliper_PS : MonoBehaviour
     {
             yield return new WaitForSeconds(1.5f);
             Obstaculo.transform.parent = null;
-            Soltar.flip_solta = false;
+               Soltar.flip_solta = false;
+            
+           
 
             
     }
