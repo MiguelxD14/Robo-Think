@@ -19,8 +19,10 @@ public class Pousar : MonoBehaviour
     {
         if(pousa == true)
         {
+            Debug.Log("Teste pouso");
             Voar.voa = false;
             animator.SetBool("Pousar", true);
+             pousa = false;
         }
 
         if(pousa == false)

@@ -26,6 +26,7 @@ TagManager:
   - Obstaculo
   - carry_mao
   - fliper_base
+  - quebravel
   layers:
   - Default
   - TransparentFX

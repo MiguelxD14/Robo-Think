@@ -9,7 +9,7 @@ public class broca : MonoBehaviour
     
     public void Start()
     {
-        obstaculo = GameObject.FindGameObjectWithTag("Obstaculo");
+        obstaculo = GameObject.FindGameObjectWithTag("quebravel");
     }
     public void OnTriggerEnter(Collider other)
     {

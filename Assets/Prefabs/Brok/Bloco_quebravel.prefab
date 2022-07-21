@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1528746813275210930
+--- !u!1 &6977038450265511703
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1528746813275210942}
-  - component: {fileID: 1528746813275210943}
-  - component: {fileID: 1528746813275210928}
-  - component: {fileID: 1528746813275210941}
+  - component: {fileID: 7753152563534433709}
+  - component: {fileID: 6644886122640835080}
+  - component: {fileID: 8922642348546913986}
+  - component: {fileID: 7787289252128782365}
+  - component: {fileID: 7787289252128782364}
   m_Layer: 0
-  m_Name: obs
-  m_TagString: Obstaculo
+  m_Name: Bloco_quebravel
+  m_TagString: quebravel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1528746813275210942
+--- !u!4 &7753152563534433709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528746813275210930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.56, y: 1.9, z: -3.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 6977038450265511703}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: -0.68, y: 0.31, z: -3.08}
+  m_LocalScale: {x: 1.4210116, y: 1.4210116, z: 1.4210116}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1528746813275210943
+--- !u!33 &6644886122640835080
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528746813275210930}
-  m_Mesh: {fileID: 4493585093827132993, guid: f6bd55c5d5ca86f4f85fb93e301ff2af, type: 3}
---- !u!23 &1528746813275210928
+  m_GameObject: {fileID: 6977038450265511703}
+  m_Mesh: {fileID: -5928785198427282456, guid: 0f7e74c9222ed194da54db76d93dc577, type: 3}
+--- !u!23 &8922642348546913986
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528746813275210930}
+  m_GameObject: {fileID: 6977038450265511703}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -4586444591600750072, guid: f6bd55c5d5ca86f4f85fb93e301ff2af, type: 3}
+  - {fileID: -4586444591600750072, guid: 0f7e74c9222ed194da54db76d93dc577, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,19 +83,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!54 &1528746813275210941
+--- !u!54 &7787289252128782365
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1528746813275210930}
+  m_GameObject: {fileID: 6977038450265511703}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
+--- !u!65 &7787289252128782364
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6977038450265511703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: -0.0544163, y: -0.05681168, z: 1.0363972}

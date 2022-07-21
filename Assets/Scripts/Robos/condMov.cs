@@ -7,11 +7,17 @@ public class condMov : MonoBehaviour
     public GameObject robo;
     public bool canMove;
     public Transform waypoint;
-    private void OnTriggerStay(Collider collision)
+    
+    public void Start()
+    {
+        
+
+    }
+    public void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Anda")
         {
-
+           
            
             canMove = true;
             waypoint = collision.gameObject.transform;
@@ -21,9 +27,7 @@ public class condMov : MonoBehaviour
 
         if (collision.gameObject.tag != "Anda")
         {
-          
             canMove = false;
-            
 
         }
 

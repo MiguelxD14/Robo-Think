@@ -7,9 +7,8 @@ public class Soltar : MonoBehaviour
     GameObject Robo;
     public bool solta;
     Animator animator;
-    public Pegar Pegar;
     GameObject braco;
-    public carry_mao linkObs;
+    
     
     
     void Start()
@@ -26,17 +25,8 @@ public class Soltar : MonoBehaviour
         {
             animator.SetBool("Soltar",false);
         }
-    //    if (solta == true)
-    //     {
-    //         animator.SetBool("Soltar",true);
-    //         Pegar.pega = false;
-    //         if (animator.GetCurrentAnimatorStateInfo(0).IsName("|Carry_parado"))
-    //              {
-    //             linkObs.Obstaculo.transform.parent = null;
-    //             solta = false;
-    //             }
-    //     }
     }
+    
 
    
 }

@@ -6,10 +6,12 @@ public class fliper_PS : MonoBehaviour
 {
     Animator animator;
     GameObject flip_base;
-    public Fliper_Pegar Pegar;
-    public Fliper_Soltar Soltar;
+    public Pegar Pegar;
+    public Soltar Soltar;
     public Collider Obstaculo;
     public GameObject Fliper;
+    public Pousar Pousar;
+     public bool colidiu, podeColidir;
 
     void Start()
     {
@@ -22,42 +24,57 @@ public class fliper_PS : MonoBehaviour
             {
                  StartCoroutine("delay2");
             }
+
+            if(Obstaculo.transform.parent == flip_base.transform.parent && Pousar.pousa == true && Obstaculo != null)
+            {
+               Debug.Log("Deu certo amem"); //adcionar animação de erro
+               Pousar.pousa = false;
+            }
+            if(Obstaculo.transform.parent == flip_base.transform.parent && colidiu == true && Obstaculo != null)
+            {
+               Obstaculo.transform.parent = null;
+               Obstaculo.GetComponent<Rigidbody>().useGravity = true;
+               Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu = false;
+            }
+          colidiu = Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu;
     }
     public void  OnTriggerStay(Collider other)
     {
-      if(Pegar.flip_pega == true && other.gameObject.tag == "Obstaculo") 
+         
+      if(Pegar.pega == true && other.gameObject.tag == "Obstaculo") 
       {
             other.transform.parent = flip_base.transform.parent;
             other.transform.position = flip_base.transform.position;
             Obstaculo = other;
-           
+            Obstaculo.GetComponent<Rigidbody>().useGravity = false; 
+             Obstaculo.gameObject.GetComponent<bloco_carregavel>().podeColidir = true;
+            
       } 
 
-      if(Soltar.flip_solta == true && other.gameObject.tag != null || other.gameObject.tag == "Obstaculo")
+      if(Soltar.solta == true )//&&  other.gameObject.tag != null 
       {
+           animator.SetBool("Soltar",true);
        
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa 0"))
             {
                  StartCoroutine("delay");
                 
-            }
-           
+            } 
       }
+
     }
 
     public IEnumerator delay()
     {
-            yield return new WaitForSeconds(1.5f);
-            Obstaculo.transform.parent = null;
-               Soltar.flip_solta = false;
-            
-           
-
-            
+          yield return new WaitForSeconds(1.5f);
+          Obstaculo.transform.parent = null;
+          Obstaculo.GetComponent<Rigidbody>().useGravity = true;
+          Soltar.solta = false;
+          
     }
     public IEnumerator delay2()
     {
-         yield return new WaitForSeconds(2f);
-        Pegar.flip_pega = false;
+          yield return new WaitForSeconds(2f);
+          Pegar.pega = false;
     }
 }

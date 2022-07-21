@@ -14,7 +14,7 @@ public class controle_fliper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-           if(Voar.voa == true && Fliper.position.y < 3)
+           if(Voar.voa == true && Fliper.position.y < 5)
            {
             Vector3 fly = new Vector3(0, fCond, 0);
             transform.Translate(fly * fSpeed * Time.deltaTime);
@@ -24,6 +24,8 @@ public class controle_fliper : MonoBehaviour
             }
             if(Pousar.pousa == true && Fliper.position.y >= 0.59)
             {
+                Voar.voa = false;
+                Debug.Log("Pouso funciona");
                 Vector3 fly = new Vector3(0, -1, 0);
                 transform.Translate(fly * fSpeed * Time.deltaTime);
             }

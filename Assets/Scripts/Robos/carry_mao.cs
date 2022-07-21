@@ -8,6 +8,7 @@ public class carry_mao : MonoBehaviour
     public Pegar Pegar;
     public Soltar Soltar;
     public Collider Obstaculo;
+    public GameObject obstaculo;
     GameObject Robo;
     Animator animator;
   
@@ -16,6 +17,8 @@ public class carry_mao : MonoBehaviour
     braco = GameObject.FindGameObjectWithTag("carry_mao");
     Robo = GameObject.FindGameObjectWithTag("Robo");
     animator = Robo.GetComponent<Animator>();
+    obstaculo = GameObject.FindGameObjectWithTag("Obstaculo");
+    
   }
   public void Update() 
   {
@@ -28,6 +31,7 @@ public class carry_mao : MonoBehaviour
             other.transform.parent = braco.transform.parent;
             other.transform.position = braco.transform.position;
             Obstaculo = other;
+            obstaculo.GetComponent<Rigidbody>().useGravity = false;
         }
 
         if(Soltar.solta == true && other.gameObject.tag == "Obstaculo")
@@ -37,8 +41,10 @@ public class carry_mao : MonoBehaviour
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("|Carry_parado"))
                  {
                 Obstaculo.transform.parent = null;
+                obstaculo.GetComponent<Rigidbody>().useGravity = true;
                 Soltar.solta = false;
                 }
         }
+        
     }
 }

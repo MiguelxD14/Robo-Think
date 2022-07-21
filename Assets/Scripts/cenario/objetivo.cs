@@ -15,7 +15,7 @@ public class objetivo : MonoBehaviour
     }
    public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Robo")
+        if (other.gameObject.tag == "Robo"|| other.gameObject.tag == "Obstaculo")
         {
             luz.gameObject.GetComponent<Light>().enabled = true;
             porta.gameObject.SetActive(true);

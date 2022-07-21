@@ -52,12 +52,12 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
-                       linkCarry.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
+                       //linkCarry.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
                     {
-                        linkCarry.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
+                       // linkCarry.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
                        
                     }
@@ -68,19 +68,12 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
                     {
+                        Debug.Log("Pousa pousa pousa pousa ai mds");
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }
-                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Fliper_pega")
-                    {
-                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Fliper_Pegar>().flip_pega = true;
-                    }
-                    if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Fliper_solta")
-                    {
-                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Fliper_Soltar>().flip_solta = true;
-                    }
                     
-                    yield return new WaitForSeconds(5);
+                    yield return new WaitForSeconds(10);
                     
                 }
                 Debug.Log(i);
