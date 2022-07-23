@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class restart_pos : MonoBehaviour
 {
-    public Vector3 robo, objeto;
-    public Quaternion robo_r,objeto_r;
+    Vector3 robo, objeto,quebravel;
+    public Quaternion robo_r,objeto_r,quebravel_r;
+    public int blocos_quebraveis;
     public ChecarSlots slots;
     public Andar AndarOpc;
     public Girar GirarOpc;
+    public GameObject bloco_quebravel;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,12 @@ public class restart_pos : MonoBehaviour
         robo_r =  GameObject.FindGameObjectWithTag("Robo").transform.rotation;
         objeto =  GameObject.FindGameObjectWithTag("Obstaculo").transform.position;
         objeto_r =  GameObject.FindGameObjectWithTag("Obstaculo").transform.rotation;
+        quebravel = GameObject.FindGameObjectWithTag("quebravel").transform.position;
+        quebravel_r = GameObject.FindGameObjectWithTag("quebravel").transform.rotation;
+
+        blocos_quebraveis = GameObject.FindGameObjectsWithTag("quebravel").Length;
+        bloco_quebravel = GameObject.FindGameObjectWithTag("quebravel");
+        bloco_quebravel.SetActive(true);
     }
 
     // Update is called once per frame
@@ -33,6 +41,14 @@ public class restart_pos : MonoBehaviour
                     slots.slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.white;
                 }
         }
+        //  for (int x = 0; x < blocos_quebraveis; x++)
+        //  {
+        //     Instantiate(bloco_quebravel, quebravel, quebravel_r);
+        //     blocos_quebraveis --;
+        //  }
+
+       
+    
         AndarOpc.opcao = 0;
         if(AndarOpc.opcao == 0)
         {
@@ -51,10 +67,14 @@ public class restart_pos : MonoBehaviour
             GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
         }
 
+        bloco_quebravel.SetActive(true);
 
         GameObject.FindGameObjectWithTag("Robo").transform.position = robo;
         GameObject.FindGameObjectWithTag("Robo").transform.rotation = robo_r;
         GameObject.FindGameObjectWithTag("Obstaculo").transform.position = objeto;
         GameObject.FindGameObjectWithTag("Obstaculo").transform.rotation = objeto_r;
+        GameObject.FindGameObjectWithTag("quebravel").transform.position = quebravel;
+        GameObject.FindGameObjectWithTag("quebravel").transform.rotation = quebravel_r;
+        
      }
 }

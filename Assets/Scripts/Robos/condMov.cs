@@ -8,11 +8,6 @@ public class condMov : MonoBehaviour
     public bool canMove;
     public Transform waypoint;
     
-    public void Start()
-    {
-        
-
-    }
     public void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.tag == "Anda")

@@ -15,7 +15,7 @@ public class broca : MonoBehaviour
     {
         if(other.gameObject == obstaculo.gameObject)
         {
-            Destroy(obstaculo, 1f); 
+            obstaculo.SetActive(false); 
             Quebrar.quebra = false;
 
         }
