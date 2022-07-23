@@ -6,6 +6,7 @@ public class restart_pos : MonoBehaviour
 {
     Vector3 robo, objeto,quebravel;
     public Quaternion robo_r,objeto_r,quebravel_r;
+    GameObject Obstaculo;
     public int blocos_quebraveis;
     public ChecarSlots slots;
     public Andar AndarOpc;
@@ -15,6 +16,7 @@ public class restart_pos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Obstaculo = GameObject.FindGameObjectWithTag("Obstaculo");
         robo =  GameObject.FindGameObjectWithTag("Robo").transform.position;
         robo_r =  GameObject.FindGameObjectWithTag("Robo").transform.rotation;
         objeto =  GameObject.FindGameObjectWithTag("Obstaculo").transform.position;
@@ -34,6 +36,7 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
+
         for (int i = 0; i < slots.slots.Length; i++)
         {
             if (slots.slots[i].transform.childCount > 0)
@@ -71,5 +74,6 @@ public class restart_pos : MonoBehaviour
         GameObject.FindGameObjectWithTag("quebravel").transform.position = quebravel;
         GameObject.FindGameObjectWithTag("quebravel").transform.rotation = quebravel_r;
         
+        Obstaculo.transform.parent = null;
      }
 }
