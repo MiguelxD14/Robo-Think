@@ -7,10 +7,11 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
-    Renderer Rend;
+    public Renderer Rend;
     public carry_mao linkCarry;
     public controle_fliper linkFliper;
     public Animator Carry;
+    public objetivo Chegou;
 
     public void Update()
     {
@@ -26,15 +27,15 @@ public class ChecarSlots : MonoBehaviour
             for (int i = 0; i < slots.Length; i++)
             {
                 Debug.Log(slots[i].name);
-                if (slots[i].transform.childCount <= 0)
+                if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
-                    // Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
-                    // Rend.enabled = true;
-                    // Rend.material.color = Color.red;
-                    // executar.podeExecutar = false;
+                    Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
+                    Rend.enabled = true;
+                    Rend.material.color = Color.red;
+                    executar.podeExecutar = false;
                     break;
                 }
-                if (slots[i].transform.childCount > 0)
+                else if(slots[i].transform.childCount > 0 )
                 {
                     slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.blue;
                     Debug.Log("Ativar fun��o do slot = " + slots[i].name);
@@ -70,7 +71,7 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
                     {
-                        Debug.Log("Pousa pousa pousa pousa ai mds");
+                      
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }

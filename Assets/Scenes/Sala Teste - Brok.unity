@@ -2600,6 +2600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porta: {fileID: 2035668473}
+  chegou: 0
 --- !u!54 &611470993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2675,6 +2676,7 @@ MonoBehaviour:
   linkCarry: {fileID: 0}
   linkFliper: {fileID: 0}
   Carry: {fileID: 0}
+  Chegou: {fileID: 611470992}
 --- !u!114 &621510378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8929,6 +8931,10 @@ PrefabInstance:
       propertyPath: Quebrar
       value: 
       objectReference: {fileID: 720255535}
+    - target: {fileID: 1972514578, guid: 2e8e0e64673d46047939efb8b92a052f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5895679514158387219, guid: 2e8e0e64673d46047939efb8b92a052f,
         type: 3}
       propertyPath: m_Name

@@ -40,15 +40,10 @@ public class restart_pos : MonoBehaviour
                 {
                     slots.slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.white;
                 }
+                slots.Rend.enabled = false;
         }
-        //  for (int x = 0; x < blocos_quebraveis; x++)
-        //  {
-        //     Instantiate(bloco_quebravel, quebravel, quebravel_r);
-        //     blocos_quebraveis --;
-        //  }
-
-       
     
+
         AndarOpc.opcao = 0;
         if(AndarOpc.opcao == 0)
         {

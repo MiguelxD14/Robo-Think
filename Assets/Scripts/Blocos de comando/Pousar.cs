@@ -22,7 +22,7 @@ public class Pousar : MonoBehaviour
             Debug.Log("Teste pouso");
             Voar.voa = false;
             animator.SetBool("Pousar", true);
-             pousa = false;
+            // pousa = false;
         }
 
         if(pousa == false)
