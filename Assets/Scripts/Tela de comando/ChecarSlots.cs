@@ -40,7 +40,9 @@ public class ChecarSlots : MonoBehaviour
                     Debug.Log("Ativar fun��o do slot = " + slots[i].name);
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Anda")
                     {
-                        linkBot.isSelected = true;
+                        linkBot.opc =  slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Andar>().opcao;
+                       linkBot.isSelected = true;
+                       
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Gira")
                     {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Girar : MonoBehaviour
 {
-     GameObject Op1, Op2, Op3;
+     public GameObject Op1, Op2, Op3;
      public int opc;
      public float rayLength;
      public bool giro;

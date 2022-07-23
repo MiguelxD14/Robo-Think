@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Andar : MonoBehaviour
 {
-    GameObject Op1, Op2, Op3, Op4, Op5;
+    public GameObject Op1, Op2, Op3, Op4, Op5;
     GameObject robo;
     public botControl linkBot;
     public float rayLength;
+    public int opcao;
     
     // Start is called before the first frame update
     void Start()
@@ -35,32 +36,32 @@ public class Andar : MonoBehaviour
                 if (hit.collider.gameObject == Op1)
                 {
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    linkBot.opc = 1;
+                   opcao = 1;
                 }
 
                 if (hit.collider.gameObject == Op2)
                 {
                     Op2.GetComponent<Renderer>().material.color = Color.yellow;
-                    linkBot.opc = 2;
+                    opcao = 2;
                 }
                 if (hit.collider.gameObject == Op3)
                 {
                     Op3.GetComponent<Renderer>().material.color = Color.yellow;
-                    linkBot.opc = 3;
+                    opcao = 3;
                 }
                 if (hit.collider.gameObject == Op4)
                 {
                     Op4.GetComponent<Renderer>().material.color = Color.yellow;
-                    linkBot.opc = 4;
+                   opcao = 4;
                 }
                 if (hit.collider.gameObject == Op5)
                 {
                     Op5.GetComponent<Renderer>().material.color = Color.yellow;
-                    linkBot.opc = 5;
+                    opcao = 5;
                 }
 
             }
-           
+               
 
         }
     }

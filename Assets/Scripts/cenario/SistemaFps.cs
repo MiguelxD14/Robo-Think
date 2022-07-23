@@ -8,6 +8,7 @@ public class SistemaFps : MonoBehaviour
     public float distance = 10f;
     public GameObject blocoAtual;
     public GameObject bloco;
+    public Vector3 posicao;
 
     bool canGrab;
 
@@ -59,7 +60,8 @@ public class SistemaFps : MonoBehaviour
         blocoAtual = bloco;
         blocoAtual.transform.position = mao.position;
         blocoAtual.transform.parent = mao;
-        blocoAtual.transform.localEulerAngles = new Vector3(0, 180, 0);
+        posicao = transform.TransformDirection(0, 180, 0);
+        blocoAtual.transform.localEulerAngles = posicao;
         blocoAtual.GetComponent<Rigidbody>().isKinematic = true;
     }
 
