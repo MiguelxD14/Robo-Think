@@ -27,6 +27,7 @@ TagManager:
   - carry_mao
   - fliper_base
   - quebravel
+  - broca
   layers:
   - Default
   - TransparentFX

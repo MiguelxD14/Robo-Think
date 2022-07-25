@@ -12,11 +12,13 @@ public class ChecarSlots : MonoBehaviour
     public controle_fliper linkFliper;
     public Animator Carry;
     public objetivo Chegou;
+    public bool rodando;
 
     public void Update()
     {
         if (executar.podeExecutar == true)
         {
+            rodando = true;
            StartCoroutine("Run");
            executar.podeExecutar = false;
         }
@@ -24,6 +26,8 @@ public class ChecarSlots : MonoBehaviour
      private IEnumerator Run()
     {
         Debug.Log("Iniciar checagem");
+        if(rodando == true)
+        {
             for (int i = 0; i < slots.Length; i++)
             {
                 Debug.Log(slots[i].name);
@@ -82,6 +86,9 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(i);
                  
             }
+
+        }
+            
 
            
            

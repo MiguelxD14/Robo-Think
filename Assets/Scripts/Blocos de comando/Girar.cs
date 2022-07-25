@@ -30,6 +30,7 @@ public class Girar : MonoBehaviour
             {
                 if (hit.collider.gameObject == Op1)
                 {
+                    selecao();
                     Op1.GetComponent<Renderer>().material.color = Color.yellow;
                     this.opc = 1;
                     
@@ -37,6 +38,7 @@ public class Girar : MonoBehaviour
 
              if (hit.collider.gameObject == Op2)
                 {
+                    selecao();
                     Op2.GetComponent<Renderer>().material.color = Color.yellow;
                     this.opc = 2;
                     
@@ -45,6 +47,7 @@ public class Girar : MonoBehaviour
 
                  if (hit.collider.gameObject == Op3)
                 {
+                    selecao();
                     Op3.GetComponent<Renderer>().material.color = Color.yellow;
                     this.opc = 3;
                     
@@ -84,6 +87,12 @@ public class Girar : MonoBehaviour
       }
     }
     
+    public void selecao()
+    {
+        Op1.GetComponent<Renderer>().material.color = Color.white;
+        Op2.GetComponent<Renderer>().material.color = Color.white;
+        Op3.GetComponent<Renderer>().material.color = Color.white;
+    }
 }
 
 

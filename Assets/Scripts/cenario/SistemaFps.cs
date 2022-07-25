@@ -9,8 +9,9 @@ public class SistemaFps : MonoBehaviour
     public GameObject blocoAtual;
     public GameObject bloco;
     public Vector3 posicao;
+    public bool naMao;
+    public bool canGrab;
 
-    bool canGrab;
 
     public void Update()
     {
@@ -41,7 +42,7 @@ public class SistemaFps : MonoBehaviour
 
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
             {
-                if (hit.transform.tag == "Bloco de comando")
+                if (hit.transform.tag == "Bloco de comando" && naMao == false)
                 {
                    // Debug.Log("Pegue o bloco");
                     canGrab = true;
@@ -57,22 +58,32 @@ public class SistemaFps : MonoBehaviour
     public void Pegar()
     {
         //Responsavel por pegar o  bloco
+        canGrab = false;
+        naMao = true;
         blocoAtual = bloco;
         blocoAtual.transform.position = mao.position;
         blocoAtual.transform.parent = mao;
         posicao = transform.TransformDirection(0, 180, 0);
         blocoAtual.transform.localEulerAngles = posicao;
-        blocoAtual.GetComponent<Rigidbody>().isKinematic = true;
+        blocoAtual.GetComponent<Rigidbody>().useGravity = false;
+        blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; //|  RigidbodyConstraints.FreezeRotationY |  RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX |  RigidbodyConstraints.FreezePositionY |  RigidbodyConstraints.FreezePositionZ;
+        
     }
 
     public void Soltar()
     {
-        //Responsavel por soltar o bloco
-       
+      if( naMao == true)
+      {
         blocoAtual = bloco;
         blocoAtual.transform.parent = null;
-        blocoAtual.GetComponent<Rigidbody>().isKinematic = false;
+        blocoAtual.GetComponent<Rigidbody>().useGravity = true;
+        blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         blocoAtual = null;
+        naMao = false;
+        canGrab = true;
+      }
+       
+        
        
     }
 }

@@ -13,6 +13,7 @@ public class atrelar : MonoBehaviour
     public bool podeExecutar;
     public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
+  
    
 
 
@@ -167,6 +168,7 @@ public class atrelar : MonoBehaviour
         // Slot1
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[0] = true;
             bloco.transform.position = slot1.transform.position;
             bloco.transform.rotation = slot1.transform.rotation;
@@ -181,6 +183,7 @@ public class atrelar : MonoBehaviour
         //Slot2
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[1] = true;
             bloco.transform.position = slot2.transform.position;
             bloco.transform.rotation = slot2.transform.rotation;
@@ -194,6 +197,7 @@ public class atrelar : MonoBehaviour
         //Slot3
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[2] = true;
             bloco.transform.position = slot3.transform.position;
             bloco.transform.rotation = slot3.transform.rotation;
@@ -208,6 +212,7 @@ public class atrelar : MonoBehaviour
         //Slot4
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[3] = true;
             bloco.transform.position = slot4.transform.position;
             bloco.transform.rotation = slot4.transform.rotation;
@@ -222,6 +227,7 @@ public class atrelar : MonoBehaviour
         //Slot5
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[4] = true;
             bloco.transform.position = slot5.transform.position;
             bloco.transform.rotation = slot5.transform.rotation;
@@ -236,6 +242,7 @@ public class atrelar : MonoBehaviour
         //Slot6
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[5] = true;
             bloco.transform.position = slot6.transform.position;
             bloco.transform.rotation = slot6.transform.rotation;
@@ -250,6 +257,7 @@ public class atrelar : MonoBehaviour
         //Slot7
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[6] = true;
             bloco.transform.position = slot7.transform.position;
             bloco.transform.rotation = slot7.transform.rotation;
@@ -264,6 +272,7 @@ public class atrelar : MonoBehaviour
         //Slot8
         if (bloco.transform.parent == mao.transform)
         {
+            player.GetComponent<SistemaFps>().naMao = false;
             podeAtrelar[7] = true;
             bloco.transform.position = slot8.transform.position;
             bloco.transform.rotation = slot8.transform.rotation;
@@ -275,8 +284,6 @@ public class atrelar : MonoBehaviour
     }
     public void Recuperar()
     {
-        bloco.transform.parent = null;
-        bloco.GetComponent<Rigidbody>().useGravity = true;
         player.GetComponent<SistemaFps>().Pegar();
 
     }
