@@ -66,7 +66,7 @@ public class SistemaFps : MonoBehaviour
         posicao = transform.TransformDirection(0, 180, 0);
         blocoAtual.transform.localEulerAngles = posicao;
         blocoAtual.GetComponent<Rigidbody>().useGravity = false;
-        blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; //|  RigidbodyConstraints.FreezeRotationY |  RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionX |  RigidbodyConstraints.FreezePositionY |  RigidbodyConstraints.FreezePositionZ;
+        blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; 
         
     }
 

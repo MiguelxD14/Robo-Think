@@ -5534,6 +5534,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577103660}
   m_Mesh: {fileID: -3537709356157935800, guid: 78ef1461596383243bd71811e95007ab, type: 3}
+--- !u!1 &1586767430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4165131150283335618, guid: 0fefbed32a9ac014ca8753d598208cc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4165131150550768741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1623805927
 GameObject:
   m_ObjectHideFlags: 0
@@ -6169,6 +6175,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1815340168039321670}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1863000365 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1863000370, guid: bd8df9714f705194ba2a52a881dd8af9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1815340168039321670}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1863000366 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1863000366, guid: bd8df9714f705194ba2a52a881dd8af9,
@@ -6181,6 +6193,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1633d55cea986654bb89661128bd6a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1863000367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863000363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65e125f3b298018409f8e5f6907c16d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1863000365}
+  reset_f: 0
 --- !u!114 &1863000369 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1863000369, guid: bd8df9714f705194ba2a52a881dd8af9,
@@ -6199,7 +6225,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4165131150550768741}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1586767430}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d6d21518e601c91419c658f433d72d68, type: 3}
@@ -8235,7 +8261,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
+      propertyPath: RF
+      value: 
+      objectReference: {fileID: 1863000367}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: Robo
+      value: 
+      objectReference: {fileID: 1863000363}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: Tela
+      value: 
+      objectReference: {fileID: 1586767430}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
       propertyPath: slots
+      value: 
+      objectReference: {fileID: 1876719196}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: Rodando
       value: 
       objectReference: {fileID: 1876719196}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
@@ -8248,5 +8294,30 @@ PrefabInstance:
       propertyPath: GirarOpc
       value: 
       objectReference: {fileID: 1417815223}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: posicoes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: rotacoes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.data[0]
+      value: 
+      objectReference: {fileID: 1863000363}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.data[1]
+      value: 
+      objectReference: {fileID: 659706789}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02606b75ff600024cb4f294f8f9bdb35, type: 3}

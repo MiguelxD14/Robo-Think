@@ -5,39 +5,38 @@ using UnityEngine;
 public class restart_pos : MonoBehaviour
 {
     // posição e rotação
-    public Vector3 robo, objeto,quebravel;
-    public Quaternion robo_r,objeto_r,quebravel_r;
+    public GameObject[] objetos;
+    public Vector3[] posicoes;
+    public Quaternion[] rotacoes; 
+    
     //Referencia a objetos
     public GameObject Robo;
-    public GameObject bloco_quebravel;
-    public GameObject Obstaculo;
     public GameObject Tela;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
     public ChecarSlots slots;
     public ChecarSlots Rodando;
+    public reset_carry RC; 
+    public reset_brok RB;
+    public reset_fliper RF;
     //atribuições
-    public int blocos_quebraveis;
    
     
     // Start is called before the first frame update
     void Start()
     {
-        robo =  Robo.transform.position;
-        robo_r =  Robo.transform.rotation;
-    //    objeto =  Obstaculo.transform.position;
-    //    objeto_r = Obstaculo.transform.rotation;
-       quebravel = bloco_quebravel.transform.position;
-       quebravel_r = bloco_quebravel.transform.rotation;
 
-       blocos_quebraveis = GameObject.FindGameObjectsWithTag("quebravel").Length;
-       if(bloco_quebravel != null)
-       {
-         bloco_quebravel.SetActive(true);
-       }
+        for (int i = 0; i < objetos.Length; i++)
+          {
+                posicoes[i] = objetos[i].transform.position;
+                rotacoes[i] = objetos[i].transform.rotation;
+           }
+    
       
     }
+    
+
 
     // Update is called once per frame
     void Update()
@@ -46,7 +45,19 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
-        
+        if(RC != null)
+        {
+            RC.reset_c = true;
+        }
+        if(RB != null)
+        {
+            RB.reset_b  = true;
+        }
+        if(RF != null)
+        {
+            RF.reset_f = true;
+        }
+        RestartPositionsRotation();
 
         for (int i = 0; i < slots.slots.Length; i++)
         {
@@ -80,28 +91,19 @@ public class restart_pos : MonoBehaviour
             GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
         }
 
-       
-        Robo.transform.position = robo;
-        Robo.transform.rotation = robo_r;
-        // if(Obstaculo != null)
-        // {
-        // Obstaculo.transform.position = objeto;
-        // Obstaculo.transform.rotation = objeto_r;
-        // Obstaculo.transform.parent = null;
-        // }
-        if(bloco_quebravel != null)
-        {
-
-        bloco_quebravel.transform.position = quebravel;
-        bloco_quebravel.transform.rotation = quebravel_r;
-        bloco_quebravel.SetActive(true);
-
-        }
-        
-        
-        
-
-        
-       
      }
+
+      public void RestartPositionsRotation()
+    {
+        for (int i = 0; i < objetos.Length; i++)
+        {
+            objetos[i].transform.position = posicoes[i];
+            objetos[i].transform.rotation = rotacoes[i];
+        }
+    }
+        
+
+        
+       
+     
 }

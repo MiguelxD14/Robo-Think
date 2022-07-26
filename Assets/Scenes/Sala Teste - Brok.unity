@@ -6137,6 +6137,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6706071610930161531}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1522009104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522009102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ac7cfbe41b7a649b43b63c5a5d45f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quebravel:
+  - {fileID: 572198888}
+  reset_b: 0
 --- !u!1 &1562861820
 GameObject:
   m_ObjectHideFlags: 0
@@ -7068,6 +7083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
+      propertyPath: RB
+      value: 
+      objectReference: {fileID: 1522009104}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
       propertyPath: Robo
       value: 
       objectReference: {fileID: 1522009102}
@@ -7099,6 +7119,41 @@ PrefabInstance:
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
       propertyPath: bloco_quebravel
+      value: 
+      objectReference: {fileID: 572198888}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: posicoes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: rotacoes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.data[0]
+      value: 
+      objectReference: {fileID: 1522009102}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.data[1]
+      value: 
+      objectReference: {fileID: 572198888}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: bloco_quebravel.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: bloco_quebravel.Array.data[0]
       value: 
       objectReference: {fileID: 572198888}
     m_RemovedComponents: []

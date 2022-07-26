@@ -19,6 +19,7 @@ public class Voar : MonoBehaviour
     {
         if(voa == true)
         {
+            animator.SetBool("reset", false);
             Pousar.pousa = false;
             animator.SetBool("Voar", true);
         }
