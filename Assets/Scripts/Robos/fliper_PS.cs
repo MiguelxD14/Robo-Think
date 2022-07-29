@@ -11,70 +11,72 @@ public class fliper_PS : MonoBehaviour
     public Collider Obstaculo;
     public GameObject Fliper;
     public Pousar Pousar;
-     public bool colidiu, podeColidir;
+    public bool colidiu, podeColidir;
 
     void Start()
     {
         flip_base = GameObject.FindGameObjectWithTag("fliper_base");
         animator = Fliper.GetComponent<Animator>();
     }
-    public void  Update() 
+    public void Update()
     {
-         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa"))
+        {
+            StartCoroutine("delay2");
+        }
+        if (Obstaculo != null)
+        {
+            if (Obstaculo.transform.parent == flip_base.transform.parent && Pousar.pousa == true)
             {
-                 StartCoroutine("delay2");
+                Debug.Log("Deu certo amem"); //adcionar animação de erro
+                Pousar.pousa = false;
             }
-
-            if(Obstaculo.transform.parent == flip_base.transform.parent && Pousar.pousa == true && Obstaculo != null)
+            if (Obstaculo.transform.parent == flip_base.transform.parent && colidiu == true)
             {
-               Debug.Log("Deu certo amem"); //adcionar animação de erro
-               Pousar.pousa = false;
+                Obstaculo.transform.parent = null;
+                Obstaculo.GetComponent<Rigidbody>().useGravity = true;
+                Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu = false;
             }
-            if(Obstaculo.transform.parent == flip_base.transform.parent && colidiu == true && Obstaculo != null)
-            {
-               Obstaculo.transform.parent = null;
-               Obstaculo.GetComponent<Rigidbody>().useGravity = true;
-               Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu = false;
-            }
-          colidiu = Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu;
+            colidiu = Obstaculo.gameObject.GetComponent<bloco_carregavel>().colidiu;
+        }
     }
-    public void  OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
     {
-         
-      if(Pegar.pega == true && other.gameObject.tag == "Obstaculo") 
-      {
+
+        if (Pegar.pega == true && other.gameObject.tag == "Obstaculo")
+        {
             other.transform.parent = flip_base.transform.parent;
             other.transform.position = flip_base.transform.position;
             Obstaculo = other;
-            Obstaculo.GetComponent<Rigidbody>().useGravity = false; 
-             Obstaculo.gameObject.GetComponent<bloco_carregavel>().podeColidir = true;
-            
-      } 
+            Obstaculo.GetComponent<Rigidbody>().useGravity = false;
+            Obstaculo.gameObject.GetComponent<bloco_carregavel>().podeColidir = true;
 
-      if(Soltar.solta == true )//&&  other.gameObject.tag != null 
-      {
-           animator.SetBool("Soltar",true);
-       
+        }
+
+        if (Soltar.solta == true)//&&  other.gameObject.tag != null 
+        {
+            animator.SetBool("Soltar", true);
+
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa 0"))
             {
-                 StartCoroutine("delay");
-                
-            } 
-      }
+                StartCoroutine("delay");
+
+            }
+        }
 
     }
 
     public IEnumerator delay()
     {
-          yield return new WaitForSeconds(1.5f);
-          Obstaculo.transform.parent = null;
-          Obstaculo.GetComponent<Rigidbody>().useGravity = true;
-          Soltar.solta = false;
-          
+        yield return new WaitForSeconds(1.5f);
+        Obstaculo.transform.parent = null;
+        Obstaculo.GetComponent<Rigidbody>().useGravity = true;
+        Soltar.solta = false;
+
     }
     public IEnumerator delay2()
     {
-          yield return new WaitForSeconds(2f);
-          Pegar.pega = false;
+        yield return new WaitForSeconds(2f);
+        Pegar.pega = false;
     }
 }
