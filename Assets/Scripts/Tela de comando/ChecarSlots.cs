@@ -20,6 +20,13 @@ public class ChecarSlots : MonoBehaviour
         {
             rodando = true;
            StartCoroutine("Run");
+        // if(rodando == true)
+        // {
+        //     for (int i = 0; i < slots.Length; i++)
+        //     {
+        //          slots[i].gameObject.transform.GetChild(0).gameObject.layer = 2;
+        //     }
+        // }
            executar.podeExecutar = false;
         }
     }
@@ -28,8 +35,13 @@ public class ChecarSlots : MonoBehaviour
         Debug.Log("Iniciar checagem");
         if(rodando == true)
         {
+            // for (int i = 0; i < slots.Length; i++)
+            // {
+                 
+            // }
             for (int i = 0; i < slots.Length; i++)
-            {
+            {      
+                // slots[i].gameObject.transform.GetChild(0).gameObject.tag = "Untagged";
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
@@ -86,13 +98,21 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(i);
                  
             }
-
+            //  rodando = false;       
         }
             
-
+        //   if(rodando == false)
+        //  {
+        //      for (int i = 0; i < slots.Length; i++)
+        //     {   
+        //         slots[i].gameObject.transform.GetChild(0).gameObject.layer = 0;   
+        //     }
+        //  }
            
            
         
     }
+
+   
 }
     

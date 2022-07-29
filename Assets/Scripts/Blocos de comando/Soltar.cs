@@ -24,6 +24,7 @@ public class Soltar : MonoBehaviour
         if(solta == false)
         {
             animator.SetBool("Soltar",false);
+            
         }
     }
     

@@ -11,7 +11,7 @@ public class botControl : MonoBehaviour
 
     public int opc;
 
-    float distance;
+    public float distance;
     bool moving = false;
     int moveCount = 0;
     public condMov condition;
@@ -85,7 +85,7 @@ public class botControl : MonoBehaviour
     {
         //TODO fazer mover para frente até chegar no ponto atual de movimento e setar as animações
        animator.SetBool("Anda", true);
-       animator.SetBool("reset", false);
+       //animator.SetBool("reset", false);
         //calcula a distância entre o robô e o piso a frente dele
         distance = Vector3.Distance(transform.position, targetPoint);
         //define a velocidade de movimento do robô no movimento para a frente relativa à ele
