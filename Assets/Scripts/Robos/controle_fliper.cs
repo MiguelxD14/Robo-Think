@@ -22,8 +22,8 @@ public class controle_fliper : MonoBehaviour
            if(Voar.voa == true && Fliper.position.y < 4)
            {
             voando = true;
-            fly = new Vector3(0, fCond, 0);
-            transform.Translate(fly * fSpeed * Time.deltaTime);
+            fly = new Vector3(0, 0, 1);
+            Fliper.transform.Translate(fly * fSpeed * Time.deltaTime);
             StartCoroutine("delay");
                 
                
@@ -33,8 +33,8 @@ public class controle_fliper : MonoBehaviour
                 voando = false;
                 Voar.voa = false;
                 Debug.Log("Pouso funciona");
-                fly = new Vector3(0, -1, 0);
-                transform.Translate(fly * fSpeed * Time.deltaTime);
+                fly = new Vector3(0, 0, -1);
+                Fliper.transform.Translate(fly * fSpeed * Time.deltaTime);
             }
             
             if(Fliper.position.y <= 0.6)
