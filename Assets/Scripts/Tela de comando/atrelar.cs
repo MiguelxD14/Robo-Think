@@ -14,15 +14,11 @@ public class atrelar : MonoBehaviour
     public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
   
-   
-
-
     public void Start()
     {
-    // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situa��es e salas do projeto.
+    // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situaçôes e salas do projeto.
        
         player = GameObject.FindGameObjectWithTag("Player");
-       
         slot = GameObject.FindGameObjectWithTag("slot");
 
 
@@ -30,7 +26,7 @@ public class atrelar : MonoBehaviour
     public void Update()
     {
           bloco = player.GetComponent<SistemaFps>().blocoAtual;
-    //Faz a verifica��o baseado onde o player est� olhando;
+    //Faz a verificação baseado onde o player esta olhando;
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -301,6 +297,7 @@ public class atrelar : MonoBehaviour
                     if (bloco.transform.parent != null)// verifica se o bloco est� atrelado 
                     {
                         podeExecutar = true;
+                       
                     }
                        
                    }

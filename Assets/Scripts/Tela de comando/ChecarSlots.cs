@@ -13,6 +13,8 @@ public class ChecarSlots : MonoBehaviour
     public Animator Carry;
     public objetivo Chegou;
     public bool rodando;
+    public GameObject botaoExecutar;
+    public GameObject botãoExecutando;
 
     public void Update()
     {
@@ -41,10 +43,14 @@ public class ChecarSlots : MonoBehaviour
             // }
             for (int i = 0; i < slots.Length; i++)
             {      
+                botaoExecutar.GetComponent<MeshRenderer>().enabled = false;
+                botãoExecutando.GetComponent<MeshRenderer>().enabled = true;
+                
                 // slots[i].gameObject.transform.GetChild(0).gameObject.tag = "Untagged";
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
+                   
                     Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
                     Rend.enabled = true;
                     Rend.material.color = Color.red;
@@ -92,12 +98,14 @@ public class ChecarSlots : MonoBehaviour
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }
                     
-                    yield return new WaitForSeconds(10);
+                    yield return new WaitForSeconds(15);
                     
                 }
                 Debug.Log(i);
                  
             }
+                botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
+                botãoExecutando.GetComponent<MeshRenderer>().enabled = false;
             //  rodando = false;       
         }
             

@@ -319,6 +319,16 @@ PrefabInstance:
       propertyPath: linkBot
       value: 
       objectReference: {fileID: 777056496}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: botaoExecutar
+      value: 
+      objectReference: {fileID: 698750627}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: "bot\xE3oExecutando"
+      value: 
+      objectReference: {fileID: 436729409}
     - target: {fileID: 4165131150283335631, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: mao
@@ -1248,6 +1258,12 @@ Transform:
   m_Father: {fileID: 2144101521}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &436729409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5018120227179463376, guid: 0fefbed32a9ac014ca8753d598208cc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 22621619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &442336110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1651,12 @@ Transform:
   m_Father: {fileID: 8871173862948152025}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &698750627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4165131150371740736, guid: 0fefbed32a9ac014ca8753d598208cc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 22621619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,6 +2652,12 @@ Transform:
   m_Father: {fileID: 2144101521}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1323998518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8595285049189340860, guid: 02606b75ff600024cb4f294f8f9bdb35,
+    type: 3}
+  m_PrefabInstance: {fileID: 20257589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1347613779
 GameObject:
   m_ObjectHideFlags: 0
@@ -3644,6 +3672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porta: {fileID: 797335937}
   chegou: 0
+  "bot\xE3oExec": {fileID: 698750627}
+  "bot\xE3oRest": {fileID: 1323998518}
 --- !u!1 &1927690354
 GameObject:
   m_ObjectHideFlags: 0
@@ -8384,6 +8414,8 @@ MonoBehaviour:
   Carry: {fileID: 0}
   Chegou: {fileID: 1900407417}
   rodando: 0
+  botaoExecutar: {fileID: 0}
+  "bot\xE3oExecutando": {fileID: 0}
 --- !u!4 &7316210180736220963
 Transform:
   m_ObjectHideFlags: 0

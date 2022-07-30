@@ -7,6 +7,7 @@ public class objetivo : MonoBehaviour
     GameObject luz;
     public GameObject porta;
     public bool chegou;
+    public GameObject botãoExec, botãoRest;
     void Start()
     {
         luz = GameObject.FindGameObjectWithTag("Luz");
@@ -21,6 +22,9 @@ public class objetivo : MonoBehaviour
             chegou = true;
             luz.gameObject.GetComponent<Light>().enabled = true;
             porta.gameObject.SetActive(true);
+            botãoExec.GetComponent<BoxCollider>().enabled = false;
+            botãoRest.GetComponent<BoxCollider>().enabled = false;
+
 
         }
     }

@@ -2388,6 +2388,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   porta: {fileID: 2035668473}
   chegou: 0
+  "bot\xE3oExec": {fileID: 1302557224}
+  "bot\xE3oRest": {fileID: 1800433674}
 --- !u!54 &611470993
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4657,6 +4659,16 @@ PrefabInstance:
       propertyPath: linkBot
       value: 
       objectReference: {fileID: 1697286719}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: botaoExecutar
+      value: 
+      objectReference: {fileID: 1302557224}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: "bot\xE3oExecutando"
+      value: 
+      objectReference: {fileID: 1302557223}
     - target: {fileID: 4165131150283335631, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: mao
@@ -4664,6 +4676,18 @@ PrefabInstance:
       objectReference: {fileID: 2085946276}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fefbed32a9ac014ca8753d598208cc0, type: 3}
+--- !u!1 &1302557223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5018120227179463376, guid: 0fefbed32a9ac014ca8753d598208cc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302557222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1302557224 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4165131150371740736, guid: 0fefbed32a9ac014ca8753d598208cc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302557222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1308154246
 GameObject:
   m_ObjectHideFlags: 0
@@ -6455,6 +6479,12 @@ PrefabInstance:
       objectReference: {fileID: 572198888}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02606b75ff600024cb4f294f8f9bdb35, type: 3}
+--- !u!1 &1800433674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8595285049189340860, guid: 02606b75ff600024cb4f294f8f9bdb35,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800433673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1802670447
 GameObject:
   m_ObjectHideFlags: 0

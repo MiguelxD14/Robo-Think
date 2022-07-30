@@ -12,12 +12,9 @@ public class controle_fliper : MonoBehaviour
     public Animator Flip;
     Vector3 fly;
     public bool voando;
-   void Start()
-   {
-       
-   }
+
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
            if(Voar.voa == true && Fliper.position.y < 4)
            {
