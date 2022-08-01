@@ -45,7 +45,7 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
-        // Rodando.rodando = false; 
+        Rodando.rodando = false; 
         if(RC != null)
         {
             RC.reset_c = true;
@@ -90,8 +90,6 @@ public class restart_pos : MonoBehaviour
             GirarOpc.Op2.GetComponent<Renderer>().material.color = Color.white;
             GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
         }
-
-       // Robo.GetComponent<Animator>().SetBool("Erro", false);
      }
 
       public void RestartPositionsRotation()

@@ -161,7 +161,7 @@ public class atrelar : MonoBehaviour
     public void Atrelar1()
     {
         //Codigo responsavel por atrelar o bloco a tela de comando;
-        // Slot1
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -170,13 +170,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot1.transform.rotation;
             bloco.transform.parent = slot1.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+           
         }
 
     }
     public void Atrelar2()
     {
-        //Slot2
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -185,12 +185,12 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot2.transform.rotation;
             bloco.transform.parent = slot2.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+           
         }
     }
     public void Atrelar3()
     {
-        //Slot3
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -199,13 +199,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot3.transform.rotation;
             bloco.transform.parent = slot3.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+            
         }
         
     }
     public void Atrelar4()
     {
-        //Slot4
+        
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -214,13 +214,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot4.transform.rotation;
             bloco.transform.parent = slot4.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+           
         }
         
     }
     public void Atrelar5()
     {
-        //Slot5
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -229,13 +229,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot5.transform.rotation;
             bloco.transform.parent = slot5.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+            
         }
        
     }
     public void Atrelar6()
     {
-        //Slot6
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -244,13 +244,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot6.transform.rotation;
             bloco.transform.parent = slot6.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+            
         }
        
     }
     public void Atrelar7()
     {
-        //Slot7
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -259,13 +259,13 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot7.transform.rotation;
             bloco.transform.parent = slot7.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+            
         }
        
     }
     public void Atrelar8()
     {
-        //Slot8
+       
         if (bloco.transform.parent == mao.transform)
         {
             player.GetComponent<SistemaFps>().naMao = false;
@@ -274,7 +274,7 @@ public class atrelar : MonoBehaviour
             bloco.transform.rotation = slot8.transform.rotation;
             bloco.transform.parent = slot8.transform;
             bloco.GetComponent<Rigidbody>().useGravity = false;
-            //ChecarSlots();
+           
         }
         
     }

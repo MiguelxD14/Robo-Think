@@ -3437,6 +3437,11 @@ PrefabInstance:
       objectReference: {fileID: 1929303916}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
+      propertyPath: botaoResetar
+      value: 
+      objectReference: {fileID: 1133017885}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
       propertyPath: botaoExecutar
       value: 
       objectReference: {fileID: 897233495}

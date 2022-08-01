@@ -13,8 +13,8 @@ public class ChecarSlots : MonoBehaviour
     public Animator Carry;
     public objetivo Chegou;
     public bool rodando;
-    public GameObject botaoExecutar;
-    public GameObject botãoExecutando;
+    public GameObject botaoExecutar, botãoExecutando, botaoResetar;
+    
     public SistemaFps bloquearBlocos;
     public void Update()
     {
@@ -38,6 +38,8 @@ public class ChecarSlots : MonoBehaviour
                 bloquearBlocos.naMao = true;
                 bloquearBlocos.bloco = null;
                 bloquearBlocos.blocoAtual = null;
+                botaoResetar.GetComponent<BoxCollider>().enabled = false;
+                botaoExecutar.GetComponent<BoxCollider>().enabled = false;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = false;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = true;
                 
@@ -72,14 +74,11 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
-                       //linkCarry.Pegar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
                     {
-                       // linkCarry.Soltar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
-                       
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Voa")
                     {
@@ -88,12 +87,11 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
                     {
-                      
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                     }
                     
-                    yield return new WaitForSeconds(15);
+                    yield return new WaitForSeconds(10);
                     
                 }
                 Debug.Log(i);
@@ -101,6 +99,8 @@ public class ChecarSlots : MonoBehaviour
             }
                 bloquearBlocos.enabled = true;
                 bloquearBlocos.naMao = false;
+                botaoResetar.GetComponent<BoxCollider>().enabled = true;
+                botaoExecutar.GetComponent<BoxCollider>().enabled = true;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = false;     
         }

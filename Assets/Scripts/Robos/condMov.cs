@@ -5,24 +5,12 @@ using UnityEngine;
 public class condMov : MonoBehaviour
 {
     public GameObject robo;
-    public GameObject Carry;
     public bool canMove;
     public Transform waypoint;
     public controle_fliper fliper;
-    public checagem_Fliper passando;
     public Soltar soltar;
 
-
-    // public void OnTriggerEnter(Collider collision) 
-    // {
-    //     if (collision.gameObject.tag == "Anda")
-    //     {
-           
-    //         canMove = true;
-    //         waypoint = collision.gameObject.transform;
-            
-    //     }
-    // }   
+ 
     public void OnTriggerStay(Collider collision)
     {
          if (collision.gameObject.tag == "Anda")
@@ -66,19 +54,6 @@ public class condMov : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
         Debug.Log(canMove);
         
-    //    if(collision.gameObject.tag != "Obstaculo")
-    //     {
-    //         if(passando != null)
-    //         {
-    //             passando.podePassar = false;
-    //         }
-    //     }  
-
-// 
-            // if(Carry != null)
-            // {
-            //     Carry.GetComponent<Animator>().SetBool("Erro", true);
-            // }
     }
 
 }
