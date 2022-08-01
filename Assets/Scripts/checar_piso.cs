@@ -22,10 +22,13 @@ public class checar_piso : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        
+        if(Obstaculo != null)
+        {
         if(other.gameObject.tag == Obstaculo.gameObject.tag && Pousar.pousa == true)
         {
            Pousar.pousa = false;
         } 
+        }
+       
     }
 }

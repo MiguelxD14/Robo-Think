@@ -8,38 +8,77 @@ public class condMov : MonoBehaviour
     public GameObject Carry;
     public bool canMove;
     public Transform waypoint;
-
+    public controle_fliper fliper;
     public checagem_Fliper passando;
-    public Soltar soltar;    
+    public Soltar soltar;
+
+
+    // public void OnTriggerEnter(Collider collision) 
+    // {
+    //     if (collision.gameObject.tag == "Anda")
+    //     {
+           
+    //         canMove = true;
+    //         waypoint = collision.gameObject.transform;
+            
+    //     }
+    // }   
     public void OnTriggerStay(Collider collision)
     {
-        if (collision.gameObject.tag == "Anda")
+         if (collision.gameObject.tag == "Anda")
         {
+           
             canMove = true;
             waypoint = collision.gameObject.transform;
             
         }
 
-        if (collision.gameObject.tag != "Anda" )
+        if (collision.gameObject.tag != "Anda" && collision.gameObject.tag != "Obstaculo")
         {
             canMove = false;
-            passando.podePassar = false;
-            // soltar.solta = false;
+
+        }
+        if(collision.gameObject.tag == "Untagged")
+        {
+            if(soltar != null)
+            {
+                soltar.solta = false;
+            }
+        }
+        else if (collision.gameObject.tag == "Obstaculo")
+        {
+
+            if(fliper != null)
+            {
+            if (fliper.voando == true)
+            {
+            canMove = true;
+            }
+            else
+            {
+            canMove = false;
+            }
+            }
+        
+
+        } 
+
+        Debug.Log(collision.gameObject.tag);
+        Debug.Log(canMove);
+        
+    //    if(collision.gameObject.tag != "Obstaculo")
+    //     {
+    //         if(passando != null)
+    //         {
+    //             passando.podePassar = false;
+    //         }
+    //     }  
+
+// 
             // if(Carry != null)
             // {
             //     Carry.GetComponent<Animator>().SetBool("Erro", true);
             // }
-                
-        }
-        if(collision.gameObject.tag == "Obstaculo")
-        {
-            if(passando != null)
-            {
-                 passando.podePassar = true;
-            }
-           
-        }   
-
     }
 
 }

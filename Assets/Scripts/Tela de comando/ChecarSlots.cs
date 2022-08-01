@@ -15,20 +15,13 @@ public class ChecarSlots : MonoBehaviour
     public bool rodando;
     public GameObject botaoExecutar;
     public GameObject botãoExecutando;
-
+    public SistemaFps bloquearBlocos;
     public void Update()
     {
         if (executar.podeExecutar == true)
         {
             rodando = true;
            StartCoroutine("Run");
-        // if(rodando == true)
-        // {
-        //     for (int i = 0; i < slots.Length; i++)
-        //     {
-        //          slots[i].gameObject.transform.GetChild(0).gameObject.layer = 2;
-        //     }
-        // }
            executar.podeExecutar = false;
         }
     }
@@ -37,16 +30,18 @@ public class ChecarSlots : MonoBehaviour
         Debug.Log("Iniciar checagem");
         if(rodando == true)
         {
-            // for (int i = 0; i < slots.Length; i++)
-            // {
-                 
-            // }
+           
             for (int i = 0; i < slots.Length; i++)
-            {      
+            {     
+                bloquearBlocos.enabled = false;
+                bloquearBlocos.canGrab = false;
+                bloquearBlocos.naMao = true;
+                bloquearBlocos.bloco = null;
+                bloquearBlocos.blocoAtual = null;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = false;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = true;
                 
-                // slots[i].gameObject.transform.GetChild(0).gameObject.tag = "Untagged";
+               
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
@@ -104,18 +99,11 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(i);
                  
             }
+                bloquearBlocos.enabled = true;
+                bloquearBlocos.naMao = false;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
-                botãoExecutando.GetComponent<MeshRenderer>().enabled = false;
-            //  rodando = false;       
+                botãoExecutando.GetComponent<MeshRenderer>().enabled = false;     
         }
-            
-        //   if(rodando == false)
-        //  {
-        //      for (int i = 0; i < slots.Length; i++)
-        //     {   
-        //         slots[i].gameObject.transform.GetChild(0).gameObject.layer = 0;   
-        //     }
-        //  }
            
            
         

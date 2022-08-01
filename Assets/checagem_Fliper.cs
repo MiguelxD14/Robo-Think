@@ -6,17 +6,18 @@ public class checagem_Fliper : MonoBehaviour
 {
     public controle_fliper voando;
     public bool podePassar;
-    public condMov movendo;
+    public condMov movendo, ts;
+    
    
     void Update()
     {
-        if(voando.voando == true && podePassar == true)
+        if( podePassar == true)
         {
             movendo.canMove = true;
         }
-        if(voando.voando == true && podePassar == false)
-        {
-            movendo.canMove = false;
-        }
+        // if(voando.voando == true && podePassar == false)
+        // {
+        //     movendo.canMove = false;
+        // }
     }
 }

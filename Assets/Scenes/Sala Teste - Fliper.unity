@@ -2577,6 +2577,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3977469719137175242, guid: dce3ea8c13cbcd640a6cdb8809601afd,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce3ea8c13cbcd640a6cdb8809601afd, type: 3}
 --- !u!1 &812735355 stripped
@@ -2585,20 +2590,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 812735354}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &812735356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812735355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 568660e96714539428b2cb7cd6f65071, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colidiu: 0
-  podeColidir: 0
 --- !u!1 &828029687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,6 +2897,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8595285048320911028}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &979342417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 579769835775405413, guid: 33e1f6308e6d333409c248cde9d881ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 579769835846598557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e34ce98d8e3685740be8336943634c7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &984888246
 GameObject:
   m_ObjectHideFlags: 0
@@ -5926,7 +5929,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.201
+      value: 10.006
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
@@ -6031,7 +6034,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9728a0efc74daf2479e27d3a0c7b58b7,
         type: 3}
@@ -6383,7 +6386,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863000363}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c5a45fa98cfdc7d48b94de0e8b6c0788, type: 3}
   m_Name: 
@@ -6391,6 +6394,7 @@ MonoBehaviour:
   voando: {fileID: 1863000366}
   podePassar: 0
   movendo: {fileID: 215300639}
+  ts: {fileID: 0}
 --- !u!1 &1931286491
 GameObject:
   m_ObjectHideFlags: 0
@@ -7776,6 +7780,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.0746057
       objectReference: {fileID: 0}
+    - target: {fileID: 579769835775405413, guid: 33e1f6308e6d333409c248cde9d881ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 579769835775405416, guid: 33e1f6308e6d333409c248cde9d881ff,
         type: 3}
       propertyPath: m_Name
@@ -8065,6 +8074,11 @@ PrefabInstance:
       objectReference: {fileID: 312267476}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
+      propertyPath: bloquearBlocos
+      value: 
+      objectReference: {fileID: 979342417}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
       propertyPath: "bot\xE3oExecutando"
       value: 
       objectReference: {fileID: 2118207005}
@@ -8087,6 +8101,16 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4949861215209192953, guid: 06e7ec96d522bd343be81ba45995f11d,
+        type: 3}
+      propertyPath: robo
+      value: 
+      objectReference: {fileID: 1863000363}
+    - target: {fileID: 4949861215209192953, guid: 06e7ec96d522bd343be81ba45995f11d,
+        type: 3}
+      propertyPath: fliper
+      value: 
+      objectReference: {fileID: 1863000366}
     - target: {fileID: 4949861215209192953, guid: 06e7ec96d522bd343be81ba45995f11d,
         type: 3}
       propertyPath: passando
@@ -8181,6 +8205,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fliper
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949861215386559606, guid: 06e7ec96d522bd343be81ba45995f11d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4949861215386559607, guid: 06e7ec96d522bd343be81ba45995f11d,
         type: 3}

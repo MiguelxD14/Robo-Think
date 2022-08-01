@@ -787,17 +787,17 @@ PrefabInstance:
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
       propertyPath: objetos.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
       propertyPath: posicoes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
       propertyPath: rotacoes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
@@ -809,6 +809,11 @@ PrefabInstance:
       propertyPath: objetos.Array.data[1]
       value: 
       objectReference: {fileID: 1528746813604204008}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: objetos.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02606b75ff600024cb4f294f8f9bdb35, type: 3}
 --- !u!1 &198651479
@@ -3353,7 +3358,7 @@ PrefabInstance:
     - target: {fileID: 4165131150283335618, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: m_Name
-      value: Tela de comando  (1)
+      value: 'Tela de comando '
       objectReference: {fileID: 0}
     - target: {fileID: 4165131150283335624, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
@@ -3435,6 +3440,11 @@ PrefabInstance:
       propertyPath: botaoExecutar
       value: 
       objectReference: {fileID: 897233495}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: bloquearBlocos
+      value: 
+      objectReference: {fileID: 1909102827}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: "bot\xE3oExecutando"
