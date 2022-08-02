@@ -34,10 +34,10 @@ public class controle_fliper : MonoBehaviour
                 Fliper.transform.Translate(fly * fSpeed * Time.deltaTime);
             }
             
-            if(Fliper.position.y <= 0.6)
-            {
-                Pousar.pousa = false;
-            }
+            // if(Fliper.position.y <= 0.6)
+            // {
+            //     Pousar.pousa = false;
+            // }
     }
 
     public IEnumerator delay()

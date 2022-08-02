@@ -20,11 +20,10 @@ public class reset_fliper : MonoBehaviour
     {
         if(reset_f == true)
         {
-            Obs.transform.parent = null;
-           
             animator.SetBool("reset", true);
-            animator.SetBool("Pousar", true);
-            
+            //animator.SetBool("Voar", false);
+            //animator.SetBool("Pousar", true);
+            Obs.transform.parent = null;
             reset_f = false;
     
         }

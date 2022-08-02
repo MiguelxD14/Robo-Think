@@ -50,6 +50,7 @@ public class restart_pos : MonoBehaviour
         }
         
         RestartPositionsRotation();
+        // RF.animator.SetBool("reset", true);
         if(RC != null)
         {
             RC.reset_c = true;
