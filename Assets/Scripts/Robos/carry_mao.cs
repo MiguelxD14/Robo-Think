@@ -11,6 +11,7 @@ public class carry_mao : MonoBehaviour
     public GameObject obstaculo;
     GameObject Robo;
     Animator animator;
+    public bool comCarry, contatoBloco; // checa se o bloco carregavel pertence ao carry
   
   public void Start()
   {
@@ -25,8 +26,13 @@ public class carry_mao : MonoBehaviour
   }
     public void OnTriggerStay(Collider other)     
     {
-        if(Pegar.pega == true && other.gameObject.tag == "Obstaculo")
+        if(other.gameObject.tag == "Obstaculo")
         {
+          contatoBloco = true;
+        }
+        if(contatoBloco == true && Pegar.pega == true && other.gameObject.tag == "Obstaculo")
+        {
+
           animator.SetBool("reset", false);
             other.transform.parent = braco.transform.parent;
             other.transform.position = braco.transform.position;
@@ -34,12 +40,17 @@ public class carry_mao : MonoBehaviour
             obstaculo = other.gameObject;
             obstaculo.GetComponent<Rigidbody>().useGravity = false;
             obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+            if(other.transform.parent = braco.transform.parent)
+            {
+              comCarry = true;
+            }
         }
 
         if(Soltar.solta == true && other.gameObject.tag == "Obstaculo")
         {
             animator.SetBool("Soltar",true);
             Pegar.pega = false;
+            comCarry = false;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("|Carry_parado"))
                  {
                 Obstaculo.transform.parent = null;
@@ -47,7 +58,7 @@ public class carry_mao : MonoBehaviour
                 obstaculo.GetComponent<Rigidbody>().useGravity = true;
                 obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 Soltar.solta = false;
-                }
+                }      
         }
         
     }

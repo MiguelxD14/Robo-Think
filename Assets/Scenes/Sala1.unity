@@ -331,6 +331,11 @@ PrefabInstance:
       objectReference: {fileID: 698750627}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
+      propertyPath: checarDestino
+      value: 
+      objectReference: {fileID: 1900407417}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
       propertyPath: bloquearBlocos
       value: 
       objectReference: {fileID: 278352547}

@@ -6337,6 +6337,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1803687880}
   m_Mesh: {fileID: -7349392892874134549, guid: 78ef1461596383243bd71811e95007ab, type: 3}
+--- !u!114 &1857302388 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4949861215582813288, guid: 06e7ec96d522bd343be81ba45995f11d,
+    type: 3}
+  m_PrefabInstance: {fileID: 4949861214899553606}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463156c94df51a84eabfae1731e605fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1863000363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4949861215386559597, guid: 06e7ec96d522bd343be81ba45995f11d,
@@ -8054,6 +8066,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
+      propertyPath: flip
+      value: 
+      objectReference: {fileID: 1857302388}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
       propertyPath: Chegou
       value: 
       objectReference: {fileID: 257332362}
@@ -8077,6 +8094,11 @@ PrefabInstance:
       propertyPath: botaoExecutar
       value: 
       objectReference: {fileID: 312267476}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: checarDestino
+      value: 
+      objectReference: {fileID: 257332362}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: bloquearBlocos
@@ -8493,6 +8515,11 @@ PrefabInstance:
       propertyPath: GirarOpc
       value: 
       objectReference: {fileID: 1417815223}
+    - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: bloco_robo
+      value: 
+      objectReference: {fileID: 812735355}
     - target: {fileID: 8595285049189340862, guid: 02606b75ff600024cb4f294f8f9bdb35,
         type: 3}
       propertyPath: objetos.Array.size

@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 54.919983, y: 54.919983, z: 54.919983}
   m_Children: []
   m_Father: {fileID: 5605947181070798396}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &369656090595706637
 SkinnedMeshRenderer:
@@ -117,7 +117,7 @@ Transform:
   m_Children:
   - {fileID: 369656091532188468}
   m_Father: {fileID: 5605947181070798396}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &369656091033992257
 GameObject:
@@ -337,7 +337,7 @@ Transform:
   m_LocalScale: {x: 1.8073399, y: 1.8073399, z: 1.4210099}
   m_Children: []
   m_Father: {fileID: 5605947181070798396}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &369656092450178770
 BoxCollider:
@@ -367,6 +367,8 @@ MonoBehaviour:
   robo: {fileID: 5605947181070798399}
   canMove: 0
   waypoint: {fileID: 369656092450178783}
+  fliper: {fileID: 0}
+  soltar: {fileID: 0}
 --- !u!54 &369656092450178780
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -474,6 +476,8 @@ MonoBehaviour:
   Soltar: {fileID: 0}
   Obstaculo: {fileID: 0}
   obstaculo: {fileID: 0}
+  comCarry: 0
+  contatoBloco: 0
 --- !u!1 &5605947181070798399
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,9 +509,9 @@ Transform:
   m_LocalPosition: {x: -0.7, y: 0.81, z: 0.4229846}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 369656092450178783}
   - {fileID: 369656090595706636}
   - {fileID: 369656090717182482}
-  - {fileID: 369656092450178783}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -559,6 +563,7 @@ MonoBehaviour:
   speed: 1
   minDistance: 0.5
   opc: 0
+  distance: 0
   condition: {fileID: 369656092450178781}
 --- !u!114 &5605947181070798386
 MonoBehaviour:

@@ -23,7 +23,10 @@ public class reset_carry : MonoBehaviour
         {
             solta.Pegar.pega = false;
             animator.SetBool("reset",true);
-            Obs.transform.parent = null;
+            if(Obs != null)
+            {
+                Obs.transform.parent = null;
+            }
             reset_c = false;
 
         }

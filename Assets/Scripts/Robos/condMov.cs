@@ -28,14 +28,19 @@ public class condMov : MonoBehaviour
         }
         if(collision.gameObject.tag == "Untagged")
         {
+            canMove = false;
             if(soltar != null)
             {
                 soltar.solta = false;
             }
         }
-        else if (collision.gameObject.tag == "Obstaculo")
+        if(collision.gameObject.tag == "quebravel")
         {
-
+            canMove = false;
+        }
+        if (collision.gameObject.tag == "Obstaculo")
+        {
+            canMove = false;
             if(fliper != null)
             {
             if (fliper.voando == true)

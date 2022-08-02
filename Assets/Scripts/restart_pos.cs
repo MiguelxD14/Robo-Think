@@ -12,6 +12,7 @@ public class restart_pos : MonoBehaviour
     //Referencia a objetos
     public GameObject Robo;
     public GameObject Tela;
+    public GameObject bloco_robo;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
@@ -26,18 +27,15 @@ public class restart_pos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        bloco_robo = GameObject.FindGameObjectWithTag("Obstaculo");
         for (int i = 0; i < objetos.Length; i++)
           {
                 posicoes[i] = objetos[i].transform.position;
                 rotacoes[i] = objetos[i].transform.rotation;
            }
     
-      
     }
     
-
-
     // Update is called once per frame
     void Update()
     {
@@ -46,6 +44,12 @@ public class restart_pos : MonoBehaviour
      void OnMouseDown()
      {
         Rodando.rodando = false; 
+        if(bloco_robo != null)
+        {
+            bloco_robo.transform.parent = null;
+        }
+        
+        RestartPositionsRotation();
         if(RC != null)
         {
             RC.reset_c = true;
@@ -58,7 +62,7 @@ public class restart_pos : MonoBehaviour
         {
             RF.reset_f = true;
         }
-        RestartPositionsRotation();
+        
 
         for (int i = 0; i < slots.slots.Length; i++)
         {

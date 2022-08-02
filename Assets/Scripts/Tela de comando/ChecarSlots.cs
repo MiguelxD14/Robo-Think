@@ -10,11 +10,12 @@ public class ChecarSlots : MonoBehaviour
     public Renderer Rend;
     public carry_mao linkCarry;
     public controle_fliper linkFliper;
+    public fliper_PS flip;
     public Animator Carry;
     public objetivo Chegou;
     public bool rodando;
     public GameObject botaoExecutar, botãoExecutando, botaoResetar;
-    
+    public objetivo checarDestino;
     public SistemaFps bloquearBlocos;
     public void Update()
     {
@@ -37,7 +38,7 @@ public class ChecarSlots : MonoBehaviour
                 bloquearBlocos.canGrab = false;
                 bloquearBlocos.naMao = true;
                 bloquearBlocos.bloco = null;
-                bloquearBlocos.blocoAtual = null;
+                //bloquearBlocos.blocoAtual = null;
                 botaoResetar.GetComponent<BoxCollider>().enabled = false;
                 botaoExecutar.GetComponent<BoxCollider>().enabled = false;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = false;
@@ -74,11 +75,25 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
-                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
+                        if(linkCarry != null && linkCarry.contatoBloco == true)
+                        {
+                            slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
+                        }
+                        if(linkFliper != null && linkFliper.voando == true)
+                        {
+                            slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
+                        }
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
                     {
-                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
+                        if(linkCarry != null && linkCarry.comCarry == true)
+                        {
+                            slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
+                        }
+                        if(flip != null && flip.podeSoltar == true)
+                        {
+                            slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
+                        }
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Voa")
                     {
@@ -87,8 +102,12 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
                     {
+                        if(linkFliper != null && linkFliper.voando == true)
+                        {
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
-                       slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
+                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
+                        }
+                        
                     }
                     
                     yield return new WaitForSeconds(10);
@@ -99,8 +118,11 @@ public class ChecarSlots : MonoBehaviour
             }
                 bloquearBlocos.enabled = true;
                 bloquearBlocos.naMao = false;
+                if(checarDestino.chegou == false)
+                {
                 botaoResetar.GetComponent<BoxCollider>().enabled = true;
                 botaoExecutar.GetComponent<BoxCollider>().enabled = true;
+                }
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = false;     
         }

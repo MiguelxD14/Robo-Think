@@ -11,7 +11,7 @@ public class fliper_PS : MonoBehaviour
     public Collider Obstaculo;
     public GameObject Fliper;
     public Pousar Pousar;
-    public bool colidiu, podeColidir;
+    public bool colidiu, podeColidir, podeSoltar;
     
     void Start()
     {
@@ -51,6 +51,10 @@ public class fliper_PS : MonoBehaviour
             Obstaculo.GetComponent<Rigidbody>().useGravity = false;
             Obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX |RigidbodyConstraints.FreezeRotationY |RigidbodyConstraints.FreezeRotationZ;
             Obstaculo.gameObject.GetComponent<bloco_carregavel>().podeColidir = true;
+            if(other.transform.parent == flip_base.transform.parent)
+            {
+                podeSoltar = true;
+            }
 
         }
 
@@ -74,6 +78,10 @@ public class fliper_PS : MonoBehaviour
         Obstaculo.GetComponent<Rigidbody>().useGravity = true;
         Obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         Soltar.solta = false;
+        if(Obstaculo.transform.parent == null)
+        {
+            podeSoltar = false;
+        }
 
     }
     public IEnumerator delay2()

@@ -20,11 +20,15 @@ public class objetivo : MonoBehaviour
         if (other.gameObject.tag == "Robo"|| other.gameObject.tag == "Obstaculo")
         {
             chegou = true;
-            luz.gameObject.GetComponent<Light>().enabled = true;
-            porta.gameObject.SetActive(true);
+            if(chegou == true)
+            {
             botãoExec.GetComponent<BoxCollider>().enabled = false;
             botãoRest.GetComponent<BoxCollider>().enabled = false;
-
+            }
+            
+            luz.gameObject.GetComponent<Light>().enabled = true;
+            porta.gameObject.SetActive(true);
+            
 
         }
     }

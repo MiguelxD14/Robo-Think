@@ -21,13 +21,12 @@ public class reset_fliper : MonoBehaviour
         if(reset_f == true)
         {
             Obs.transform.parent = null;
+           
             animator.SetBool("reset", true);
             animator.SetBool("Pousar", true);
-            reset_f = false;
             
-           
-           
-
+            reset_f = false;
+    
         }
     }
 }

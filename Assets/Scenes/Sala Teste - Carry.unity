@@ -814,6 +814,11 @@ PrefabInstance:
       propertyPath: objetos.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8595285049189340863, guid: 02606b75ff600024cb4f294f8f9bdb35,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02606b75ff600024cb4f294f8f9bdb35, type: 3}
 --- !u!1 &198651479
@@ -3445,6 +3450,11 @@ PrefabInstance:
       propertyPath: botaoExecutar
       value: 
       objectReference: {fileID: 897233495}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: checarDestino
+      value: 
+      objectReference: {fileID: 478340824}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: bloquearBlocos
@@ -7427,6 +7437,16 @@ PrefabInstance:
       propertyPath: Soltar
       value: 
       objectReference: {fileID: 1255010987}
+    - target: {fileID: 369656091277054198, guid: 867ff9a5d012bf241b0ce8c28d84d7e4,
+        type: 3}
+      propertyPath: obstaculo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 369656091700246675, guid: 867ff9a5d012bf241b0ce8c28d84d7e4,
+        type: 3}
+      propertyPath: minDistance
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 369656092450178781, guid: 867ff9a5d012bf241b0ce8c28d84d7e4,
         type: 3}
       propertyPath: Carry
@@ -7526,6 +7546,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: obs
+      objectReference: {fileID: 0}
+    - target: {fileID: 3977469719137175237, guid: dce3ea8c13cbcd640a6cdb8809601afd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3977469719137175241, guid: dce3ea8c13cbcd640a6cdb8809601afd,
         type: 3}
