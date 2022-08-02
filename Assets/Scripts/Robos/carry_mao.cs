@@ -30,6 +30,10 @@ public class carry_mao : MonoBehaviour
         {
           contatoBloco = true;
         }
+        else
+        {
+          contatoBloco = false;
+        }
         if(contatoBloco == true && Pegar.pega == true && other.gameObject.tag == "Obstaculo")
         {
 
