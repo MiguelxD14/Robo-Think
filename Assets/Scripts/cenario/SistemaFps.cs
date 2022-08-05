@@ -59,7 +59,6 @@ public class SistemaFps : MonoBehaviour
     {
         //Responsavel por pegar o  bloco
         canGrab = false;
-        naMao = true;
         blocoAtual = bloco;
         blocoAtual.transform.position = mao.position;
         blocoAtual.transform.parent = mao;
@@ -67,6 +66,10 @@ public class SistemaFps : MonoBehaviour
         blocoAtual.transform.localEulerAngles = posicao;
         blocoAtual.GetComponent<Rigidbody>().useGravity = false;
         blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll; 
+         if(mao.transform.childCount != 0)
+        {
+            naMao = true;
+        }
         
     }
 
@@ -76,6 +79,7 @@ public class SistemaFps : MonoBehaviour
       {
         blocoAtual = bloco;
         blocoAtual.transform.parent = null;
+        bloco = null;
         blocoAtual.GetComponent<Rigidbody>().useGravity = true;
         blocoAtual.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         blocoAtual = null;

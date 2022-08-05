@@ -12,7 +12,7 @@ public class restart_pos : MonoBehaviour
     //Referencia a objetos
     public GameObject Robo;
     public GameObject Tela;
-    public GameObject bloco_robo;
+    public GameObject bloco_robo, buraco,executar;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
@@ -27,13 +27,15 @@ public class restart_pos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      
         bloco_robo = GameObject.FindGameObjectWithTag("Obstaculo");
         for (int i = 0; i < objetos.Length; i++)
           {
                 posicoes[i] = objetos[i].transform.position;
                 rotacoes[i] = objetos[i].transform.rotation;
+                
            }
-    
+    this.gameObject.SetActive(false);
     }
     
     // Update is called once per frame
@@ -43,13 +45,22 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
+        RestartPositionsRotation();
+        //executar.GetComponent<BoxCollider>().enabled = true;
+        if(buraco != null)
+        {
+            buraco.gameObject.tag = "buraco";
+        }
+        
         Rodando.rodando = false; 
         if(bloco_robo != null)
         {
             bloco_robo.transform.parent = null;
+            bloco_robo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            bloco_robo.GetComponent<Rigidbody>().useGravity = true;
         }
         
-        RestartPositionsRotation();
+       
         // RF.animator.SetBool("reset", true);
         if(RC != null)
         {
@@ -95,8 +106,17 @@ public class restart_pos : MonoBehaviour
             GirarOpc.Op2.GetComponent<Renderer>().material.color = Color.white;
             GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
         }
+       
+        
+        StartCoroutine("delay");
      }
 
+        IEnumerator delay()
+        {
+            yield return new WaitForSeconds(0.5f);
+            this.gameObject.SetActive(false);
+            executar.SetActive(true);
+        }
       public void RestartPositionsRotation()
     {
         for (int i = 0; i < objetos.Length; i++)
@@ -104,9 +124,10 @@ public class restart_pos : MonoBehaviour
             objetos[i].transform.position = posicoes[i];
             objetos[i].transform.rotation = rotacoes[i];
         }
+
     }
         
-
+     
         
        
      

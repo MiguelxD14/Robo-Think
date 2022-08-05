@@ -28,6 +28,7 @@ TagManager:
   - fliper_base
   - quebravel
   - broca
+  - buraco
   layers:
   - Default
   - TransparentFX

@@ -20,7 +20,7 @@ public class atrelar : MonoBehaviour
        
         player = GameObject.FindGameObjectWithTag("Player");
         slot = GameObject.FindGameObjectWithTag("slot");
-
+        mao = GameObject.FindGameObjectWithTag("mao");
 
     }
     public void Update()

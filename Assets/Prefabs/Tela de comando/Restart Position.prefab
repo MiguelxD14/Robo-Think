@@ -30,11 +30,11 @@ Transform:
   m_GameObject: {fileID: 8595285049189340860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.898, y: 1.634, z: 2.71}
-  m_LocalScale: {x: 0.46, y: 0.37, z: 0.28}
+  m_LocalScale: {x: 0.035229977, y: 0.035229985, z: 0.03522999}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 311.151, y: 90, z: 180}
 --- !u!33 &8595285049189340857
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -42,7 +42,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8595285049189340860}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2563503517647939310, guid: 39ad8b4902b76844ea4599d98af5a74e, type: 3}
 --- !u!23 &8595285049189340856
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 7843005a12e402f449bcca55cf0e22cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.83, y: 1.03, z: 1.68}
+  m_Center: {x: -0.45, y: -1.41, z: 0}
 --- !u!114 &8595285049189340862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,13 +109,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad3986529b6c9554cab2237f4262f9e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robo: {x: 0, y: 0, z: 0}
-  objeto: {x: 0, y: 0, z: 0}
-  robo_r: {x: 0, y: 0, z: 0, w: 0}
-  objeto_r: {x: 0, y: 0, z: 0, w: 0}
-  slots: {fileID: 0}
+  objetos: []
+  posicoes: []
+  rotacoes: []
+  Robo: {fileID: 0}
+  Tela: {fileID: 0}
+  bloco_robo: {fileID: 0}
   AndarOpc: {fileID: 0}
   GirarOpc: {fileID: 0}
+  slots: {fileID: 0}
+  Rodando: {fileID: 0}
+  RC: {fileID: 0}
+  RB: {fileID: 0}
+  RF: {fileID: 0}
 --- !u!54 &8595285049189340861
 Rigidbody:
   m_ObjectHideFlags: 0

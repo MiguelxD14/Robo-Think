@@ -7,8 +7,10 @@ public class Girar : MonoBehaviour
      public GameObject Op1, Op2, Op3;
      public int opc;
      public float rayLength;
+     public float turnTime = 1f;
      public bool giro;
      GameObject robo;
+     public ChecarSlots podeClicar;
 
 
      void Start(){
@@ -26,8 +28,9 @@ public class Girar : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength))
+            if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)
             {
+                Debug.Log(hit.collider.name);
                 if (hit.collider.gameObject == Op1)
                 {
                     selecao();
@@ -66,6 +69,7 @@ public class Girar : MonoBehaviour
         if(this.opc == 1)
         {
         robo.transform.Rotate(0.0f,90.0f,0.0f);
+        //robo.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 90, 0), turnTime * Time.deltaTime);
          giro = false;
          this.opc = 0;
         }

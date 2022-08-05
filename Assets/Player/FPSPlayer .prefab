@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579769835630654993}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.608, y: -0.42, z: 1.344}
+  m_LocalRotation: {x: 0.000000029802317, y: 0.000000011175868, z: 0.07460572, w: 0.9972131}
+  m_LocalPosition: {x: 0.61, y: -0.42, z: 0.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 579769836899166947}
@@ -114,6 +114,9 @@ MonoBehaviour:
   distance: 10
   blocoAtual: {fileID: 0}
   bloco: {fileID: 0}
+  posicao: {x: 0, y: 0, z: 0}
+  naMao: 0
+  canGrab: 0
 --- !u!65 &579769835775405418
 BoxCollider:
   m_ObjectHideFlags: 0

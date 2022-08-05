@@ -9,6 +9,7 @@ public class Andar : MonoBehaviour
     public botControl linkBot;
     public float rayLength;
     public int opcao;
+    public ChecarSlots podeClicar;
     
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,7 @@ public class Andar : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength))
+            if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)
             {
                 if (hit.collider.gameObject == Op1)
                 {

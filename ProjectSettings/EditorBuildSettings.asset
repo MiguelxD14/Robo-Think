@@ -6,15 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sala1.unity
+    path: Assets/Scenes/Salas Trix/Sala1-Trix.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Sala Teste - Brok.unity
+    path: Assets/Scenes/Salas Trix/Sala 4 - Trix.unity
+    guid: 879ddf42064f551449f7663e214181c9
+  - enabled: 0
+    path: Assets/Scenes/Salas de teste/Sala Teste - Brok.unity
     guid: efc0dc5241c375d4d95327fca818c850
-  - enabled: 1
-    path: Assets/Scenes/Sala Teste - Carry.unity
+  - enabled: 0
+    path: Assets/Scenes/Salas de teste/Sala Teste - Carry.unity
     guid: f55d05d3cb96f694e8de48d2fea753af
-  - enabled: 1
-    path: Assets/Scenes/Sala Teste - Fliper.unity
+  - enabled: 0
+    path: Assets/Scenes/Salas de teste/Sala Teste - Fliper.unity
     guid: 1b20d4152e2bce14f8491953e9dec547
   m_configObjects: {}

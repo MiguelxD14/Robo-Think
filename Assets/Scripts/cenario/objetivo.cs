@@ -8,6 +8,7 @@ public class objetivo : MonoBehaviour
     public GameObject porta;
     public bool chegou;
     public GameObject botãoExec, botãoRest;
+    public SistemaFps podePegar;
     void Start()
     {
         luz = GameObject.FindGameObjectWithTag("Luz");
@@ -15,11 +16,12 @@ public class objetivo : MonoBehaviour
         
 
     }
-   public void OnTriggerEnter(Collider other)
+   public void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Robo"|| other.gameObject.tag == "Obstaculo")
         {
             chegou = true;
+            podePegar.enabled = false;
             if(chegou == true)
             {
             botãoExec.GetComponent<BoxCollider>().enabled = false;

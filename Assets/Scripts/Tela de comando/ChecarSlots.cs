@@ -39,8 +39,8 @@ public class ChecarSlots : MonoBehaviour
                 bloquearBlocos.naMao = true;
                 bloquearBlocos.bloco = null;
                 //bloquearBlocos.blocoAtual = null;
-                botaoResetar.GetComponent<BoxCollider>().enabled = false;
-                botaoExecutar.GetComponent<BoxCollider>().enabled = false;
+                //botaoResetar.GetComponent<BoxCollider>().enabled = false;
+                //botaoExecutar.GetComponent<BoxCollider>().enabled = false;
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = false;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = true;
                 
@@ -48,7 +48,8 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
-                   
+                    botaoExecutar.SetActive(false);
+                    botaoResetar.SetActive(true);
                     Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
                     Rend.enabled = true;
                     Rend.material.color = Color.red;
@@ -120,8 +121,8 @@ public class ChecarSlots : MonoBehaviour
                 bloquearBlocos.naMao = false;
                 if(checarDestino.chegou == false)
                 {
-                botaoResetar.GetComponent<BoxCollider>().enabled = true;
-                botaoExecutar.GetComponent<BoxCollider>().enabled = true;
+                //botaoResetar.GetComponent<BoxCollider>().enabled = true;
+                //botaoExecutar.GetComponent<BoxCollider>().enabled = true;
                 }
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
                 botãoExecutando.GetComponent<MeshRenderer>().enabled = false;     

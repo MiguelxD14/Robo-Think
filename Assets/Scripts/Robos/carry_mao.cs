@@ -12,7 +12,6 @@ public class carry_mao : MonoBehaviour
     GameObject Robo;
     Animator animator;
     public bool comCarry, contatoBloco; // checa se o bloco carregavel pertence ao carry
-  
   public void Start()
   {
     braco = GameObject.FindGameObjectWithTag("carry_mao");
@@ -30,10 +29,10 @@ public class carry_mao : MonoBehaviour
         {
           contatoBloco = true;
         }
-        else
-        {
-          contatoBloco = false;
-        }
+        // else
+        // {
+        //   contatoBloco = false;
+        // }
         if(contatoBloco == true && Pegar.pega == true && other.gameObject.tag == "Obstaculo")
         {
 
@@ -61,6 +60,12 @@ public class carry_mao : MonoBehaviour
                 obstaculo = other.gameObject;
                 obstaculo.GetComponent<Rigidbody>().useGravity = true;
                 obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                Vector3 pos = obstaculo.GetComponent<Transform>().position;
+                pos.x += 0.7f;
+                obstaculo.GetComponent<Transform>().position = pos;
+                
+                
+
                 Soltar.solta = false;
                 }      
         }
