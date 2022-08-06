@@ -16,7 +16,7 @@ public class controle_fliper : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-           if(Voar.voa == true && Fliper.position.y < 4)
+           if(Voar.voa == true && Fliper.position.y < 20)
            {
             voando = true;
             fly = new Vector3(0, 0, 1);
@@ -25,7 +25,7 @@ public class controle_fliper : MonoBehaviour
                 
                
             }
-            if(Pousar.pousa == true && Fliper.position.y > 0.59)
+            if(Pousar.pousa == true && Fliper.position.y > 8.7)
             {
                 voando = false;
                 Voar.voa = false;

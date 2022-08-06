@@ -20,8 +20,8 @@ public class Quebrar : MonoBehaviour
     {
          if(quebra == true)
             {
-            broca.GetComponent<BoxCollider>().enabled = true;
             animator.SetBool("Quebra", true);
+           broca.GetComponent<BoxCollider>().enabled = true;
             }
 
             if(quebra == false)

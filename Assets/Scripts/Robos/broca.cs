@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class broca : MonoBehaviour
 {
-    public Quebrar Quebrar;
-    GameObject obstaculo;
+    public Quebrar quebrar;
+    public GameObject quebravel;
     
     public void Start()
     {
-        obstaculo = GameObject.FindGameObjectWithTag("quebravel");
+        //quebravel = GameObject.FindGameObjectWithTag("quebravel");
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == obstaculo.gameObject)
+        if(other.gameObject.tag == "quebravel")
         {
-            obstaculo.SetActive(false); 
-            Quebrar.quebra = false;
+            other.gameObject.SetActive(false); 
+           quebrar.quebra = false;
 
         }
-        if(other.gameObject != null)
+        if(other.gameObject.tag != null )
         {
-            Quebrar.quebra = false;
+            quebrar.quebra = false;
         }
 
     }

@@ -7,7 +7,7 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
-    public Renderer Rend;
+   // public Renderer Rend;
     public carry_mao linkCarry;
     public controle_fliper linkFliper;
     public fliper_PS flip;
@@ -17,6 +17,7 @@ public class ChecarSlots : MonoBehaviour
     public GameObject botaoExecutar, botãoExecutando, botaoResetar;
     public objetivo checarDestino;
     public SistemaFps bloquearBlocos;
+    public broca podeQuebrar;
     public void Update()
     {
         if (executar.podeExecutar == true)
@@ -50,9 +51,9 @@ public class ChecarSlots : MonoBehaviour
                 {
                     botaoExecutar.SetActive(false);
                     botaoResetar.SetActive(true);
-                    Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
-                    Rend.enabled = true;
-                    Rend.material.color = Color.red;
+                    // Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
+                    // Rend.enabled = true;
+                    // Rend.material.color = Color.red;
                     executar.podeExecutar = false;
                     break;
                 }
@@ -72,6 +73,7 @@ public class ChecarSlots : MonoBehaviour
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Quebra")
                     {
+                      //podeQuebrar.quebrar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>().quebra = true;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
@@ -111,7 +113,7 @@ public class ChecarSlots : MonoBehaviour
                         
                     }
                     
-                    yield return new WaitForSeconds(10);
+                    yield return new WaitForSeconds(15);
                     
                 }
                 Debug.Log(i);

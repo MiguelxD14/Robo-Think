@@ -23,7 +23,11 @@ public class reset_fliper : MonoBehaviour
             animator.SetBool("reset", true);
             //animator.SetBool("Voar", false);
             //animator.SetBool("Pousar", true);
-            Obs.transform.parent = null;
+            if(Obs != null)
+            {
+                Obs.transform.parent = null;
+            }
+           
             reset_f = false;
     
         }

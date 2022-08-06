@@ -83,7 +83,7 @@ public class restart_pos : MonoBehaviour
                 {
                     slots.slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Renderer>().material.color = Color.white;
                 }
-                slots.Rend.enabled = false;
+                // slots.Rend.enabled = false;
                  
         }
 
@@ -99,6 +99,8 @@ public class restart_pos : MonoBehaviour
             
         }
         // Bloco girar
+        if(GirarOpc != null)
+        {
         GirarOpc.opc = 0;
         if(GirarOpc.opc == 0)
         {
@@ -106,6 +108,8 @@ public class restart_pos : MonoBehaviour
             GirarOpc.Op2.GetComponent<Renderer>().material.color = Color.white;
             GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
         }
+        }
+        
        
         
         StartCoroutine("delay");
