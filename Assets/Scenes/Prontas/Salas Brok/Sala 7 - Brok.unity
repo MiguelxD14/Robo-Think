@@ -559,6 +559,10 @@ PrefabInstance:
       propertyPath: Quebrar
       value: 
       objectReference: {fileID: 1528986038}
+    - target: {fileID: 1697286721, guid: 2e8e0e64673d46047939efb8b92a052f, type: 3}
+      propertyPath: quebrar
+      value: 
+      objectReference: {fileID: 1528986038}
     - target: {fileID: 1972514578, guid: 2e8e0e64673d46047939efb8b92a052f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.11

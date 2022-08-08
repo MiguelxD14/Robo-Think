@@ -56,6 +56,7 @@ public class carry_mao : MonoBehaviour
             comCarry = false;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("|Carry_parado"))
                  {
+                Debug.Log("Entrou");
                 Obstaculo.transform.parent = null;
                 obstaculo = other.gameObject;
                 obstaculo.GetComponent<Rigidbody>().useGravity = true;
@@ -63,11 +64,9 @@ public class carry_mao : MonoBehaviour
                 Vector3 pos = obstaculo.GetComponent<Transform>().position;
                 pos.x += 0.7f;
                 obstaculo.GetComponent<Transform>().position = pos;
-                
-                
-
                 Soltar.solta = false;
-                }      
+                }  
+                    
         }
         
     }
