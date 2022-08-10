@@ -113,7 +113,7 @@ public class ChecarSlots : MonoBehaviour
                         
                     }
                     
-                    yield return new WaitForSeconds(15);
+                    yield return new WaitForSeconds(3);
                     
                 }
                 Debug.Log(i);

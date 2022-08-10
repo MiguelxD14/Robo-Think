@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15035a34f46e98459dd57cf440fe151, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Quebrar: {fileID: 0}
+  quebrar: {fileID: 0}
   quebravel: {fileID: 0}
 --- !u!65 &1697286716
 BoxCollider:
@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
-  speed: 1
+  speed: 1.5
   minDistance: 0.5
   opc: 0
   distance: 0

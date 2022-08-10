@@ -21,12 +21,13 @@ public class Quebrar : MonoBehaviour
          if(quebra == true)
             {
             animator.SetBool("Quebra", true);
-           broca.GetComponent<BoxCollider>().enabled = true;
+            broca.GetComponent<BoxCollider>().enabled = true;
             }
 
             if(quebra == false)
             {
             animator.SetBool("Quebra", false);
+            broca.GetComponent<BoxCollider>().enabled = false;
             }
     }
    
