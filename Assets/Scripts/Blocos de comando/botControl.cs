@@ -33,7 +33,7 @@ public class botControl : MonoBehaviour
         canMove = condition.canMove;
 
         //se o piso for andavel ele verifica se foi acionado o movimento
-        if (canMove && moveCount > 0)
+        if (moveCount > 0)
         {
             if (moving)
             {
@@ -93,8 +93,15 @@ public class botControl : MonoBehaviour
         //quandoa distancia entre ele e o ponto de destino for menor que o valor indicado ele para de andar e recalcula o movimento
          if (distance < minDistance)
          {
+            if(canMove)
+            {
+                moveCount--;
+            }
+            else
+            {
+                moveCount = 0;
+            }
             
-            moveCount--;
             if (moveCount <= 0)
             {
                 moving = false;

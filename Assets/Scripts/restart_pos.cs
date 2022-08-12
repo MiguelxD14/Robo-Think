@@ -12,7 +12,7 @@ public class restart_pos : MonoBehaviour
     //Referencia a objetos
     public GameObject Robo;
     public GameObject Tela;
-    public GameObject bloco_robo, buraco,executar, blocosQuebraveis;
+    public GameObject bloco_robo, buraco,executar, blocosQuebraveis, piso;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
@@ -27,7 +27,7 @@ public class restart_pos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        piso = GameObject.FindGameObjectWithTag("Anda");
         bloco_robo = GameObject.FindGameObjectWithTag("Obstaculo");
         for (int i = 0; i < objetos.Length; i++)
           {
@@ -45,6 +45,13 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
+       GameObject[] pisos = GameObject.FindGameObjectsWithTag("Anda");
+        foreach (GameObject piso in pisos)
+        {
+            piso.GetComponent<BoxCollider>().enabled = true;
+        }
+        //GameObject.FindGameObjectsWithTag("Anda").GetComponent<BoxCollider>().enabled = true;
+        //piso.GetComponent<BoxCollider>().enabled = true;
         if(blocosQuebraveis != null)
         {
              for (int x = 0; x < blocosQuebraveis.transform.childCount; x ++)
