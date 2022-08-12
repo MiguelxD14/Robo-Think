@@ -134,7 +134,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fcd5cdd31a22f0f42a1f1956310f54e9,
         type: 3}
@@ -258,12 +258,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isSelected: 0
-  speed: 1.5
+  speed: 3
   minDistance: 0.5
   opc: 0
   distance: 0
   condition: {fileID: 1972514580}
---- !u!114 &3219814756195323025
+--- !u!114 &4928514452465151675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,5 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21ac7cfbe41b7a649b43b63c5a5d45f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quebravel: []
+  quebravel:
+  - {fileID: 0}
   reset_b: 0

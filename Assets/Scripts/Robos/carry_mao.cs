@@ -56,8 +56,9 @@ public class carry_mao : MonoBehaviour
             comCarry = false;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("|Carry_parado"))
                  {
-                Debug.Log("Entrou");
+                
                 Obstaculo.transform.parent = null;
+                Obstaculo.transform.localScale = new Vector3(1.4210f, 1.4210f, 1.4210f);
                 obstaculo = other.gameObject;
                 obstaculo.GetComponent<Rigidbody>().useGravity = true;
                 obstaculo.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;

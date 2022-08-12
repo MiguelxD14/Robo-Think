@@ -12,7 +12,7 @@ public class restart_pos : MonoBehaviour
     //Referencia a objetos
     public GameObject Robo;
     public GameObject Tela;
-    public GameObject bloco_robo, buraco,executar;
+    public GameObject bloco_robo, buraco,executar, blocosQuebraveis;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
@@ -45,6 +45,15 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
+        if(blocosQuebraveis != null)
+        {
+             for (int x = 0; x < blocosQuebraveis.transform.childCount; x ++)
+        {
+            blocosQuebraveis.transform.GetChild(x).gameObject.SetActive(true);
+        }
+        }
+       
+       
         RestartPositionsRotation();
         //executar.GetComponent<BoxCollider>().enabled = true;
         if(buraco != null)

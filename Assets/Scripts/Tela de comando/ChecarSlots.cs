@@ -18,6 +18,7 @@ public class ChecarSlots : MonoBehaviour
     public objetivo checarDestino;
     public SistemaFps bloquearBlocos;
     public broca podeQuebrar;
+    public float tempoExec;
     public void Update()
     {
         if (executar.podeExecutar == true)
@@ -63,21 +64,27 @@ public class ChecarSlots : MonoBehaviour
                     Debug.Log("Ativar fun��o do slot = " + slots[i].name);
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Anda")
                     {
+                        
                         linkBot.opc =  slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Andar>().opcao;
                        linkBot.isSelected = true;
+                       tempoExec = 2;
+                       tempoExec *= linkBot.opc;
                        
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Gira")
                     {
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Girar>().giro = true;
+                       tempoExec = 2;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Quebra")
                     {
                       //podeQuebrar.quebrar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>().quebra = true;
+                        tempoExec = 3;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
+
                         if(linkCarry != null && linkCarry.contatoBloco == true)
                         {
                             slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
@@ -86,6 +93,7 @@ public class ChecarSlots : MonoBehaviour
                         {
                             slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pegar>().pega = true; 
                         }
+                         tempoExec = 4;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Solta")
                     {
@@ -97,11 +105,14 @@ public class ChecarSlots : MonoBehaviour
                         {
                             slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
                         }
+                         tempoExec = 4;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Voa")
                     {
                         linkFliper.Voar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Voar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Voar>().voa = true;
+
+                        tempoExec = 6;
                     }
                     if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pousa")
                     {
@@ -110,10 +121,10 @@ public class ChecarSlots : MonoBehaviour
                         linkFliper.Pousar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>();
                         slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Pousar>().pousa = true;
                         }
-                        
+                         tempoExec = 6;
                     }
                     
-                    yield return new WaitForSeconds(3);
+                    yield return new WaitForSeconds(tempoExec);
                     
                 }
                 Debug.Log(i);

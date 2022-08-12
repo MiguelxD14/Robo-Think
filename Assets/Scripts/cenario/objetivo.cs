@@ -9,10 +9,12 @@ public class objetivo : MonoBehaviour
     public bool chegou;
     public GameObject botãoExec, botãoRest;
     public SistemaFps podePegar;
+    public GameObject aneis;
     void Start()
     {
         luz = GameObject.FindGameObjectWithTag("Luz");
         luz.gameObject.GetComponent<Light>().enabled = false;
+        aneis.SetActive(false);
         
 
     }
@@ -21,6 +23,7 @@ public class objetivo : MonoBehaviour
         if (other.gameObject.tag == "Robo"|| other.gameObject.tag == "Obstaculo")
         {
             chegou = true;
+            aneis.SetActive(true);
             podePegar.enabled = false;
             if(chegou == true)
             {

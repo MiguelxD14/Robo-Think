@@ -234,7 +234,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RB
       value: 
-      objectReference: {fileID: 834197637}
+      objectReference: {fileID: 0}
     - target: {fileID: 4877281910914977725, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: Robo
@@ -608,21 +608,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.56
       objectReference: {fileID: 0}
@@ -656,21 +641,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6528664632474012329, guid: 2e8e0e64673d46047939efb8b92a052f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e8e0e64673d46047939efb8b92a052f, type: 3}
 --- !u!114 &834197633 stripped
@@ -691,33 +661,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 834197632}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &834197635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834197634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ac7cfbe41b7a649b43b63c5a5d45f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  quebravel:
-  - {fileID: 0}
-  reset_b: 0
---- !u!114 &834197637 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3219814756195323025, guid: 2e8e0e64673d46047939efb8b92a052f,
-    type: 3}
-  m_PrefabInstance: {fileID: 834197632}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 834197634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ac7cfbe41b7a649b43b63c5a5d45f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1041036740
 PrefabInstance:
   m_ObjectHideFlags: 0
