@@ -5,7 +5,7 @@ using UnityEngine;
 public class botControl : MonoBehaviour
 {
     public bool isSelected = false;
-    GameObject trix;
+    GameObject Robo;
     public float speed = 2.0f;
     public float minDistance = 0.5f;
 
@@ -17,13 +17,16 @@ public class botControl : MonoBehaviour
     public condMov condition;
     Transform nextPoint;
     bool canMove;
+    bool Andando;
 
     Vector3 targetPoint;
-
+    public GameObject particulas;
     Animator animator;
     private void Start()
     {
         animator = GetComponent<Animator>();
+       
+
     }
     public void Update()
     {
@@ -39,6 +42,8 @@ public class botControl : MonoBehaviour
             {
                 Move();
             }
+        
+
         }
         else
         {
@@ -78,6 +83,11 @@ public class botControl : MonoBehaviour
             moveCount = count;
             //pega a posição até onde o robô vai andar
             targetPoint = condition.waypoint.position;
+            if(particulas != null)
+            {
+                 particulas.SetActive(true);
+            }
+           
         }
     }
 
@@ -105,6 +115,11 @@ public class botControl : MonoBehaviour
             if (moveCount <= 0)
             {
                 moving = false;
+                if(particulas != null)
+                {
+                     particulas.SetActive(false);
+                }
+               
             }
             else
             {

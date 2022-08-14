@@ -42,8 +42,9 @@ public class fliper_PS : MonoBehaviour
     }
     public void OnTriggerStay(Collider other)
     {
-
-        if (Pegar.pega == true && other.gameObject.tag == "Obstaculo")
+        if(Pegar != null)
+        {
+             if (Pegar.pega == true && other.gameObject.tag == "Obstaculo")
         {
             other.transform.parent = flip_base.transform.parent;
             other.transform.position = flip_base.transform.position;
@@ -57,17 +58,21 @@ public class fliper_PS : MonoBehaviour
             }
 
         }
-
-        if (Soltar.solta == true)//&&  other.gameObject.tag != null 
+        }
+       
+        if(Soltar != null)
         {
+             if (Soltar.solta == true)//&&  other.gameObject.tag != null 
+            {
             animator.SetBool("Soltar", true);
 
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa 0"))
-            {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Fliper_pega_solta_voa 0"))
+                {
                 StartCoroutine("delay");
-
+                }
             }
         }
+       
 
     }
 

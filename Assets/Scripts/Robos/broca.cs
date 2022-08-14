@@ -5,7 +5,7 @@ using UnityEngine;
 public class broca : MonoBehaviour
 {
     public Quebrar quebrar;
-    public GameObject quebravel;
+    public GameObject quebravel, pedras, somExp;
     
     public void Start()
     {
@@ -16,7 +16,9 @@ public class broca : MonoBehaviour
         if(other.gameObject.tag == "quebravel")
         {
             other.gameObject.SetActive(false); 
-           quebrar.quebra = false;
+            somExp.SetActive(true);
+            pedras.SetActive(true);
+            quebrar.quebra = false;
 
         }
         if(other.gameObject.tag != null )

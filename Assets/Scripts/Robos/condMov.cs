@@ -13,21 +13,17 @@ public class condMov : MonoBehaviour
  
     public void OnTriggerStay(Collider collision)
     {
-
-         if (collision.gameObject.tag != "Anda")
+        if (collision.gameObject.tag != "Anda")
         {
             canMove = false;
-           
-           
         }
-        else if (collision.gameObject.tag == "Anda")
+         else if (collision.gameObject.tag == "Anda")
         {
            
             canMove = true;
             waypoint = collision.gameObject.transform;
             
         }
-
        
         if(collision.gameObject.tag == "Untagged")
         {
@@ -36,7 +32,7 @@ public class condMov : MonoBehaviour
                 soltar.solta = false;
             }
         }
-        if (collision.gameObject.tag == "Obstaculo")
+        if (collision.gameObject.tag == "Obstaculo" || collision.gameObject.tag == "buraco")
         {
             canMove = false;
             if(fliper != null)
@@ -44,6 +40,7 @@ public class condMov : MonoBehaviour
                 if (fliper.voando == true)
                 {
                 canMove = true;
+                waypoint = collision.gameObject.transform;
                 }
                 else
                 {
@@ -53,14 +50,12 @@ public class condMov : MonoBehaviour
         
 
         } 
-        if(fliper != null)
+       
         {
-            if(fliper.voando == true && collision.gameObject.tag == "buraco")
-            {
-            canMove = true;
-            }
+
         }
        
+
         Debug.Log(collision.gameObject.tag);
         Debug.Log(canMove);
         

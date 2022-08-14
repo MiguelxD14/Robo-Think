@@ -12,7 +12,7 @@ public class restart_pos : MonoBehaviour
     //Referencia a objetos
     public GameObject Robo;
     public GameObject Tela;
-    public GameObject bloco_robo, buraco,executar, blocosQuebraveis, piso;
+    public GameObject bloco_robo, buraco,executar, blocosQuebraveis, piso, destroço, somExp,somAcerto;
     //Scripts
     public Andar AndarOpc;
     public Girar GirarOpc;
@@ -21,6 +21,8 @@ public class restart_pos : MonoBehaviour
     public reset_carry RC; 
     public reset_brok RB;
     public reset_fliper RF;
+    public controle_fliper flip_voo;
+    public Pousar pousoFLip;
     //atribuições
    
     
@@ -45,6 +47,25 @@ public class restart_pos : MonoBehaviour
     }
      void OnMouseDown()
      {
+        somAcerto.SetActive(false);
+        if(somExp != null)
+        {
+            somExp.SetActive(false);
+        }
+        if(destroço != null)
+        {
+            destroço.SetActive(false);
+        }
+       
+        if(pousoFLip != null)
+        {
+            pousoFLip.pousa = false;
+        }
+        if(flip_voo != null)
+        {
+            flip_voo.voando = false;
+        }
+        
        GameObject[] pisos = GameObject.FindGameObjectsWithTag("Anda");
         foreach (GameObject piso in pisos)
         {

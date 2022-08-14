@@ -20,6 +20,7 @@ public class buraco : MonoBehaviour
         if(other.gameObject.tag == "Obstaculo")
         {
             this.gameObject.tag = "Anda";
+
         }
    
         

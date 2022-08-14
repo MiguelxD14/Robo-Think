@@ -10,6 +10,7 @@ public class objetivo : MonoBehaviour
     public GameObject botãoExec, botãoRest;
     public SistemaFps podePegar;
     public GameObject aneis;
+    public GameObject somAcerto;
     void Start()
     {
         luz = GameObject.FindGameObjectWithTag("Luz");
@@ -24,6 +25,7 @@ public class objetivo : MonoBehaviour
         {
             chegou = true;
             aneis.SetActive(true);
+            somAcerto.SetActive(true);
             podePegar.enabled = false;
             if(chegou == true)
             {

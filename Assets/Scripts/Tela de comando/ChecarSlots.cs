@@ -7,6 +7,8 @@ public class ChecarSlots : MonoBehaviour
     public GameObject[] slots;
     public atrelar executar;
     public botControl linkBot;
+    public GameObject Robo;
+    Animator animator;
    // public Renderer Rend;
     public carry_mao linkCarry;
     public controle_fliper linkFliper;
@@ -19,6 +21,7 @@ public class ChecarSlots : MonoBehaviour
     public SistemaFps bloquearBlocos;
     public broca podeQuebrar;
     public float tempoExec;
+
     public void Update()
     {
         if (executar.podeExecutar == true)
@@ -48,6 +51,7 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
+                    //Robo.GetComponent<Animator>().SetBool("Erro", true);
                     botaoExecutar.SetActive(false);
                     botaoResetar.SetActive(true);
                     // Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
@@ -55,6 +59,7 @@ public class ChecarSlots : MonoBehaviour
                     // Rend.material.color = Color.red;
                     executar.podeExecutar = false;
                     break;
+                    
                 }
                 else if(slots[i].transform.childCount > 0 )
                 {
@@ -78,7 +83,7 @@ public class ChecarSlots : MonoBehaviour
                     {
                       //podeQuebrar.quebrar = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>();
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Quebrar>().quebra = true;
-                        tempoExec = 3;
+                        tempoExec = 4;
                     }
                     else if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Pega")
                     {
@@ -103,7 +108,7 @@ public class ChecarSlots : MonoBehaviour
                         {
                             slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Soltar>().solta = true;
                         }
-                         tempoExec = 4;
+                         tempoExec = 5;
                     }
                     else if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Voa")
                     {

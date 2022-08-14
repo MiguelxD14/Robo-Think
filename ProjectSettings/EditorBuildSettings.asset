@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Prontas/Salas Brok/Sala 7 - Brok.unity
     guid: 346869b2a44a0f947a8ec63728cad4a5
+  - enabled: 1
+    path: Assets/Scenes/Prontas/Salas Brok/Sala 8 - Brok.unity
+    guid: 4a09f4d5dcbc9ce4e8f0e0d488284e9e
+  - enabled: 1
+    path: Assets/Scenes/Prontas/Salas Fliper/Sala 9 - Fliper.unity
+    guid: a1e2894435b247a438c5a2e005d63342
   m_configObjects: {}

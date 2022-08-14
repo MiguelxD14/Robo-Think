@@ -7,6 +7,7 @@ public class checar_piso : MonoBehaviour
     
      public GameObject Obstaculo;
      public Pousar Pousar;
+     public Voar voar;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class checar_piso : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter(Collider other)
+    public void OnTriggerStay(Collider other)
     {
         if(Obstaculo != null)
         {
@@ -30,5 +31,9 @@ public class checar_piso : MonoBehaviour
         } 
         }
        
+       if(other.gameObject.tag == "buraco")
+       {
+            Pousar.pousa = false;
+       }
     }
 }

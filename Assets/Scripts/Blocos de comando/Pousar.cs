@@ -19,9 +19,8 @@ public class Pousar : MonoBehaviour
     {
         if(pousa == true)
         {
-            Debug.Log("Teste pouso");
             Voar.voa = false;
-            animator.SetBool("Pousar", true);
+           StartCoroutine("delay");
             // pousa = false;
         }
 
@@ -31,5 +30,11 @@ public class Pousar : MonoBehaviour
         }
 
 
+    }
+
+     public IEnumerator delay()
+    {
+        yield return new WaitForSeconds(6);
+         animator.SetBool("Pousar", true);
     }
 }
