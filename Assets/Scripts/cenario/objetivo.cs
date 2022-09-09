@@ -24,6 +24,7 @@ public class objetivo : MonoBehaviour
         if (other.gameObject.tag == "Robo"|| other.gameObject.tag == "Obstaculo")
         {
             chegou = true;
+            PlayerPrefs.SetString("Concluiu",chegou.ToString());
             aneis.SetActive(true);
             somAcerto.SetActive(true);
             podePegar.enabled = false;

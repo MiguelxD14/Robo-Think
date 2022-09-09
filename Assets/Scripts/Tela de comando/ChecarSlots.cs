@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Globalization;
 
 public class ChecarSlots : MonoBehaviour
 {
@@ -133,6 +134,13 @@ public class ChecarSlots : MonoBehaviour
                
                  
             }
+            // coleta de data e hora
+            string date = System.DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+            PlayerPrefs.SetString("Data", date);
+            Debug.Log(date);
+            //...
+
+
                 bloquearBlocos.enabled = true;
                 bloquearBlocos.naMao = false;
                 if(checarDestino.chegou == false)
