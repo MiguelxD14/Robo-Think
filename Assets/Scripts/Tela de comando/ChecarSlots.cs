@@ -140,7 +140,7 @@ public class ChecarSlots : MonoBehaviour
             Debug.Log(date);
             //...
 
-
+                PlayerPrefs.SetString("acabou" , "true");
                 bloquearBlocos.enabled = true;
                 bloquearBlocos.naMao = false;
                 if(checarDestino.chegou == false)

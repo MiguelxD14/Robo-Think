@@ -54,8 +54,7 @@ public class MySharedData : MonoBehaviour
                 myListaFases.Cenas[i].fase = PlayerPrefs.GetString("Fase");
                 myListaFases.Cenas[i].resultado = PlayerPrefs.GetString("Concluiu");
 
-                tw.WriteLine(myListaFases.Cenas[i].Data_hora + "," +
-                    myListaFases.Cenas[i].fase + "," + myListaFases.Cenas[i].resultado);
+                tw.WriteLine(myListaFases.Cenas[i].Data_hora + "," + myListaFases.Cenas[i].fase + "," + myListaFases.Cenas[i].resultado);
             }
 
             tw.Close();
