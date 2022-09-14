@@ -71,21 +71,21 @@ public class Girar : MonoBehaviour
         robo.transform.Rotate(0.0f,90.0f,0.0f);
         //robo.transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0, 90, 0), turnTime * Time.deltaTime);
          giro = false;
-         this.opc = 0;
+         //this.opc = 0;
         }
 
         if(this.opc == 2)
         {
         robo.transform.Rotate(0.0f,-90.0f,0.0f);
         giro = false;
-        this.opc = 0;
+        //this.opc = 0;
         }
 
         if(this.opc == 3)
         {
         robo.transform.Rotate(0.0f,180.0f,0.0f);
         giro = false;
-        this.opc = 0;
+        //this.opc = 0;
         }
 
       }

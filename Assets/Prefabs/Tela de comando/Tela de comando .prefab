@@ -593,7 +593,7 @@ MonoBehaviour:
   - {fileID: 4165131151148617069}
   executar: {fileID: 4165131150283335631}
   linkBot: {fileID: 0}
-  Rend: {fileID: 0}
+  Robo: {fileID: 0}
   linkCarry: {fileID: 0}
   linkFliper: {fileID: 0}
   flip: {fileID: 0}
@@ -605,6 +605,18 @@ MonoBehaviour:
   botaoResetar: {fileID: 0}
   checarDestino: {fileID: 0}
   bloquearBlocos: {fileID: 0}
+  podeQuebrar: {fileID: 0}
+  tempoExec: 0
+  comandos:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  Linkgiro: {fileID: 0}
 --- !u!1 &4165131150371740736
 GameObject:
   m_ObjectHideFlags: 0

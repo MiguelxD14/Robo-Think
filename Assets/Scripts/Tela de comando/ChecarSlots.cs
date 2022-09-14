@@ -16,15 +16,24 @@ public class ChecarSlots : MonoBehaviour
     public fliper_PS flip;
     public Animator Carry;
     public objetivo Chegou;
-    public bool rodando;
+    public bool rodando, parou;
     public GameObject botaoExecutar, botãoExecutando, botaoResetar;
     public objetivo checarDestino;
     public SistemaFps bloquearBlocos;
     public broca podeQuebrar;
     public float tempoExec;
+    public string[] comandos;
+    public Girar Linkgiro;
+    public float timer = 0;
 
     public void Update()
     {
+        if(parou == false)
+        {
+            timer += Time.deltaTime;
+            
+        }
+       
         if (executar.podeExecutar == true)
         {
             rodando = true;
@@ -78,6 +87,7 @@ public class ChecarSlots : MonoBehaviour
                     else if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Gira")
                     {
                        slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Girar>().giro = true;
+                       Linkgiro = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Girar>();
                        tempoExec = 2;
                     }
                     else if(slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo == "Quebra")
@@ -129,18 +139,39 @@ public class ChecarSlots : MonoBehaviour
                     }
                     
                     yield return new WaitForSeconds(tempoExec);
-                    
+                     
+                    comandos[i] = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo;
+                    if(comandos[i] == "Anda")
+                    {
+                        comandos[i] = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo + slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<Andar>().opcao.ToString();
+
+                    }
+                    if(comandos[i] == "Gira")
+                    {
+                       comandos[i] = slots[i].gameObject.transform.GetChild(0).GetComponentInChildren<tipo_bloco>().Tipo + Linkgiro.opc.ToString();
+                    }
                 }
-               
+                   
+
+
                  
             }
+            parou = true;
+            timer = Mathf.Round(timer);
+            PlayerPrefs.SetFloat("timer", timer);
             // coleta de data e hora
             string date = System.DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             PlayerPrefs.SetString("Data", date);
             Debug.Log(date);
             //...
-
-                PlayerPrefs.SetString("acabou" , "true");
+                PlayerPrefs.SetString("comandos", string.Join(" - ", comandos));
+                if(parou == true)
+                {
+                    PlayerPrefs.SetString("acabou" , "true");
+                }
+               
+               
+            
                 bloquearBlocos.enabled = true;
                 bloquearBlocos.naMao = false;
                 if(checarDestino.chegou == false)

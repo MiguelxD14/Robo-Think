@@ -10,8 +10,9 @@ public class MySharedData : MonoBehaviour
     [System.Serializable]
     public class dados
     {
-        public string fase, resultado;
+        public string fase, resultado, nome, codigo;
         public string Data_hora;
+        public float  tempo;
 
     }
 
@@ -25,7 +26,7 @@ public class MySharedData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filename = Application.dataPath + "/coletateste.csv";
+        filename = Application.dataPath + "/coletadados.csv";
     }
 
     // Update is called once per frame
@@ -42,8 +43,8 @@ public class MySharedData : MonoBehaviour
     {
         if (myListaFases.Cenas.Length > 0)
         {
-            TextWriter tw = new StreamWriter(filename, false);
-            tw.WriteLine("Data/Hora, Fase, Resultado ");
+            TextWriter tw = new StreamWriter(filename, true);
+            tw.WriteLine("Nome, Data/Hora, Fase/Robo, Tempo, Codigo, Resultado ");
             tw.Close();
 
             tw = new StreamWriter(filename, true);
@@ -53,8 +54,12 @@ public class MySharedData : MonoBehaviour
                 myListaFases.Cenas[i].Data_hora = PlayerPrefs.GetString("Data");
                 myListaFases.Cenas[i].fase = PlayerPrefs.GetString("Fase");
                 myListaFases.Cenas[i].resultado = PlayerPrefs.GetString("Concluiu");
-
-                tw.WriteLine(myListaFases.Cenas[i].Data_hora + "," + myListaFases.Cenas[i].fase + "," + myListaFases.Cenas[i].resultado);
+                myListaFases.Cenas[i].nome = PlayerPrefs.GetString("Nome");
+                myListaFases.Cenas[i].codigo = PlayerPrefs.GetString("comandos");
+                myListaFases.Cenas[i].tempo = PlayerPrefs.GetFloat("timer");
+                tw.WriteLine(myListaFases.Cenas[i].nome + "," + myListaFases.Cenas[i].Data_hora + "," 
+                + myListaFases.Cenas[i].fase + "," + myListaFases.Cenas[i].tempo + "," 
+                + myListaFases.Cenas[i].codigo + "," + myListaFases.Cenas[i].resultado);
             }
 
             tw.Close();

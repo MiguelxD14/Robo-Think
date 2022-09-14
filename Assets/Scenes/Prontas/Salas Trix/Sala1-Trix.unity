@@ -311,6 +311,16 @@ PrefabInstance:
       objectReference: {fileID: 777056496}
     - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
+      propertyPath: LinkAnda
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: Linkgiro
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
       propertyPath: botaoResetar
       value: 
       objectReference: {fileID: 2035195116}
@@ -334,6 +344,11 @@ PrefabInstance:
       propertyPath: "bot\xE3oExecutando"
       value: 
       objectReference: {fileID: 436729409}
+    - target: {fileID: 4165131150283335629, guid: 0fefbed32a9ac014ca8753d598208cc0,
+        type: 3}
+      propertyPath: comandos.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4165131150283335630, guid: 0fefbed32a9ac014ca8753d598208cc0,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
