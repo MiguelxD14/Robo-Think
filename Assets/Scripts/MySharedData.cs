@@ -26,7 +26,7 @@ public class MySharedData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filename = Application.dataPath + "/DadosColetados.csv";
+       
     }
 
     // Update is called once per frame
@@ -41,6 +41,7 @@ public class MySharedData : MonoBehaviour
 
     public void WriteCSV()
     {
+        filename = Application.dataPath + "/" + PlayerPrefs.GetString("Nome") + " - DadosColetados.csv";
         if (myListaFases.Cenas.Length > 0)
         {
             TextWriter tw = new StreamWriter(filename, true);
