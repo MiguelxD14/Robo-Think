@@ -26,7 +26,7 @@ public class MySharedData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        filename = Application.dataPath + "/coletadados.csv";
+        filename = Application.dataPath + "/DadosColetados.csv";
     }
 
     // Update is called once per frame
