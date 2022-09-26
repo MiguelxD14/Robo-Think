@@ -16,6 +16,7 @@ public class atrelar : MonoBehaviour
   
     public void Start()
     {
+    
     // Utilizando o sistema de tags fica mais facil de portar o codigo para as diversas situaçôes e salas do projeto.
        
         player = GameObject.FindGameObjectWithTag("Player");
@@ -287,7 +288,7 @@ public class atrelar : MonoBehaviour
     public void Ativar()
     {
       RaycastHit hit;
-       if (Input.GetMouseButtonDown(0))
+       if (Input.GetMouseButtonDown(0)  || Input.GetButtonDown("A"))
           {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 if (Physics.Raycast(ray, out hit, rayLength))

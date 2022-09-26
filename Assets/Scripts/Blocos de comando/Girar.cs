@@ -25,7 +25,7 @@ public class Girar : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)

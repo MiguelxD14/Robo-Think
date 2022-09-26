@@ -12,6 +12,12 @@ public class SistemaFps : MonoBehaviour
     public bool naMao;
     public bool canGrab;
 
+public void Start()
+{
+    Cursor.lockState = CursorLockMode.Locked;
+    Cursor.visible = false;
+
+}
 
     public void Update()
     {
