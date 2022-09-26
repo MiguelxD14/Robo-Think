@@ -19,7 +19,7 @@ public class SistemaFps : MonoBehaviour
         CheckGrab();
         if (canGrab)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("X"))
             {
                 if (blocoAtual != null)
                      Soltar();
@@ -29,7 +29,7 @@ public class SistemaFps : MonoBehaviour
         }
         if (blocoAtual != null)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("B"))
             {
                 Soltar();
             }

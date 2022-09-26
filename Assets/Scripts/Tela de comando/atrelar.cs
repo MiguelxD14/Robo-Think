@@ -36,11 +36,11 @@ public class atrelar : MonoBehaviour
             {
                 
 
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar1();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[0] = false;
@@ -52,26 +52,26 @@ public class atrelar : MonoBehaviour
             {
                 
              
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar2();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[1] = false;
                 }
             }
             //slot3
-            if (hit.collider.gameObject == slot3)
+            if (hit.collider.gameObject == slot3 )
             {
                 
               
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar3();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[2] = false;
@@ -82,11 +82,11 @@ public class atrelar : MonoBehaviour
             {
                
              
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar4();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[3] = false;
@@ -97,11 +97,11 @@ public class atrelar : MonoBehaviour
             {
                 
              
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar5();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[4] = false;
@@ -112,11 +112,11 @@ public class atrelar : MonoBehaviour
             {
                 
               
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar6();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[5] = false;
@@ -127,11 +127,11 @@ public class atrelar : MonoBehaviour
             {
 
                
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar7();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[6] = false;
@@ -142,11 +142,11 @@ public class atrelar : MonoBehaviour
             {
 
               
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
                     Atrelar8();
                 }
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
                     Recuperar();
                      podeAtrelar[7] = false;
