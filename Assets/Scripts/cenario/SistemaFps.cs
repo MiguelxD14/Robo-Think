@@ -50,7 +50,7 @@ public void Start()
             {
                 if (hit.transform.tag == "Bloco de comando" && naMao == false)
                 {
-                   // Debug.Log("Pegue o bloco");
+                    Debug.Log("Pegue o bloco");
                     canGrab = true;
                     bloco = hit.transform.gameObject;
                 }
