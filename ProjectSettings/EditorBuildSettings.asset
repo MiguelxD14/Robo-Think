@@ -5,39 +5,36 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Jogador.unity
     guid: 3b253304782b35f42a8883b015992814
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Trix/Sala1-Trix.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Trix/Sala 2 - Trix.unity
     guid: d1ce20412efc90645b6c5b31cdbb33c1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Trix/Sala 3 - Trix.unity
     guid: 0248ef9b76ed9824aba14d933a7c55e6
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Trix/Sala 4 - Trix.unity
     guid: 879ddf42064f551449f7663e214181c9
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Carry/Sala 5 - carry.unity
     guid: 703592bcaac39e94397e5fb327ce5cce
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Carry/Sala 6 - Carry.unity
     guid: c2dbffb06b518624c9d719b3c6249de8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Brok/Sala 7 - Brok.unity
     guid: 346869b2a44a0f947a8ec63728cad4a5
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Brok/Sala 8 - Brok.unity
     guid: 4a09f4d5dcbc9ce4e8f0e0d488284e9e
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prontas/Salas Fliper/Sala 9 - Fliper.unity
     guid: a1e2894435b247a438c5a2e005d63342
-  - enabled: 1
-    path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.17.0/Hello Cardboard/Scenes/HelloCardboard.unity
-    guid: 145a2a45d7bc746b19cb68410368bf96
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 29b858c597f996144a50a72d901d7e7b,
       type: 2}
