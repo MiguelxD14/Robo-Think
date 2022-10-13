@@ -11,6 +11,7 @@ public class SistemaFps : MonoBehaviour
     public Vector3 posicao;
     public bool naMao;
     public bool canGrab;
+    bool B,X;
 
 public void Start()
 {
@@ -27,17 +28,36 @@ public void Start()
         {
             if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("X"))
             {
+                X = true;
+                PlayerPrefs.SetString("X", X.ToString());
+                Debug.Log("X pressionado");
                 if (blocoAtual != null)
                      Soltar();
 
                 Pegar();
+          
+               
             }
+            // else if (Input.GetKeyUp(KeyCode.E) && Input.GetButtonUp("X"))
+            // {
+            //     X = false;
+            //     PlayerPrefs.SetString("X", X.ToString());
+            // }
         }
         if (blocoAtual != null)
         {
             if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("B"))
             {
+                B = true;
+                PlayerPrefs.SetString("B", B.ToString());
+                Debug.Log("B pressionado");
                 Soltar();
+            }
+
+            else if (Input.GetKeyUp(KeyCode.Q) && Input.GetButtonUp("B"))
+            {
+                 B = false;
+                PlayerPrefs.SetString("B", B.ToString());
             }
         }
     }

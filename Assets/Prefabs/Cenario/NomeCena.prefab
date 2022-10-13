@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2715694136449875616}
   - component: {fileID: 2715694136449875647}
+  - component: {fileID: 6285892749772669489}
   m_Layer: 0
   m_Name: NomeCena
   m_TagString: Untagged
@@ -41,5 +42,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd3d9b83f2b3afc43bab430a729c94ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6285892749772669489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2715694136449875646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b54fb9428e9da5e4a817f2673fce5b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

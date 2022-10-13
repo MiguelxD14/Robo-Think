@@ -13,6 +13,7 @@ public class atrelar : MonoBehaviour
     public bool podeExecutar;
     public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
+    bool A,X;
   
     public void Start()
     {
@@ -39,13 +40,28 @@ public class atrelar : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                    A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar1();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                    X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[0] = false;
 
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             // slot2
@@ -55,12 +71,26 @@ public class atrelar : MonoBehaviour
              
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar2();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[1] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot3
@@ -70,12 +100,26 @@ public class atrelar : MonoBehaviour
               
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar3();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[2] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot4
@@ -85,12 +129,26 @@ public class atrelar : MonoBehaviour
              
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar4();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[3] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot5
@@ -100,12 +158,26 @@ public class atrelar : MonoBehaviour
              
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar5();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[4] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot6
@@ -115,27 +187,53 @@ public class atrelar : MonoBehaviour
               
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar6();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[5] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot7
             if (hit.collider.gameObject == slot7)
             {
-
-               
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar7();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[6] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
             //slot8
@@ -145,12 +243,26 @@ public class atrelar : MonoBehaviour
               
                 if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
                 {
+                     A = true;
+                    PlayerPrefs.SetString("A", A.ToString());
                     Atrelar8();
+                }
+                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+                {
+                    A = false;
+                    PlayerPrefs.SetString("A", A.ToString());
                 }
                 if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
                 {
+                     X = true;
+                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[7] = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
+                {
+                    X = false;
+                    PlayerPrefs.SetString("X", X.ToString());
                 }
             }
 

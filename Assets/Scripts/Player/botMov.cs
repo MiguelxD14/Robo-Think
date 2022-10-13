@@ -11,8 +11,11 @@ public class botMov : MonoBehaviour
     {
         float xDir = Input.GetAxis("Horizontal");
         float zDir = Input.GetAxis("Vertical");
-;
-        Vector3 move = transform.right * xDir + transform.forward * zDir;
+
+        PlayerPrefs.SetFloat("Horizontal", xDir);
+        PlayerPrefs.SetFloat("Vertical", zDir);
+
+        Vector3 move = transform.right * PlayerPrefs.GetFloat("Horizontal") + transform.forward * PlayerPrefs.GetFloat("Vertical");
         controller.Move(move * speed * Time.deltaTime);
         
     }
