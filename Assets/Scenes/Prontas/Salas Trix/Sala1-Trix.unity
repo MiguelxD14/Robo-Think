@@ -796,6 +796,8 @@ GameObject:
   - component: {fileID: 278352544}
   - component: {fileID: 278352547}
   - component: {fileID: 278352549}
+  - component: {fileID: 278352550}
+  - component: {fileID: 278352548}
   m_Layer: 2
   m_Name: FPSPlayer
   m_TagString: Player
@@ -828,7 +830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278352543}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c1da18baddb9724eba253c22a3bd8bf, type: 3}
   m_Name: 
@@ -871,6 +873,23 @@ MonoBehaviour:
   posicao: {x: 0, y: 0, z: 0}
   naMao: 0
   canGrab: 0
+--- !u!114 &278352548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278352543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eacf52163fea6444b5e944866f8a3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 278352544}
+  speed: 12
+  cam: {fileID: 963194225}
+  sensitive: 100
+  playerBody: {fileID: 278352546}
 --- !u!65 &278352549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -884,6 +903,57 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: -0.84, z: 0}
+--- !u!114 &278352550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278352543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 02d5ef8f24592684cab012cd97557c13,
+    type: 3}
+  m_NotificationBehavior: 3
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f4b88c13-60e0-457e-b44d-1e1019462fd9
+    m_ActionName: Gameplay/Mover[/XInputControllerWindows/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4eea8827-d613-461a-bd60-b18239e5c5d4
+    m_ActionName: Gameplay/Girar[/XInputControllerWindows/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 98ff0f76-822f-485a-bd52-d8a247cbd86a
+    m_ActionName: Gameplay/Pegar[/XInputControllerWindows/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3a749fef-3130-485d-85fa-f6361ff7ca2f
+    m_ActionName: Gameplay/Soltar[/XInputControllerWindows/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7322e8db-e2d3-47ab-b3dd-46f73a2b8b34
+    m_ActionName: Gameplay/Selecionar[/XInputControllerWindows/buttonSouth]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Gamepad
+  m_DefaultActionMap: Gameplay
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &298211136
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,7 +2720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a78ecbfeea0e1744800356bc10b8b89, type: 3}
   m_Name: 
@@ -2664,7 +2734,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7beba053903517b46b66ef77614060c4, type: 3}
   m_Name: 
