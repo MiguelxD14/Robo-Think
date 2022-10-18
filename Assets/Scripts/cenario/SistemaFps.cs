@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SistemaFps : MonoBehaviour
 {
+    PlayerInputs controls;
+
     public Transform mao;
     public float distance = 10f;
     public GameObject blocoAtual;
@@ -13,6 +16,11 @@ public class SistemaFps : MonoBehaviour
     public bool canGrab;
     bool B,X;
 
+void Awake()
+{
+    controls = new PlayerInputs();
+    controls.Gameplay.Enable();
+}
 public void Start()
 {
     Cursor.lockState = CursorLockMode.Locked;
@@ -26,39 +34,24 @@ public void Start()
         CheckGrab();
         if (canGrab)
         {
-            if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("X"))
+            if (controls.Gameplay.Pegar.triggered)
             {
-                X = true;
-                PlayerPrefs.SetString("X", X.ToString());
                 Debug.Log("X pressionado");
                 if (blocoAtual != null)
                      Soltar();
 
                 Pegar();
-          
-               
             }
-            // else if (Input.GetKeyUp(KeyCode.E) && Input.GetButtonUp("X"))
-            // {
-            //     X = false;
-            //     PlayerPrefs.SetString("X", X.ToString());
-            // }
+        
         }
         if (blocoAtual != null)
         {
-            if (Input.GetKeyDown(KeyCode.Q) || Input.GetButtonDown("B"))
+            if (controls.Gameplay.Soltar.triggered)
             {
-                B = true;
-                PlayerPrefs.SetString("B", B.ToString());
                 Debug.Log("B pressionado");
                 Soltar();
             }
 
-            else if (Input.GetKeyUp(KeyCode.Q) && Input.GetButtonUp("B"))
-            {
-                 B = false;
-                PlayerPrefs.SetString("B", B.ToString());
-            }
         }
     }
         public void CheckGrab()

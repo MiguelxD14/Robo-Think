@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 579769835775405412}
   - component: {fileID: 579769835775405413}
   - component: {fileID: 579769835775405418}
+  - component: {fileID: 297626638741452559}
   m_Layer: 0
   m_Name: 'FPSPlayer '
   m_TagString: Player
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579769835775405416}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c1da18baddb9724eba253c22a3bd8bf, type: 3}
   m_Name: 
@@ -132,6 +133,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &297626638741452559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579769835775405416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eacf52163fea6444b5e944866f8a3c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 579769835775405412}
+  speed: 12
+  cam: {fileID: 579769836899166944}
+  sensitive: 100
+  playerBody: {fileID: 579769835775405419}
 --- !u!1 &579769836708387879
 GameObject:
   m_ObjectHideFlags: 0
@@ -188,7 +206,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -213,7 +230,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &579769836708387873
 CapsuleCollider:
   m_ObjectHideFlags: 0

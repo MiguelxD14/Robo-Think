@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class atrelar : MonoBehaviour
 {
+    PlayerInputs controls;
+
     public GameObject slot1, slot2, slot3, slot4, slot5, slot6, slot7, slot8;
     GameObject player;
     GameObject slot;
@@ -13,8 +16,12 @@ public class atrelar : MonoBehaviour
     public bool podeExecutar;
     public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
-    bool A,X;
   
+   void Awake() 
+    {
+        controls = new PlayerInputs();
+        controls.Gameplay.Enable();
+    }
     public void Start()
     {
     
@@ -36,233 +43,130 @@ public class atrelar : MonoBehaviour
         {
             if (hit.collider.gameObject == slot1)
             {
-                
-
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+                if (controls.Gameplay.Selecionar.triggered)
                 {
-                    A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
                     Debug.Log("A Pressionado");
                     Atrelar1();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                    X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[0] = false;
 
                 }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
-                }
+                
             }
             // slot2
             if (hit.collider.gameObject == slot2)
             {
-                
-             
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+                if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar2();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[1] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot3
             if (hit.collider.gameObject == slot3 )
             {
-                
-              
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+               if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar3();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[2] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot4
             if (hit.collider.gameObject == slot4)
             {
-               
-             
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+              if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar4();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[3] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot5
             if (hit.collider.gameObject == slot5)
             {
-                
-             
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+            if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar5();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[4] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot6
             if (hit.collider.gameObject == slot6)
             {
-                
-              
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+               if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar6();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[5] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot7
             if (hit.collider.gameObject == slot7)
             {
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+                 if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar7();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[6] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
             //slot8
             if (hit.collider.gameObject == slot8)
             {
-
-              
-                if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+                if (controls.Gameplay.Selecionar.triggered)
                 {
-                     A = true;
-                    PlayerPrefs.SetString("A", A.ToString());
+                    Debug.Log("A Pressionado");
                     Atrelar8();
                 }
-                else if (Input.GetMouseButtonUp(0) && Input.GetButtonUp("A"))
+            
+                if (controls.Gameplay.Pegar.triggered)
                 {
-                    A = false;
-                    PlayerPrefs.SetString("A", A.ToString());
-                }
-                if (Input.GetKey(KeyCode.E) || Input.GetButtonDown("X"))
-                {
-                     X = true;
-                    PlayerPrefs.SetString("X", X.ToString());
                     Recuperar();
                      podeAtrelar[7] = false;
-                }
-                else if (Input.GetKeyUp(KeyCode.E) &&  Input.GetButtonUp("X"))
-                {
-                    X = false;
-                    PlayerPrefs.SetString("X", X.ToString());
+
                 }
             }
 

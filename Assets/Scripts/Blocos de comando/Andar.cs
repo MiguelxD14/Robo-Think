@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Andar : MonoBehaviour
 {
+    PlayerInputs controls;
+
     public GameObject Op1, Op2, Op3, Op4, Op5;
     GameObject robo;
     public botControl linkBot;
@@ -11,6 +14,11 @@ public class Andar : MonoBehaviour
     public int opcao;
     public ChecarSlots podeClicar;
     
+    void Awake()
+    {
+        controls = new PlayerInputs();
+        controls.Gameplay.Selecionar.Enable();
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +37,7 @@ public class Andar : MonoBehaviour
         
          RaycastHit hit;
 
-        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+        if (controls.Gameplay.Selecionar.triggered)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)

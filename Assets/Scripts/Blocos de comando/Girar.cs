@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Girar : MonoBehaviour
 {
+    PlayerInputs controls;
+
      public GameObject Op1, Op2, Op3;
      public int opc;
      public float rayLength;
@@ -12,7 +15,11 @@ public class Girar : MonoBehaviour
      GameObject robo;
      public ChecarSlots podeClicar;
 
-
+    void Awake()
+    {
+        controls = new PlayerInputs();
+        controls.Gameplay.Enable();
+    }
      void Start(){
     
     Op1 = transform.GetChild(1).gameObject;
@@ -25,7 +32,7 @@ public class Girar : MonoBehaviour
     void Update()
     {
         RaycastHit hit;
-        if (Input.GetMouseButtonDown(0) || Input.GetButtonDown("A"))
+        if (controls.Gameplay.Selecionar.triggered)
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)
