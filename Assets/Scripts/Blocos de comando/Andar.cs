@@ -13,6 +13,7 @@ public class Andar : MonoBehaviour
     public float rayLength;
     public int opcao;
     public ChecarSlots podeClicar;
+    float distance = 5f;
     
     void Awake()
     {
@@ -39,8 +40,8 @@ public class Andar : MonoBehaviour
 
         if (controls.Gameplay.Selecionar.triggered)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance) && podeClicar.rodando == false)
             {
                 if (hit.collider.gameObject == Op1)
                 {

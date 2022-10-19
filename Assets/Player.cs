@@ -23,9 +23,9 @@ public class Player : MonoBehaviour
      controls.Gameplay.Enable();
      controls.Gameplay.Mover.performed += OnMove;
      controls.Gameplay.Girar.performed += OnRotate;
-    
-
+     Cursor.lockState = CursorLockMode.Locked;
     }
+
 
     void Update()
     {

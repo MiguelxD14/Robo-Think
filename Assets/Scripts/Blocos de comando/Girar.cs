@@ -12,6 +12,7 @@ public class Girar : MonoBehaviour
      public float rayLength;
      public float turnTime = 1f;
      public bool giro;
+     float distance = 5f;
      GameObject robo;
      public ChecarSlots podeClicar;
 
@@ -34,8 +35,8 @@ public class Girar : MonoBehaviour
         RaycastHit hit;
         if (controls.Gameplay.Selecionar.triggered)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, rayLength) && podeClicar.rodando == false)
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance) && podeClicar.rodando == false)
             {
                 Debug.Log(hit.collider.name);
                 if (hit.collider.gameObject == Op1)

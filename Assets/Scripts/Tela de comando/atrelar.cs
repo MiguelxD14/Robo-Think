@@ -13,6 +13,8 @@ public class atrelar : MonoBehaviour
     public GameObject bloco;
     public GameObject mao;
     public float rayLength;
+    float distance = 5f;
+    
     public bool podeExecutar;
     public bool[] podeAtrelar = new bool[8];
     public GameObject botaoExecutar;
@@ -37,9 +39,9 @@ public class atrelar : MonoBehaviour
           bloco = player.GetComponent<SistemaFps>().blocoAtual;
     //Faz a verificação baseado onde o player esta olhando;
         RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit, rayLength))
+       // Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //if (Physics.Raycast(ray, out hit, rayLength))
+    if(Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
         {
             if (hit.collider.gameObject == slot1)
             {
@@ -304,10 +306,10 @@ public class atrelar : MonoBehaviour
     public void Ativar()
     {
       RaycastHit hit;
-       if (Input.GetMouseButtonDown(0)  || Input.GetButtonDown("A"))
+       if (controls.Gameplay.Selecionar.triggered)
           {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, rayLength))
+            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance))
                 {
                   if (hit.collider.gameObject == botaoExecutar)// se o player clicar no bot�o de executar
                    {

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class restart_pos : MonoBehaviour
 {
+    PlayerInputs controls;
     // posição e rotação
     public GameObject[] objetos;
     public Vector3[] posicoes;
@@ -27,6 +29,11 @@ public class restart_pos : MonoBehaviour
    
     
     // Start is called before the first frame update
+    void Awake()
+    {
+        controls = new PlayerInputs();
+        controls.Gameplay.Enable();
+    }
     void Start()
     {
         piso = GameObject.FindGameObjectWithTag("Anda");
@@ -44,8 +51,13 @@ public class restart_pos : MonoBehaviour
     void Update()
     {
         Tela.GetComponent<MeshRenderer>().enabled = true;
+        if(controls.Gameplay.Selecionar.triggered)
+        {
+            OnClick();
+        }
+
     }
-     void OnMouseDown()
+     void OnClick()
      {
         somAcerto.SetActive(false);
         if(somExp != null)
