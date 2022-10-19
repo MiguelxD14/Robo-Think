@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public float speed = 12f;
     // Camera
     public GameObject cam;
-    public float sensitive = 100f;
+    public float sensitive;
     float xRotation;
     public Transform playerBody;
 
@@ -30,12 +30,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         //Mov
-        Vector2 m =  controls.Gameplay.Mover.ReadValue<Vector2>();
+        Vector2 m =  controls.Gameplay.Mover.ReadValue<Vector2>(); // Pega o Inut do analogico esquerdo
         Vector3 move = transform.right * m.x +  transform.forward * m.y;
         controller.Move(move * speed * Time.deltaTime); 
 
         //Cam
-        Vector2 r = controls.Gameplay.Girar.ReadValue<Vector2>();
+        Vector2 r = controls.Gameplay.Girar.ReadValue<Vector2>();//  Pega o Inut do analogico direito
         xRotation -= r.y;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 

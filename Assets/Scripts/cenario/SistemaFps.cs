@@ -34,7 +34,7 @@ public void Start()
         CheckGrab();
         if (canGrab)
         {
-            if (controls.Gameplay.Pegar.triggered)
+            if (controls.Gameplay.Pegar.triggered) // Pega o Input do X
             {
                 Debug.Log("X pressionado");
                 if (blocoAtual != null)
@@ -46,7 +46,7 @@ public void Start()
         }
         if (blocoAtual != null)
         {
-            if (controls.Gameplay.Soltar.triggered)
+            if (controls.Gameplay.Soltar.triggered) // Pega o Input do B
             {
                 Debug.Log("B pressionado");
                 Soltar();

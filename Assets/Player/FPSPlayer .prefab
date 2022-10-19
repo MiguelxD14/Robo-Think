@@ -149,7 +149,7 @@ MonoBehaviour:
   controller: {fileID: 579769835775405412}
   speed: 12
   cam: {fileID: 579769836899166944}
-  sensitive: 100
+  sensitive: 150
   playerBody: {fileID: 579769835775405419}
 --- !u!114 &4676991886682161786
 MonoBehaviour:
