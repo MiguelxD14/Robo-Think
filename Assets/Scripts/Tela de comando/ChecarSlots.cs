@@ -25,6 +25,9 @@ public class ChecarSlots : MonoBehaviour
     public string[] comandos;
     public Girar Linkgiro;
     public float timer = 0;
+    public string date;
+    public string codigos;
+    public string conclusao;
 
     public void Update()
     {
@@ -159,12 +162,14 @@ public class ChecarSlots : MonoBehaviour
             parou = true;
             timer = Mathf.Round(timer);
             PlayerPrefs.SetFloat("timer", timer);
+            conclusao =  PlayerPrefs.GetFloat("timer").ToString();
             // coleta de data e hora
-            string date = System.DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
+            date = System.DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss");
             PlayerPrefs.SetString("Data", date);
             Debug.Log(date);
             //...
                 PlayerPrefs.SetString("comandos", string.Join(" - ", comandos));
+                codigos = PlayerPrefs.GetString("comandos");
                 if(parou == true)
                 {
                     PlayerPrefs.SetString("acabou" , "true");
@@ -180,13 +185,12 @@ public class ChecarSlots : MonoBehaviour
                 //botaoExecutar.GetComponent<BoxCollider>().enabled = true;
                 }
                 botaoExecutar.GetComponent<MeshRenderer>().enabled = true;
-                botãoExecutando.GetComponent<MeshRenderer>().enabled = false;     
+                botãoExecutando.GetComponent<MeshRenderer>().enabled = false;   
+  
         }
-           
+    
            
         
     }
-
-   
 }
     

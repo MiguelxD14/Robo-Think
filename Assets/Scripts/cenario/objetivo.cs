@@ -11,6 +11,7 @@ public class objetivo : MonoBehaviour
     public SistemaFps podePegar;
     public GameObject aneis;
     public GameObject somAcerto;
+    public string resultadoF;
     void Start()
     {
         luz = GameObject.FindGameObjectWithTag("Luz");
@@ -25,6 +26,7 @@ public class objetivo : MonoBehaviour
         {
             chegou = true;
             PlayerPrefs.SetString("Concluiu",chegou.ToString());
+            resultadoF =  PlayerPrefs.GetString("Concluiu");
             aneis.SetActive(true);
             somAcerto.SetActive(true);
             podePegar.enabled = false;
