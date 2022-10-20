@@ -6,7 +6,7 @@ public class objetivo : MonoBehaviour
 {
     GameObject luz;
     public GameObject porta;
-    public bool chegou;
+    public bool chegou = false;
     public GameObject botãoExec, botãoRest;
     public SistemaFps podePegar;
     public GameObject aneis;
@@ -17,7 +17,9 @@ public class objetivo : MonoBehaviour
         luz = GameObject.FindGameObjectWithTag("Luz");
         luz.gameObject.GetComponent<Light>().enabled = false;
         aneis.SetActive(false);
-        
+
+        PlayerPrefs.SetString("Concluiu",chegou.ToString());
+        resultadoF = PlayerPrefs.GetString("Concluiu");
 
     }
    public void OnTriggerStay(Collider other)
@@ -26,7 +28,7 @@ public class objetivo : MonoBehaviour
         {
             chegou = true;
             PlayerPrefs.SetString("Concluiu",chegou.ToString());
-            resultadoF =  PlayerPrefs.GetString("Concluiu");
+            resultadoF = PlayerPrefs.GetString("Concluiu");
             aneis.SetActive(true);
             somAcerto.SetActive(true);
             podePegar.enabled = false;
@@ -35,6 +37,7 @@ public class objetivo : MonoBehaviour
             botãoExec.GetComponent<BoxCollider>().enabled = false;
             botãoRest.GetComponent<BoxCollider>().enabled = false;
             }
+            
             
             luz.gameObject.GetComponent<Light>().enabled = true;
             porta.gameObject.SetActive(true);

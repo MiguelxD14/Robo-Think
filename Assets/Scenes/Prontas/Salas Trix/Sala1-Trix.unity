@@ -4055,14 +4055,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3294494762731700428, guid: 33e1f6308e6d333409c248cde9d881ff,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4662,15 +4654,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb670f64c40eaef448516582825d0de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Op1: {fileID: 0}
-  Op2: {fileID: 0}
-  Op3: {fileID: 0}
-  Op4: {fileID: 0}
-  Op5: {fileID: 0}
   linkBot: {fileID: 777056496}
   rayLength: 5
   opcao: 0
   podeClicar: {fileID: 1619271438}
+  OP:
+  - {fileID: 1669996406}
+  - {fileID: 530493786}
+  - {fileID: 945412421}
+  - {fileID: 1764964415}
+  - {fileID: 1987766640}
 --- !u!1 &2035195116 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4877281910914977727, guid: 0fefbed32a9ac014ca8753d598208cc0,

@@ -42,8 +42,6 @@ public class botControl : MonoBehaviour
             {
                 Move();
             }
-        
-
         }
         else
         {
@@ -51,23 +49,20 @@ public class botControl : MonoBehaviour
             //caso o piso não seja andável ele para o movimento na mesma hora
             moving = false;
             moveCount = 0;
-           
-            
         }
 
     }
     public void OPC()
     // sistema de opções
         {
+            
         if (opc != 0)
         {
             if (isSelected == true)
             { 
                 BeginMovement(opc);
                 opc = 0;
-            
             }
-            
         }
         else
         {
@@ -87,7 +82,6 @@ public class botControl : MonoBehaviour
             {
                  particulas.SetActive(true);
             }
-           
         }
     }
 
@@ -119,12 +113,10 @@ public class botControl : MonoBehaviour
                 {
                      particulas.SetActive(false);
                 }
-               
             }
             else
             {
-                targetPoint = condition.waypoint.position;
-                
+                targetPoint = condition.waypoint.position; 
             }
        }
     }

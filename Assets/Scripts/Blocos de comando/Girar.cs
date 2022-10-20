@@ -7,7 +7,6 @@ public class Girar : MonoBehaviour
 {
     PlayerInputs controls;
 
-     public GameObject Op1, Op2, Op3;
      public int opc;
      public float rayLength;
      public float turnTime = 1f;
@@ -15,6 +14,7 @@ public class Girar : MonoBehaviour
      float distance = 5f;
      GameObject robo;
      public ChecarSlots podeClicar;
+     public GameObject[] OP;
 
     void Awake()
     {
@@ -22,11 +22,10 @@ public class Girar : MonoBehaviour
         controls.Gameplay.Enable();
     }
      void Start(){
-    
-    Op1 = transform.GetChild(1).gameObject;
-    Op2 = transform.GetChild(2).gameObject;
-    Op3 = transform.GetChild(3).gameObject;
-    
+    for(int y = 0; y < 3; y++)
+    {
+        OP[y] = transform.GetChild(y + 1).gameObject;
+    }
     robo = GameObject.FindGameObjectWithTag("Robo");
      }
     
@@ -35,36 +34,17 @@ public class Girar : MonoBehaviour
         RaycastHit hit;
         if (controls.Gameplay.Selecionar.triggered)
         {
-            //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, distance) && podeClicar.rodando == false)
             {
-                Debug.Log(hit.collider.name);
-                if (hit.collider.gameObject == Op1)
+                for( int i = 0; i < 3; i++)
                 {
+                    if (hit.collider.gameObject ==OP[i])
+                    {
                     selecao();
-                    Op1.GetComponent<Renderer>().material.color = Color.yellow;
-                    this.opc = 1;
-                    
-                }
-
-             if (hit.collider.gameObject == Op2)
-                {
-                    selecao();
-                    Op2.GetComponent<Renderer>().material.color = Color.yellow;
-                    this.opc = 2;
-                    
-
-                }
-
-                 if (hit.collider.gameObject == Op3)
-                {
-                    selecao();
-                    Op3.GetComponent<Renderer>().material.color = Color.yellow;
-                    this.opc = 3;
-                    
-                    
-                }
-               
+                    OP[i].GetComponent<Renderer>().material.color = Color.yellow;
+                    this.opc = i + 1;
+                    }
+                } 
             } 
           }
            OPC();
@@ -101,9 +81,11 @@ public class Girar : MonoBehaviour
     
     public void selecao()
     {
-        Op1.GetComponent<Renderer>().material.color = Color.white;
-        Op2.GetComponent<Renderer>().material.color = Color.white;
-        Op3.GetComponent<Renderer>().material.color = Color.white;
+        for(int z = 0; z < 3; z++)
+        {
+            OP[z].GetComponent<Renderer>().material.color = Color.white;
+        }
+        
     }
 }
 

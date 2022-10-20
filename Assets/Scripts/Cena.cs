@@ -16,9 +16,6 @@ public class Cena : MonoBehaviour
         PlayerPrefs.SetString("Concluiu", "false");
         
     }
-    void Update()
-    {
-    }
 
 
 }

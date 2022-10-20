@@ -10,7 +10,6 @@ public class ChecarSlots : MonoBehaviour
     public botControl linkBot;
     public GameObject Robo;
     Animator animator;
-   // public Renderer Rend;
     public carry_mao linkCarry;
     public controle_fliper linkFliper;
     public fliper_PS flip;
@@ -34,7 +33,6 @@ public class ChecarSlots : MonoBehaviour
         if(parou == false)
         {
             timer += Time.deltaTime;
-            
         }
        
         if (executar.podeExecutar == true)
@@ -64,12 +62,8 @@ public class ChecarSlots : MonoBehaviour
                 Debug.Log(slots[i].name);
                 if (slots[i].transform.childCount <= 0 && Chegou.chegou == false)
                 {
-                    //Robo.GetComponent<Animator>().SetBool("Erro", true);
                     botaoExecutar.SetActive(false);
                     botaoResetar.SetActive(true);
-                    // Rend = slots[i].gameObject.GetComponent<MeshRenderer>();
-                    // Rend.enabled = true;
-                    // Rend.material.color = Color.red;
                     executar.podeExecutar = false;
                     break;
                     

@@ -140,11 +140,10 @@ public class restart_pos : MonoBehaviour
         AndarOpc.opcao = 0;
         if(AndarOpc.opcao == 0)
         {
-            AndarOpc.Op1.GetComponent<Renderer>().material.color = Color.white;
-            AndarOpc.Op2.GetComponent<Renderer>().material.color = Color.white;
-            AndarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
-            AndarOpc.Op4.GetComponent<Renderer>().material.color = Color.white;
-            AndarOpc.Op5.GetComponent<Renderer>().material.color = Color.white;
+            for( int i = 0; i < 5; i++)
+            {
+                AndarOpc.OP[i].GetComponent<Renderer>().material.color = Color.white;
+            }
             
         }
         // Bloco girar
@@ -153,9 +152,10 @@ public class restart_pos : MonoBehaviour
         GirarOpc.opc = 0;
         if(GirarOpc.opc == 0)
         {
-            GirarOpc.Op1.GetComponent<Renderer>().material.color = Color.white;
-            GirarOpc.Op2.GetComponent<Renderer>().material.color = Color.white;
-            GirarOpc.Op3.GetComponent<Renderer>().material.color = Color.white;
+            for(int z = 0; z < 3; z++)
+            {
+                 GirarOpc.OP[z].GetComponent<Renderer>().material.color = Color.white;
+            }
         }
         }
         
