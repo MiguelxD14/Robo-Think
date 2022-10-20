@@ -39,7 +39,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 579769835775405419}
-  - component: {fileID: 579769835775405415}
   - component: {fileID: 579769835775405412}
   - component: {fileID: 579769835775405413}
   - component: {fileID: 579769835775405418}
@@ -70,20 +69,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &579769835775405415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579769835775405416}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c1da18baddb9724eba253c22a3bd8bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 579769835775405412}
-  speed: 12
 --- !u!143 &579769835775405412
 CharacterController:
   m_ObjectHideFlags: 0
@@ -287,8 +272,6 @@ GameObject:
   - component: {fileID: 579769836899166947}
   - component: {fileID: 579769836899166751}
   - component: {fileID: 579769836899166748}
-  - component: {fileID: 579769836899166749}
-  - component: {fileID: 579769836899166946}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -362,36 +345,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579769836899166944}
   m_Enabled: 1
---- !u!114 &579769836899166749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579769836899166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a78ecbfeea0e1744800356bc10b8b89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sensitive: 150
-  playerBody: {fileID: 579769835775405419}
---- !u!114 &579769836899166946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 579769836899166944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7beba053903517b46b66ef77614060c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayLength: 15
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!1001 &2108316194230245942
 PrefabInstance:
   m_ObjectHideFlags: 0
