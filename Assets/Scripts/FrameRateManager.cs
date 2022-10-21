@@ -30,5 +30,6 @@ public class FrameRateManager : MonoBehaviour
             while (t < currentFrameTime)
                 t = Time.realtimeSinceStartup;
         }
+       
     }
 }
