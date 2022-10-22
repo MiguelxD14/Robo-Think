@@ -1168,6 +1168,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Analytics
       objectReference: {fileID: 0}
+    - target: {fileID: 1038729509574677751, guid: d761ba55a575a604694556c15d7be7f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4080667220087343013, guid: d761ba55a575a604694556c15d7be7f1,
         type: 3}
       propertyPath: m_RootOrder
