@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Jogador.unity
     guid: 3b253304782b35f42a8883b015992814
   - enabled: 1
-    path: Assets/Scenes/Prontas/Salas Trix/Sala1-Trix.unity
+    path: Assets/Scenes/Prontas/Salas Trix/Sala 1-Trix.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Prontas/Salas Trix/Sala 2 - Trix.unity
